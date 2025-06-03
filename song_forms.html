@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アンケートforms - MNTKFES！</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="footer.css">
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section {
+      padding: 15px 20px 15px 20px;
+    }
+    @media (max-width: 768px) {
+  .section {
+   padding: 5px 20px 5px 20px;
+  }
+   }
+
+
+  </style>
+</head>
+
+
+<body>
+  <div class="bg_pattern Paper_v2"></div>
+
+
+  <!-- ✅ ヘッダー -->
+  <header class="site-header">
+    <a href="song_forms.html" class="site-logo">
+      <img src="images/logo.png" alt="MNTKFES！ロゴ">
+    </a>
+  </header>
+
+
+      <div class="toggle_btn" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  <!-- ✅ メニュー -
+  <nav>
+    <div class="inner">
+      <ul>
+        <li><a href="#top">ホーム</a></li>
+        <li><a href="howto.html">参加について</a></li>
+        <li><a href="guideline.html">サークル参加者向けガイドライン</a></li>
+        <li><a href="#gallery">ギャラリー</a></li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  ✅ メニュー -->
+
+  <!-- ✅ マスク 
+  <div id="mask"></div>
+   ✅ マスク -->
+
+
+
+    <!-- 本文 -->
+  <main>
+    
+    <section class="section" id="page-title" data-aos-f>
+      <div class="container-center center-line">
+        <h1 class="page-title">アンケートforms</h1>
+        <p>MNTKFES！アンケートです！てすてす！</p>
+      </div>
+    </section>
+
+
+        <section class="section" id="formdayo" data-aos-f>
+      <div class="container-center">
+
+       
+         
+          <div class="formsbox">
+
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfcPZbcm-mAL9mWV3tKMSY8o2ui58m-zIzu5hXXIB_uzzhoxg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+
+      <div class="form-group">
+  <label for="song">曲名</label>
+  <input type="text" id="song" name="entry.694791822" required>
+</div>
+
+<div class="form-group">
+  <label for="artist">アーティスト名</label>
+  <input type="text" id="artist" name="entry.843564125" required>
+</div>
+
+<div class="form-group">
+  <label for="comment">アピールポイント（任意）</label>
+  <textarea id="comment" name="entry.137029353" rows="6"
+    placeholder="例：歌詞がキャラの心情と重なっていて印象的です！&#10;※歌詞の直接引用がある場合掲載しきれない可能性があります。ご了承ください"></textarea>
+</div>
+
+
+<div class="form-group">
+  <button type="submit" class="submit-btn">イメソンおくる！</button>
+</div>
+
+</form>
+
+
+</div>
+
+
+
+<!-- 送信後、Thanksページに遷移する -->
+<iframe name="hidden_iframe" style="display:none;" onload="if(submitted){ window.location='thanks.html'; }"></iframe>
+
+
+
+
+
+</main>
+
+<!-- フッター-->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/footer-logo.png" alt="サイトロゴ" class="footer-logo">
+      <div class="footer-info">
+        <p>MNTKFES!</p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <ul class="footer-nav">
+        <li><a href="index">準備中</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 MNTKFES!実行委員会.</p>
+  </div>
+</footer>
+
+
+
+
+<!-- フッター-->
+
+
+<!-- ✅ スマホ向けの縦型フッター -->
+<footer class="footer-mobile">
+  <div class="footer-brand">
+    <img src="images/footer-logo.png" alt="サイトロゴ" class="footer-logo">
+    <div class="footer-sns">
+      <a href="https://twitter.com"><img src="images/twitter-icon.png" alt="Twitter"></a>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <div class="footer-columns">
+        <li><a href="index">準備中</a></li>
+
+    </div>
+  </div>
+
+
+
+  <div class="footer-copy">
+    <p>&copy; 2025 MNTKFES!実行委員会.</p>
+
+  </div>
+</footer>
+
+
+
+<!-- ✅ ページトップボタン-->
+
+<a href="#" id="pageTop" class="pagetop">
+  <img src="images/Pagetop.png" alt="ページトップに戻る">
+</a>
+
+
+  <script>
+
+ let submitted = false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function fadeImage(imageEl) {
+      if (!imageEl) return;
+      imageEl.classList.remove('show');
+      void imageEl.offsetWidth;
+      setTimeout(() => {
+        imageEl.classList.add('show');
+      }, 10);
+    }
+
+    function showTab(tab) {
+      const circle = document.getElementById('circle');
+      const general = document.getElementById('general');
+      const circleImage = document.getElementById('circle-image');
+      const generalImage = document.getElementById('general-image');
+
+      if (tab === 'circle') {
+        circle.style.display = 'block';
+        general.style.display = 'none';
+        fadeImage(circleImage);
+      } else {
+        general.style.display = 'block';
+        circle.style.display = 'none';
+        fadeImage(generalImage);
+      }
+
+      document.querySelectorAll(".tab-buttons button").forEach(btn => {
+      btn.classList.remove("active");
+      });
+      event.target.classList.add("active");
+
+      // ✅ activeクラス切り替え
+      document.querySelectorAll(".tab-buttons button").forEach(btn => {
+      btn.classList.remove("active");
+      });
+      const clicked = (tab === 'circle') ? document.querySelector('.tab-buttons button:nth-child(1)')
+      : document.querySelector('.tab-buttons button:nth-child(2)');
+      clicked.classList.add("active");
+
+    }
+
+    // スクロール演出
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('aos-animate');
+        }
+      });
+    });
+    document.querySelectorAll('[data-aos-f]').forEach(el => observer.observe(el));
+
+    // 初回表示時に .show を付ける前に、一度すべて外す
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.fade-up').forEach(el => el.classList.remove('show'));
+});
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    fadeImage(document.getElementById('circle-image'));
+  }, 100);
+});
+
+    // ハンバーガーメニュー
+    const toggle = document.getElementById("menu-toggle");
+    const body = document.body;
+    const mask = document.getElementById("mask");
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("open");
+    });
+    mask.addEventListener("click", () => {
+      body.classList.remove("open");
+    });
+
+
+
+
+    // ページトップボタン
+  const pageTop = document.getElementById("pageTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      pageTop.classList.add("show");
+    } else {
+      pageTop.classList.remove("show");
+    }
+  });
+
+  pageTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+
+  </script>
+</body>
+</html>

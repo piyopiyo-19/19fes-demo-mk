@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>参加方法 - MNTKFES！</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="footer.css">
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section {
+      padding: 15px 15px 40px 15px;
+    }
+
+
+
+  /* ✅ スマホ表示時に余白を小さくする */
+  @media (max-width: 768px) {
+    .section {
+      padding: 10px 10px 20px 10px;
+    }
+  }
+  </style>
+</head>
+
+
+<body>
+  <div class="bg_pattern Paper_v2"></div>
+
+
+  <!-- ✅ ヘッダー -->
+  <header class="site-header">
+    <a href="index.html" class="site-logo">
+      <img src="images/logo.png" alt="MNTKFES！ロゴ">
+    </a>
+  </header>
+
+
+      <div class="toggle_btn" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  <!-- ✅ メニュー -->
+  <nav>
+    <div class="inner">
+      <ul>
+        <li><a href="#top">ホーム</a></li>
+        <li><a href="howto.html">参加について</a></li>
+        <li><a href="guideline.html">サークル参加者向けガイドライン</a></li>
+        <li><a href="#gallery">ギャラリー</a></li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ✅ マスク -->
+  <div id="mask"></div>
+
+
+
+    <!-- 本文 -->
+  <main>
+    
+    <section class="section" id="page-title" data-aos-f>
+      <div class="container-center center-line">
+        <h1 class="page-title">参加について</h1>
+        <p>MNTKFES！に参加したい方へのご案内ページです。</p>
+      </div>
+    </section>
+
+    
+    <!-- セクションナビゲーション -->
+
+    <section class="section-nav" data-aos-f>
+  <div class="circle-nav">
+    <a href="#schedule"><span>開催情報</span></a>
+    <a href="#participation"><span>参加方法</span></a>
+    <a href="#notices"><span>注意事項</span></a>
+  </div>
+</section>
+
+   
+
+
+
+
+    <section class="section" id="schedule" data-aos-f>
+      <div class="container-center">
+        <h2 class="ribbon-title">開催情報</h2>
+
+<div class="info-line first-info-line">
+  <div class="label">開催日時</div>
+  <div class="value">2026年1月9日（金）22:00 〜 1月10日（土）21:50</div>
+</div>
+
+<div class="info-line">
+  <div class="label">開催場所</div>
+  <div class="value">pictSQUARE様　特設WEB会場</div>
+</div>
+
+<div class="info-line">
+  <div class="label">サークル申込期間</div>
+  <div class="value">2025年5月10日（日） 〜 12月9日（火）</div>
+</div>
+
+<div class="info-line">
+  <div class="label">参加条件</div>
+  <div class="value">MNTKを取り扱った作品が１点以上あること<br>※一般参加はどなたでも可能です</div>
+</div>
+
+<div class="info-line">
+  <div class="label">募集数</div>
+  <div class="value">24sp（状況により変動する可能性あり）</div>
+</div>
+
+<div class="info-line">
+  <div class="label">参加費</div>
+  <div class="value">一般参加：無料 <br>サークル参加：550円（pictSQUARE利用料）</div>
+</div>
+
+
+
+<div class="box-019">
+  <div class="box-label">頒布品・展示品について</div>
+
+  <ul>
+    <li>漫画/イラスト/小説/グッズ/コスプレ/ネットプリント等 形態不問</li>
+    <li>既刊の頒布/過去作品の展示のみもOK！</li>
+  </ul>
+
+  <p class="note-text mb-space">その他詳細事項は「サークル参加者向けガイドライン」を併せて確認ください</p>
+
+
+  <div class="arrow-button1">
+    <a href="guideline.html">サークル参加者向けガイドライン</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+    <section class="section" id="participation" data-aos-f>
+  <div class="center-tab">
+    <h2 class="ribbon-title">参加方法</h2>
+
+    <div class="tab-wrapper">
+      <!-- タブ切替ボタン -->
+      <div class="tab-buttons">
+        <button class="active" onclick="showTab('circle')">サークル参加</button>
+        <button onclick="showTab('general')">一般参加</button>
+      </div>
+
+      <!-- サークル参加タブ -->
+      <div class="tab-content" id="circle" style="display: block;">
+      
+
+        <div class="center-line fade-up" id="circle-image">
+          <h2 class="center-left number-heading1" data-number="01">PICTSQUAREに会員登録</h2>
+
+          <div class="image-text-row">
+          <div class="image-col">
+          <img src="images/p-touroku.png" alt="サ説明1">
+          </div>
+
+         <div class="text-col with-note">
+      <p class="indent"><strong>■pictSQUARE会員登録をする</strong></p>
+        <p class="indent">pictSQUARE公式サイトから会員登録をします。</p>
+        <p class="note-text mb-space-long">ニックネームなど入力内容は後から変更可能です</p>
+
+         </div>
+         </div>
+
+
+         
+
+        <h2 class="center-left number-heading1" data-number="02">宗拓フェス!サークル参加申し込み</h2>
+          <div class="image-text-row">
+          <div class="image-col">
+          <img src="images/ibentosanka.png" alt="サ説明2">
+          </div>
+
+         <div class="text-col">
+          <p class="indent"><strong>■宗拓フェス!に申し込む</strong></p>
+          <p class="indent">宗拓フェス!イベントページ下部から申し込みできます</p>
+          <p class="note-text">サークル名など入力内容は後から変更可能です</p>
+
+
+          <div class="arrow-button1 mb-space-long"><a href="https://pictsquare.net/axvht1etg1dwyb2hnh5zkpm2yufvrvjf" target="_blank">MNTKFES!イベントページはこちら</a></div>
+
+
+
+         </div>
+         </div>
+
+
+
+        <h2 class="center-left number-heading1" data-number="03">サークル店舗情報の編集</h2>
+          <div class="image-text-row">
+          <div class="image-col">
+          <img src="images/s-hensyuu-2.png" alt="サ説明3">
+          </div>
+
+         <div class="text-col">
+        <p class="indent"><strong>■サークルカット・お品書き・店舗外観変更する</strong></p>
+        <p class="indent">マイページ→MYイベント→MNTKFES!→参加申込詳細より画像を追加できます</p>
+        <p class="note-text">詳細はサークル参加ガイドラインを確認ください</p>
+
+        <div class="arrow-button1">
+       <a href="#" class="mb-space-long">サークル参加ガイドライン</a>
+</div>
+        
+         </div>
+         </div>
+
+
+
+
+        <h2 class="center-left number-heading1" data-number="04">頒布品・展示品を登録</h2>
+          <div class="image-text-row align-top">
+          <div class="image-col">
+          <img src="images/hanpuhin.png" alt="サ説明4">
+          </div>
+
+         <div class="text-col">
+          <p class="indent"><strong>■頒布品・展示品の登録</strong></p>
+         <p class="indent">マイページ→MYイベント→MNTKFES!→参加申込詳細より通販ページ・展示先のリンクが追加できます</p>
+        <p class="note-text">出展区分により作品表示画面が異なります</p>
+          
+<details class="accordion-001">
+  <summary>サークル出展区分とは？</summary>
+  <div class="accordion-content center-left">
+  <p>作品公開をする際、<br>
+  <strong>【pictSPACE系列サービス】を利用するか、<br>【BOOTHやpixiv 等の外部サービス】を利用するかの違いになります。</strong></p>
+
+            <div class="henkoutyuuuu">
+            <img src="images/s-kubuntoha.png" alt="サークル区分とは" class="no-padding-img">
+            </div>
+            
+          <p>詳細内容はこちらにまとめていますので、ご自身に合った出展区分を検討ください！</p>
+          <p class="note-text">出展区分は後からでも変更可能です！</p>
+
+
+          </div>
+</details>
+
+          <ul>
+          <li>当日までに頒布品・作品を用意しましょう！</li>
+          <li class="mb-space-long">はじめての方はpictSQUARE-ONEが便利です！</li>
+        </ul>
+         </div>
+         </div>
+
+
+
+
+
+        <h2 class="center-left number-heading1" data-number="05">（任意）アバターの登録</h2>
+          <div class="image-text-row">
+          <div class="image-col">
+          <img src="images/abata-.png" alt="サ説明5">
+          </div>
+
+         <div class="text-col">
+          <p class="indent"><strong>■アバターを登録する</strong></p>
+        <p class="indent">マイページ→アバター設定より画像を追加できます</p>
+          <ul>
+          <li>設定しなくても参加可能です</li>
+          <li>宗拓フェス！限定アバターも配布準備中です！</li>
+        </ul>
+
+        <img src="images/abata-2.png" alt="アバター説明" class="no-padding-img ">
+
+        <p class="indent mb-space-long">その他便利な素材配布先や、作り方詳細はこちらを併せて確認ください！ </p>
+
+
+
+         </div>
+         </div>
+
+
+
+                 <h2 class="center-left number-heading1" data-number="06">（当日）MNTKFES!に入場</h2>
+          <div class="image-text-row">
+          <div class="image-col">
+          <img src="images/ibentosanka.png" alt="サ説明6">
+          <img src="images/ibe-tano.png" alt="一般説明4">
+          </div>
+
+         <div class="text-col">
+          <p class="indent"><strong>■イベント会場に入場する</strong></p>
+          <p class="indent">MNTKFES!イベントページ下部から入場できます</p>
+          <p class="note-text mb-space">開催日時になると入場ボタンが表示されます</p>
+  
+
+
+          <p class="indent"><strong>■イベント会場を見て回る</strong></p>
+          <ul>
+          <li>サークル主様は当日不在でもOK！</li>
+          <li class="indent">他の参加者さんのスペースも回ってみましょう！</li>
+         </ul>
+  
+         
+
+         </div>
+         </div>
+
+
+
+
+        </div>
+
+      </div>
+
+      
+</details>
+
+
+
+      <!-- 一般参加タブ -->
+
+<div class="tab-content" id="general" style="display: none;">
+  <div class="center-line fade-up" id="general-image">
+    
+    <h2 class="center-left number-heading1" data-number="01">PICTSQUAREに会員登録</h2>
+    <div class="image-text-row">
+      <div class="image-col">
+        <img src="images/p-touroku.png" alt="一般説明1">
+      </div>
+         <div class="text-col with-note">
+      <p class="indent"><strong>■pictSQUARE会員登録をする</strong></p>
+        <p class="indent">pictSQUARE公式サイトから会員登録をします。</p>
+        <p class="note-text mb-space-long">ニックネームなど入力内容は後から変更可能です</p>
+      </div>
+    </div>
+
+    <h2 class="center-left number-heading1" data-number="02">アバターの登録（任意）</h2>
+    <div class="image-text-row">
+      <div class="image-col">
+        <img src="images/abata-.png" alt="一般説明2">
+      </div>
+      <div class="text-col">
+        <p class="indent"><strong>■アバターを登録する</strong></p>
+        <p class="indent">マイページ→アバター設定より画像を追加できます</p>
+          <ul>
+          <li>設定しなくても参加可能です</li>
+          <li>宗拓フェス！限定アバターも配布準備中です！</li>
+        </ul>
+
+              <img src="images/abata-2.png" alt="アバター説明">
+        <p class="indent">その他便利な素材配布先や、作り方詳細はこちらを併せて確認ください！ </p>
+
+        <div class="arrow-button1"><a href="link-b">アバターの作り方</a></div>
+        <div class="arrow-button1 mb-space-long"><a href="link-b">公式ガイド</a></div>
+
+      </div>
+    </div>
+
+
+
+    <h2 class="center-left number-heading1" data-number="03">(当日)MNTKFES!に入場</h2>
+    <div class="image-text-row">
+      <div class="image-col">
+        <img src="images/ibentosanka.png" alt="一般説明3">
+      </div>
+      <div class="text-col">
+        <p class="indent"><strong>■イベント会場に入場する</strong></p>
+          <p class="indent">pictSQUAREにアクセス→</p>
+          <p class="indent">MNTKFES!イベントページ下部から入場できます</p>
+          <ul>
+          <li>開催日時になると入場ボタンが表示されます</li>
+          <li class="mb-space">お気に入り登録をしておくと便利です</li>
+        </ul>
+
+        <div class="arrow-button1 mb-space-long"><a href="link-b">MNTKFES!イベントページはこちら</a></div>
+      </div>
+    </div>
+
+    <h2 class="center-left number-heading1" data-number="04">会場内を見て回ろう</h2>
+    <div class="image-text-row">
+      <div class="image-col">
+        <img src="images/ibe-tano.png" alt="一般説明4">
+      </div>
+      <div class="text-col">
+        <p class="indent"><strong>■イベント会場を見て回る</strong></p>
+          <p class="indent">サークルのスペースを見て回りましょう</p>
+          <ul>
+          <li>サークルでのお買い物・作品の閲覧</li>
+          <li>寄せ書きボードで作家さんにメッセージを送ろう</li>
+        </ul>
+        <div class="arrow-button1"><a href="link-b">会場での操作方法</a></div>
+      </div>
+
+    </div>
+  </div> <!-- #general-image -->
+</div> <!-- ✅ これが抜けていた！ -->
+
+
+
+
+
+    <div class="box-019">
+      <div class="box-label">操作が不安な方</div>
+    <div class="henkoutyuuuu">
+      <h3 class="page-title">操作が不安な方へ</h3>
+
+  <p>操作が不安な方は「デモ会場」でお試しできます！</p>
+  <div class="arrow-button1 mb-space"><a href="link-b">デモ会場へ</a></div>
+
+
+   <h3>操作が不安な方へ</h3>
+  <p>その他詳細な操作方法は公式の操作ガイドや、お役立ち記事まとめから確認してください。</p>
+  
+  <div class="arrow-button1"><a href="link-b">お役立ち記事まとめ</a></div>
+  <div class="arrow-button1"><a href="link-b">pictSQUARE公式ガイド</a></div>
+  </div>
+</div>
+</section>
+
+
+    <section class="section" id="notices" data-aos-f>
+      <div class="container-center">
+        <h2 class="ribbon-title">注意事項・禁止事項</h2>
+        <small>※本項はサークル参加ガイドラインにも記載しています</small>
+<h3 class="icon-side-head">
+  <img src="images/prohibition.png" alt="禁止">禁止事項<img src="images/prohibition.png" alt="禁止">
+</h3>
+        <ul>
+          <li>逆カプ/リバ要素のある作品でのサークル参加</li>
+          <li>注意書き記載がない他カプ要素が含まれる作品の頒布・展示</li>
+          <li>年齢指定作品のネットプリント</li>
+          <li>委託での参加</li>
+          <li>誹謗中傷・迷惑行為</li>
+        </ul>
+        
+<h3 class="icon-side-head">
+  <img src="images/attention.png" alt="注意">注意事項<img src="images/attention.png" alt="注意">
+</h3>
+        <p><strong>【イベント全般】</strong></p>
+        <ul>
+          <li>参加者様同士のトラブルについては一切責任を負いかねます</li>
+          <li>嫌がらせや荒らし行為など、悪質な場合は追放させていただく場合がございます<br>※迷惑行為の情報は主催までご連絡ください</li>
+        </ul>
+
+        <p><strong>【会場のスクリーンショットについて】</strong></p>
+        <ul>
+          <li>スクリーンショット及びSNSへの投稿可能です</li>
+          <li>チャット内容・各サークルスペース画像・展示頒布物など、各参加者様が作成された画像が写りこんでいる場合は許可をお取りください</li>
+          <li>（サークル様事前入場時）SNSへの画像掲載はご自分のアバター・店舗のみとしてください</li>
+        </ul>
+
+        <p><strong>【書き込みボードなどの記載について】</strong></p>
+        <ul>
+          <li>イベント終了後は投稿ができなくなります。終了間際の記入には時間にご注意ください</li>
+          <li>返信はイベント終了後でも可能です</li>
+        </ul>
+
+      </div>
+    </section>
+  </main> 
+
+<!-- フッター-->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="images/footer-logo.png" alt="サイトロゴ" class="footer-logo">
+      <div class="footer-info">
+        <p>MNTKFES!</p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <ul class="footer-nav">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="howto.html">参加について</a></li>
+        <li><a href="guideline.html">ガイドライン</a></li>
+        <li><a href="#gallery">ギャラリー</a></li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+      <div class="footer-social">
+        <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 MNTKFES!実行委員会.</p>
+    <small>Produced by ？？？</small>
+  </div>
+</footer>
+<!-- フッター-->
+
+
+<!-- ✅ スマホ向けの縦型フッター -->
+<footer class="footer-mobile">
+  <div class="footer-brand">
+    <img src="images/footer-logo.png" alt="サイトロゴ" class="footer-logo">
+    <div class="footer-sns">
+      <a href="https://twitter.com"><img src="images/twitter-icon.png" alt="Twitter"></a>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <div class="footer-columns">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="howto.html">参加について</a></li>
+        <li><a href="guideline.html">ガイドライン</a></li>
+        <li><a href="#gallery">ギャラリー</a></li>
+        <li><a href="#download">ダウンロード</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+    </div>
+  </div>
+
+
+
+  <div class="footer-copy">
+    <p>&copy; 2025 MNTKFES!実行委員会.</p>
+    <small>Produced by ？？？</small>
+  </div>
+</footer>
+
+
+
+<!-- ✅ ページトップボタン-->
+
+<a href="#" id="pageTop" class="pagetop">
+  <img src="images/Pagetop.png" alt="ページトップに戻る">
+</a>
+
+
+  <script>
+    function fadeImage(imageEl) {
+      if (!imageEl) return;
+      imageEl.classList.remove('show');
+      void imageEl.offsetWidth;
+      setTimeout(() => {
+        imageEl.classList.add('show');
+      }, 10);
+    }
+
+    function showTab(tab) {
+      const circle = document.getElementById('circle');
+      const general = document.getElementById('general');
+      const circleImage = document.getElementById('circle-image');
+      const generalImage = document.getElementById('general-image');
+
+      if (tab === 'circle') {
+        circle.style.display = 'block';
+        general.style.display = 'none';
+        fadeImage(circleImage);
+      } else {
+        general.style.display = 'block';
+        circle.style.display = 'none';
+        fadeImage(generalImage);
+      }
+
+      document.querySelectorAll(".tab-buttons button").forEach(btn => {
+      btn.classList.remove("active");
+      });
+      event.target.classList.add("active");
+
+      // ✅ activeクラス切り替え
+      document.querySelectorAll(".tab-buttons button").forEach(btn => {
+      btn.classList.remove("active");
+      });
+      const clicked = (tab === 'circle') ? document.querySelector('.tab-buttons button:nth-child(1)')
+      : document.querySelector('.tab-buttons button:nth-child(2)');
+      clicked.classList.add("active");
+
+    }
+
+    // スクロール演出
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('aos-animate');
+        }
+      });
+    });
+    document.querySelectorAll('[data-aos-f]').forEach(el => observer.observe(el));
+
+    // 初回表示時に .show を付ける前に、一度すべて外す
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.fade-up').forEach(el => el.classList.remove('show'));
+});
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    fadeImage(document.getElementById('circle-image'));
+  }, 100);
+});
+
+    // ハンバーガーメニュー
+    const toggle = document.getElementById("menu-toggle");
+    const body = document.body;
+    const mask = document.getElementById("mask");
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("open");
+    });
+    mask.addEventListener("click", () => {
+      body.classList.remove("open");
+    });
+
+
+
+
+    // ページトップボタン
+  const pageTop = document.getElementById("pageTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      pageTop.classList.add("show");
+    } else {
+      pageTop.classList.remove("show");
+    }
+  });
+
+  pageTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+
+  </script>
+</body>
+</html>
