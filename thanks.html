@@ -158,6 +158,11 @@
 
 
 
+<!-- ✅ ページトップボタン-->
+
+<a href="#" id="pageTop" class="pagetop">
+  <img src="images/Pagetop.png" alt="ページトップに戻る">
+</a>
 
 <!-- パーティクル -->
 <div id="floating-particles"></div>
@@ -244,11 +249,16 @@ window.addEventListener('load', () => {
 
 
 
+  pageTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
 
 
 
-  // パーティクル
+  
+// パーティクル
 const container = document.getElementById("floating-particles");
 const symbols = ["heart", "star", "ball", "shoes"]; // 追加したいシンボルの種類
 const total = 10;
@@ -275,6 +285,7 @@ for (let i = 0; i < total; i++) {
 
   container.appendChild(particle);
 }
+
 
 
   </script>
