@@ -158,12 +158,9 @@
 
 
 
-<!-- ✅ ページトップボタン-->
 
-<a href="#" id="pageTop" class="pagetop">
-  <img src="images/Pagetop.png" alt="ページトップに戻る">
-</a>
-
+<!-- パーティクル -->
+<div id="floating-particles"></div>
 
   <script>
 
@@ -242,36 +239,42 @@ window.addEventListener('load', () => {
   }, 100);
 });
 
-    // ハンバーガーメニュー
-    const toggle = document.getElementById("menu-toggle");
-    const body = document.body;
-    const mask = document.getElementById("mask");
-
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("open");
-    });
-    mask.addEventListener("click", () => {
-      body.classList.remove("open");
-    });
 
 
 
 
-    // ページトップボタン
-  const pageTop = document.getElementById("pageTop");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      pageTop.classList.add("show");
-    } else {
-      pageTop.classList.remove("show");
-    }
-  });
 
-  pageTop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+
+
+
+  // パーティクル
+const container = document.getElementById("floating-particles");
+const symbols = ["heart", "star", "ball", "shoes"]; // 追加したいシンボルの種類
+const total = 10;
+
+for (let i = 0; i < total; i++) {
+  const particle = document.createElement("div");
+  const type = symbols[Math.floor(Math.random() * symbols.length)];
+  particle.classList.add("particle", type);
+
+  // 等間隔ベース＋ランダム補正（くっつき防止）
+  const spacing = 100 / total;
+  particle.style.left = (i * spacing + Math.random() * 5) + "vw";
+
+  // 画面外の下から出現（Y座標）
+  particle.style.bottom = -(Math.random() * 20 + 10) + "vh";
+
+  // 回転＆大きさランダム
+  const scale = 0.7 + Math.random() * 0.6;
+  particle.style.transform = `scale(${scale}) rotate(${Math.random() * 360}deg)`;
+
+  // ゆっくりめのアニメーション＋ランダムな開始タイミング
+  particle.style.animationDuration = 10 + Math.random() * 5 + "s";
+  particle.style.animationDelay = Math.random() * 5 + "s";
+
+  container.appendChild(particle);
+}
 
 
   </script>

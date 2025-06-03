@@ -211,11 +211,6 @@
 
 
 
-<!-- ✅ ページトップボタン-->
-
-<a href="#" id="pageTop" class="pagetop">
-  <img src="images/Pagetop.png" alt="ページトップに戻る">
-</a>
 
 <!-- パーティクル -->
 <div id="floating-particles"></div>
@@ -296,22 +291,13 @@ window.addEventListener('load', () => {
   }, 100);
 });
 
-    // ハンバーガーメニュー
 
 
 
 
 
-    // ページトップボタン
-  const pageTop = document.getElementById("pageTop");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      pageTop.classList.add("show");
-    } else {
-      pageTop.classList.remove("show");
-    }
-  });
+
 
   pageTop.addEventListener("click", (e) => {
     e.preventDefault();
@@ -321,7 +307,7 @@ window.addEventListener('load', () => {
 
 
 
-    // パーティクル
+
 // パーティクル
 const container = document.getElementById("floating-particles");
 const symbols = ["heart", "star", "ball", "shoes"]; // 追加したいシンボルの種類
