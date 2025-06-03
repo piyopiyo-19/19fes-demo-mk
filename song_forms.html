@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>アンケートforms - MNTKFES！</title>
+  <meta name="robots" content="noindex, nofollow"><!-- ✅ 検索避け -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="footer.css">
   <style>
@@ -27,9 +28,6 @@
 
 
 
-
-
-
   </style>
 
 
@@ -49,6 +47,7 @@
 <meta name="twitter:title" content="MNTKFES! イメソンアンケート" />
 <meta name="twitter:description" content="イメージソングを教えてください！" />
 <meta name="twitter:image" content="https://19fes-demo-mk.netlify.app/images/formsimg.png" /> <!-- 画像の直リンク貼る！！！！ -->
+
 
 
 </head>
@@ -165,7 +164,8 @@
 
     <div class="footer-right">
       <ul class="footer-nav">
-        <li><a href="index">準備中</a></li>
+        <li><a href="index">※本イベントは非公式です。版権元とは一切関係がございません</a></li>
+        <li><a href="index">本ページは検索避け済みです</a></li>
       </ul>
       <div class="footer-social">
         <a href="https://twitter.com" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a>
@@ -195,7 +195,8 @@
 
   <div class="footer-links">
     <div class="footer-columns">
-        <li><a href="index">準備中</a></li>
+        <li><a href="index">※本イベントは非公式です。版権元とは一切関係がございません</a></li>
+        <li><a href="index">本ページは検索避け済みです</a></li>
 
     </div>
   </div>
@@ -216,21 +217,22 @@
   <img src="images/Pagetop.png" alt="ページトップに戻る">
 </a>
 
+<!-- パーティクル -->
+<div id="floating-particles"></div>
+
+
+
+
+
+
+
+
+
+
 
   <script>
 
  let submitted = false;
-
-
-
-
-
-
-
-
-
-
-
 
 
     function fadeImage(imageEl) {
@@ -295,16 +297,7 @@ window.addEventListener('load', () => {
 });
 
     // ハンバーガーメニュー
-    const toggle = document.getElementById("menu-toggle");
-    const body = document.body;
-    const mask = document.getElementById("mask");
 
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("open");
-    });
-    mask.addEventListener("click", () => {
-      body.classList.remove("open");
-    });
 
 
 
@@ -324,6 +317,32 @@ window.addEventListener('load', () => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+
+
+
+    // パーティクル
+  const container = document.getElementById("floating-particles");
+  const symbols = ["heart", "star"]; // 追加したいシンボルの種類
+  const total = 10;
+
+  for (let i = 0; i < total; i++) {
+    const particle = document.createElement("div");
+    const type = symbols[Math.floor(Math.random() * symbols.length)];
+    particle.classList.add("particle", type);
+    
+  particle.style.left = Math.random() * 100 + "vw";
+  particle.style.bottom = -(Math.random() * 20 + 10) + "vh";
+  // アニメーション
+  particle.style.animationDuration = 5 + Math.random() * 10 + "s";
+  particle.style.animationDelay = Math.random() * 3 + "s";
+    container.appendChild(particle);
+  }
+
+
+
+
+
 
 
   </script>
