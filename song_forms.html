@@ -315,8 +315,8 @@ window.addEventListener('load', () => {
 
 // パーティクル
 const container = document.getElementById("floating-particles");
-const symbols = ["heart", "star", "ball", "shoes"]; // 追加したいシンボルの種類
-const total = 10;
+const symbols = ["heart", "star", "ball", "shoes", "pto", "p-ina-g"]; // 追加したいシンボルの種類
+const total = 20;
 
 for (let i = 0; i < total; i++) {
   const particle = document.createElement("div");
@@ -328,15 +328,18 @@ for (let i = 0; i < total; i++) {
   particle.style.left = (i * spacing + Math.random() * 5) + "vw";
 
   // 画面外の下から出現（Y座標）
-  particle.style.bottom = -(Math.random() * 20 + 10) + "vh";
+  particle.style.left = (-10 + Math.random() * 80) + "vw"; // -30〜50vw
+  particle.style.bottom = (-30 + Math.random() * 20) + "vh"; // -30〜-10vh
 
   // 回転＆大きさランダム
-  const scale = 0.7 + Math.random() * 0.6;
-  particle.style.transform = `scale(${scale}) rotate(${Math.random() * 360}deg)`;
+  // サイズ・回転をばらけさせる
+  const scale = 0.6 + Math.random() * 0.5;
+  const rotate = Math.random() * 360;
+  particle.style.transform = `scale(${scale}) rotate(${rotate}deg)`;
 
   // ゆっくりめのアニメーション＋ランダムな開始タイミング
-  particle.style.animationDuration = 10 + Math.random() * 5 + "s";
-  particle.style.animationDelay = Math.random() * 5 + "s";
+  particle.style.animationDuration = 10 + Math.random() * 12 + "s";
+  particle.style.animationDelay = Math.random() * 2 + "s";
 
   container.appendChild(particle);
 }

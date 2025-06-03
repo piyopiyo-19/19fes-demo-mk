@@ -67,29 +67,71 @@
 }
 
 
+
+
+
+
+.particle.heart {
+  background-image: url("images/p-onp.png"); /* ←ハート画像 */
+    width: 70px;
+  height: 70px;
+}
+
+.particle.star {
+  background-image: url("images/p-bsk.png"); /* ←星画像やバスケ風画像 */
+    width: 85px;
+  height: 85px;
+}
+.particle.ball {
+  background-image: url("images/p-ball.png"); /* ←サッカーボール */
+    width: 70px;
+  height: 70px;
+}
+
+.particle.shoes {
+  background-image: url("images/p-shoes.png"); /* ←くつ */
+    width: 80px;
+  height: 80px;
+}
+
+.particle.pto {
+  background-image: url("images/p-t.png"); /* ←ト音記号 */
+    width: 80px;
+  height: 80px;
+}
+
+.particle.p-ina-g {
+  background-image: url("images/p-ina-g.png"); /* ←いなずま */
+    width: 100px;
+  height: 100px;
+}
+
+
 @media (max-width: 768px) {
 .particle {
   position: absolute;
   width: 50px;
   height: 50px;
 }
-}
-
-
-
 .particle.heart {
-  background-image: url("images/p-onp.png"); /* ←ハート画像 */
+  width: 50px;
+  height: 50px;
 }
 
 .particle.star {
-  background-image: url("images/p-bsk.png"); /* ←星画像やバスケ風画像 */
+  width: 50px;
+  height: 50px;
 }
 .particle.ball {
-  background-image: url("images/p-ball.png"); /* ←サッカーボール */
+  width: 50px;
+  height: 50px;
 }
 
 .particle.shoes {
-  background-image: url("images/p-shoes.png"); /* ←くつ */
+  width: 50px;
+  height: 50px;
+}
+
 }
 
 
