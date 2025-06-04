@@ -507,6 +507,8 @@
       });
     }
 
+
+
     function slideTo(index, smooth = true) {
       if (!smooth) {
         carousel.style.scrollBehavior = "auto";
@@ -525,7 +527,17 @@
       }
     }
 
-    carousel.addEventListener("scroll", () => {
+    function checkLoop() {
+      if (currentIndex === 0) {
+        currentIndex = itemCount;
+        slideTo(currentIndex, false);
+      } else if (currentIndex === itemCount + 1) {
+        currentIndex = 1;
+        slideTo(currentIndex, false);
+      }
+    }
+
+        carousel.addEventListener("scroll", () => {
       const width = getItemWidth();
       const index = Math.round(carousel.scrollLeft / width);
       if (index !== currentIndex) {
@@ -535,9 +547,9 @@
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(checkLoop, 60);
     });
+    
 
-
-
+    
 
     leftBtn.addEventListener("click", () => {
       slideTo(currentIndex - 1);
