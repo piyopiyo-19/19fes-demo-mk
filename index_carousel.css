@@ -8,6 +8,7 @@
   --item-gap: 120px;
   position: relative;
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto 40px;
   padding: 0 1em;
   }
@@ -22,7 +23,7 @@
   scroll-snap-type: x mandatory;
   scroll-snap-stop: always;
 
-  padding: 0 calc((100vw - var(--item-width)) / 2);
+  padding: 0 calc((100% - var(--item-width)) / 2);
   scrollbar-width: none; /* Firefox */
 }
 .carousel::-webkit-scrollbar {
