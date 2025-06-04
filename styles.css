@@ -292,6 +292,31 @@ h6 {
 
 }
 
+
+/* --------カルーセル ---------*/
+
+.swiper {
+  width: 100%;
+  max-width: 900px;
+  height: 400px; /* 追加：お好みで調整 */
+  margin: 2em auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像を枠に合わせる */
+}
+
+
+
+
+
+
+
+
+
+
 /* --------セクションナビゲーション ---------*/
 .section-nav {
   text-align: center;
@@ -617,6 +642,46 @@ button.submit-btn {
     animation: none !important;
   }
 }
+
+
+  /*----------【戻る】ボタン------------*/
+
+.return-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.return-btn a {
+    background: rgb(81 109 235); 
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+    max-width: 200px;
+    padding: 10px 30px;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 2em; /* 右にスペースを確保 */
+    margin: 0.8em 2em;
+    font-size: 1.1em;
+}
+.return-btn a:hover {
+    background: #4d2dff;
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -1114,6 +1179,13 @@ main h1 {
 .arrow-button1 a:hover:after {
     border-color: #FFF;
 }
+
+
+
+
+
+
+
 
 
 /*ふわふわした囲み枠*/

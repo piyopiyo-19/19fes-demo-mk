@@ -7,6 +7,10 @@
   <meta name="robots" content="noindex, nofollow">  <!-- ✅ 検索避け -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="footer.css">
+
+  <!-- カルーセル -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   
   <style>
     [data-aos] {
@@ -131,6 +135,32 @@
 
 セクション -->
 
+
+
+<!-- カルーセル -->
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <!-- スライド1 -->
+    <div class="swiper-slide">
+      <img src="images/ka1.png" alt="スライド1">
+    </div>
+    <!-- スライド2 -->
+    <div class="swiper-slide">
+      <img src="images/ka2.png" alt="スライド2">
+    </div>
+    <!-- スライド3 -->
+    <div class="swiper-slide">
+      <img src="images/ka3.png" alt="スライド3">
+    </div>
+  </div>
+
+  <!-- カルーセルナビゲーションボタン -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- ページネーション（ドット） -->
+  <div class="swiper-pagination"></div>
+</div>
 
 
 
@@ -452,8 +482,6 @@
 
 
 
-
-
 <!-- ✅ ページトップボタン-->
 
 
@@ -567,5 +595,27 @@
 
 
   </script>
+
+      
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
+</script>
+
+
 </body>
 </html>
