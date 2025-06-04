@@ -7,6 +7,7 @@
   <meta name="robots" content="noindex, nofollow">  <!-- ✅ 検索避け -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="index_carousel.css" />
   
   <style>
     [data-aos] {
@@ -123,6 +124,25 @@
 </section>
 
 
+
+<!-- カルーセル -->
+<div class="cal-container">
+  <button class="carousel-button left">◀</button>
+  <div class="carousel">
+    <div class="item clone"><img src="images/ka3.png" alt="クローン画像"></div><!-- 最後のスライドを先頭にクローン -->
+    <div class="item"><img src="images/ka1.png" alt="画像1"></div>
+    <div class="item"><img src="images/ka2.png" alt="画像2"></div>
+    <div class="item"><img src="images/ka3.png" alt="画像3"></div>
+    <div class="item clone"><img src="images/ka1.png" alt="クローン画像"></div><!-- 最初のスライドを末尾にクローン -->
+  </div>
+  <button class="carousel-button right">▶</button>
+</div>
+
+<div class="dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
 
 <!-- ナビゲーションボタン
 <div class="center-line bg-highlight" data-aos>
@@ -461,6 +481,78 @@
     <img src="images/Pagetop.png" alt="ページトップに戻る">
   </a>
 
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".carousel");
+    const items = carousel.querySelectorAll(".item");
+    const leftBtn = document.querySelector(".carousel-button.left");
+    const rightBtn = document.querySelector(".carousel-button.right");
+    const dots = document.querySelectorAll(".dot");
+
+    const itemCount = 3; // 実スライド数（クローン除く）
+    const itemWidth = items[0].offsetWidth + 120;
+    let currentIndex = 1; // 初期位置：1（クローン前提）
+
+    function updateDots(index) {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    function slideTo(index, smooth = true) {
+      carousel.scrollTo({
+        left: itemWidth * index,
+        behavior: smooth ? "smooth" : "auto"
+      });
+      currentIndex = index;
+      updateDots((index - 1 + itemCount) % itemCount); // 実スライド番号に変換
+    }
+
+    function checkLoop() {
+      if (currentIndex === 0) {
+        // 先頭のクローン（最後）→ 本物の最後へ瞬間移動
+        currentIndex = itemCount;
+        slideTo(currentIndex, false);
+      } else if (currentIndex === itemCount + 1) {
+        // 最後のクローン（先頭）→ 本物の先頭へ瞬間移動
+        currentIndex = 1;
+        slideTo(currentIndex, false);
+      }
+    }
+
+    leftBtn.addEventListener("click", () => {
+      currentIndex--;
+      slideTo(currentIndex);
+      setTimeout(checkLoop, 400);
+    });
+
+    rightBtn.addEventListener("click", () => {
+      currentIndex++;
+      slideTo(currentIndex);
+      setTimeout(checkLoop, 400);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        slideTo(i + 1); // クローンを除いた番号に+1補正
+      });
+    });
+
+    setInterval(() => {
+      currentIndex++;
+      slideTo(currentIndex);
+      setTimeout(checkLoop, 400);
+    }, 5000);
+
+    // 初期表示位置
+    window.addEventListener("load", () => {
+  slideTo(currentIndex, false);
+});
+  });
+</script>
 
 
 

@@ -298,6 +298,13 @@ h6 {
 
 
 
+
+
+
+
+
+
+
 /* --------セクションナビゲーション ---------*/
 .section-nav {
   text-align: center;
@@ -702,7 +709,7 @@ textarea::placeholder {
   font-size: 1.05rem;    /* 全体の文字サイズを少し大きく */
   line-height: 1.8;
   font-weight: 600;      /* 少し太めにする */
-  margin-bottom: 2em; 
+  margin-bottom: 0; 
 }
 
 #attention h2 {
