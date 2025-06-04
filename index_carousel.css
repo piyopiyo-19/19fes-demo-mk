@@ -5,15 +5,11 @@
  * ----------------------*/
 .cal-container {
   --item-width: 600px;
-  --item-height: 300px;
-  width: var(--item-width);
+  --item-gap: 120px;
   position: relative;
-  margin-bottom: 40px;
-  /* 各パーツ配置をグリッドでレイアウト */
-  display: grid;
-  grid-template-areas: "item item item" "left markers right";
-  grid-template-columns: 1fr 2fr 1fr;
-  row-gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 0 1em;
 }
 
 .cal-container {
@@ -27,131 +23,42 @@
  * カルーセル
  * ----------------------*/
 .carousel {
-  width: 100%;
-  display: grid;
-  /* アイテムを横並びにする */
-  grid-auto-flow: column;
-  grid-area: item;
-  /* 次のスライドとの間隔 */
-  gap: 120px;
+  display: flex;
+  gap: var(--item-gap);
   overflow-x: auto;
-  /* X方向にスナップ */
   scroll-snap-type: x mandatory;
-  /* 1度に1枚ずつ移動 */
   scroll-snap-stop: always;
-  /* スムーズにスクロールさせる */
   scroll-behavior: smooth;
-
-  /* スクロールバー非表示 */
-  scrollbar-width: none;
-
-
-  /* 前へ・次へボタン */
-  &::scroll-button(*) {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: #fff;
-    padding: 0;
-    color:  rgb(81 109 235);
-    border: 1px solid  rgb(81 109 235);
-    transition: background-color 0.2s, color 0.2s;
-  }
-
-  /* ホバー時スタイル */
-  @media (any-hover: hover) {
-    &::scroll-button(*):not(:disabled):hover {
-      background-color:  rgb(81 109 235);
-      color: #fff;
-      cursor: pointer;
-    }
-  }
-
-
-  /* 非活性時スタイル */
-  &::scroll-button(*):disabled {
-    color: darkgray;
-    border: 1px solid lightgray;
-  }
-
-  /* 前へボタン */
-  &::scroll-button(left) {
-    /* コンテンツ / 代替テキスト */
-    content: "◀" / "前へ";
-    grid-area: left;
-    justify-self: end;
-  }
-
-  /* 次へボタン */
-  &::scroll-button(right) {
-    /* コンテンツ / 代替テキスト */
-    content: "▶" / "次へ";
-    grid-area: right;
-  }
-
-  /* インジケーター（コンテナー） */
-  &::scroll-marker-group {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    grid-area: markers;
-    align-items: center;
-    scroll-snap-type: x mandatory;
-    overscroll-behavior-x: contain;
-  }
+  padding: 0 calc((100vw - var(--item-width)) / 2);
+  scrollbar-width: none; /* Firefox */
+}
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 /* ----------------------*
  * カルーセルの画像アイテム
  * ----------------------*/
 .item {
+   flex: 0 0 auto;
   width: var(--item-width);
-  min-width: var(--item-width);
-  height: var(--item-height);
   scroll-snap-align: center;
-
-  /* インジケーター */
-  &::scroll-marker {
-    content: "";
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-color: lightgray;
-    border-radius: 50%;
-    transition: background-color 0.2s;
-    flex-shrink: 0;
-  }
-
-  /* インジケーターのカレントスタイル */
-  &::scroll-marker:target-current {
-    background-color:  rgb(81 109 235);
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
 
-@media (width < 600px) {
-  .cal-container {
-    --item-width: calc(100vw - 32px);
-    width: var(--item-width);
-    grid-template-columns: 1fr 3fr 1fr;
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
   }
-}
 
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  background: white;
-  color:  rgb(81 109 235);
-  border: 1px solid  rgb(81 109 235);
+  background: #fff;
+  color: rgb(81 109 235);
+  border: 1px solid rgb(81 109 235);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -159,27 +66,15 @@
   cursor: pointer;
   transition: 0.2s;
 }
-.carousel-button.left {
-  left: -50px;
-}
-.carousel-button.right {
-  right: -50px;
-}
+.carousel-button.left { left: -50px; }
+.carousel-button.right { right: -50px; }
 
-.carousel {
-  scrollbar-width: none;     /* Firefox */
-  -ms-overflow-style: none;  /* IE/Edge */
-}
-.carousel::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari */
-}
 
 .dots {
   display: flex;
   justify-content: center;
-  margin-top: 0.1em;
   gap: 10px;
-  margin-bottom: 2.5em; 
+  margin: 0 0 2.5em;
 }
 .dot {
   width: 10px;
@@ -188,67 +83,24 @@
   background-color: #ccc;
   transition: background-color 0.3s;
 }
-.dot.active {
-  background-color:  rgb(81 109 235);
-}
+.dot.active { background-color: rgb(81 109 235); }
 
-
-.carousel {
-  padding: 0 calc((100vw - var(--item-width)) / 2); /* 左右中央寄せ */
-  display: flex;
-  gap: 40px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-snap-stop: always;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.item {
-  flex: 0 0 auto;
-  width: 600px;
-  scroll-snap-align: center;
-}
-
-.item.clone {
-  opacity: 1;
-  pointer-events: auto;
-}
 
 
 @media screen and (max-width: 768px) {
+  .cal-container {
+    --item-width: calc(100vw - 64px);
+  }
   .carousel {
-    padding: 0 24px; /* 両端の見切れ調整 */
-    gap: 16px;       /* スライド間の間隔も狭くする */
+    gap: 16px;
+    padding: 0 24px;
   }
-
-  .item {
-    width: calc(100vw - 64px); /* 画面幅 - padding でちょうど見切れる */
-  }
-
   .carousel-button {
     width: 32px;
     height: 32px;
     font-size: 14px;
   }
-
-  .carousel-button.left {
-    left: 4px;
-  }
-
-  .carousel-button.right {
-    right: 4px;
-  }
-
-  .dots {
-    gap: 8px;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-  }
+  .carousel-button.left { left: 4px; }
+  .carousel-button.right { right: 4px; }
+  .dot { width: 8px; height: 8px; }
 }

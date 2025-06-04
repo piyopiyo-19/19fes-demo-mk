@@ -493,7 +493,9 @@
     const dots = document.querySelectorAll(".dot");
 
     const itemCount = 3; // 実スライド数（クローン除く）
-    const itemWidth = items[0].offsetWidth + 120;
+    const gap = parseInt(getComputedStyle(carousel).gap);
+    const itemWidth = items[0].offsetWidth + gap;
+    
     let currentIndex = 1; // 初期位置：1（クローン前提）
 
     function updateDots(index) {
