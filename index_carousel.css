@@ -21,7 +21,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-snap-stop: always;
-  scroll-behavior: smooth;
+
   padding: 0 calc((100vw - var(--item-width)) / 2);
   scrollbar-width: none; /* Firefox */
 }
@@ -85,6 +85,7 @@
   .cal-container {
     --item-width: calc(100vw - 64px);
     padding: 0;
+    width: 100%;
   }
   .carousel {
     gap: 16px;
@@ -95,7 +96,7 @@
     height: 32px;
     font-size: 14px;
   }
-  .carousel-button.left { left: 8px; }
-  .carousel-button.right { right: 8px; }
+  .carousel-button.left { left: 0; }
+  .carousel-button.right { right: 0; }
   .dot { width: 8px; height: 8px; }
 }

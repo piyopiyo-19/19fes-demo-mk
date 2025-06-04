@@ -493,8 +493,11 @@
     const dots = document.querySelectorAll(".dot");
 
     const itemCount = 3;
-    const gap = parseInt(getComputedStyle(carousel).gap);
-    const itemWidth = items[0].getBoundingClientRect().width + gap;
+
+    function getItemWidth() {
+      const gap = parseInt(getComputedStyle(carousel).gap);
+      return items[0].getBoundingClientRect().width + gap;
+    }
     let currentIndex = 1;
     let scrollTimeout;
 
@@ -505,26 +508,26 @@
     }
 
     function slideTo(index, smooth = true) {
+      if (!smooth) {
+        carousel.style.scrollBehavior = "auto";
+      }
+      const width = getItemWidth();
       carousel.scrollTo({
-        left: itemWidth * index,
+        left: width * index,
         behavior: smooth ? "smooth" : "auto"
       });
       currentIndex = index;
       updateDots((index - 1 + itemCount) % itemCount);
-    }
-
-    function checkLoop() {
-      if (currentIndex === 0) {
-        currentIndex = itemCount;
-        slideTo(currentIndex, false);
-      } else if (currentIndex === itemCount + 1) {
-        currentIndex = 1;
-        slideTo(currentIndex, false);
+      if (!smooth) {
+        requestAnimationFrame(() => {
+          carousel.style.scrollBehavior = "smooth";
+        });
       }
     }
 
     carousel.addEventListener("scroll", () => {
-      const index = Math.round(carousel.scrollLeft / itemWidth);
+      const width = getItemWidth();
+      const index = Math.round(carousel.scrollLeft / width);
       if (index !== currentIndex) {
         currentIndex = index;
         updateDots((currentIndex - 1 + itemCount) % itemCount);
@@ -532,6 +535,9 @@
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(checkLoop, 60);
     });
+
+
+
 
     leftBtn.addEventListener("click", () => {
       slideTo(currentIndex - 1);
@@ -548,6 +554,10 @@
     setInterval(() => {
       slideTo(currentIndex + 1);
     }, 5000);
+
+    window.addEventListener("resize", () => {
+      slideTo(currentIndex, false);
+    });
 
     window.addEventListener("load", () => {
       slideTo(currentIndex, false);
