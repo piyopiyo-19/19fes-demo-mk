@@ -492,11 +492,11 @@
     const rightBtn = document.querySelector(".carousel-button.right");
     const dots = document.querySelectorAll(".dot");
 
-    const itemCount = 3; // 実スライド数（クローン除く）
+    const itemCount = 3;
     const gap = parseInt(getComputedStyle(carousel).gap);
-    const itemWidth = items[0].offsetWidth + gap;
-    
-    let currentIndex = 1; // 初期位置：1（クローン前提）
+    const itemWidth = items[0].getBoundingClientRect().width + gap;
+    let currentIndex = 1;
+    let scrollTimeout;
 
     function updateDots(index) {
       dots.forEach((dot, i) => {
@@ -510,51 +510,51 @@
         behavior: smooth ? "smooth" : "auto"
       });
       currentIndex = index;
-      updateDots((index - 1 + itemCount) % itemCount); // 実スライド番号に変換
+      updateDots((index - 1 + itemCount) % itemCount);
     }
 
     function checkLoop() {
       if (currentIndex === 0) {
-        // 先頭のクローン（最後）→ 本物の最後へ瞬間移動
         currentIndex = itemCount;
         slideTo(currentIndex, false);
       } else if (currentIndex === itemCount + 1) {
-        // 最後のクローン（先頭）→ 本物の先頭へ瞬間移動
         currentIndex = 1;
         slideTo(currentIndex, false);
       }
     }
 
+    carousel.addEventListener("scroll", () => {
+      const index = Math.round(carousel.scrollLeft / itemWidth);
+      if (index !== currentIndex) {
+        currentIndex = index;
+        updateDots((currentIndex - 1 + itemCount) % itemCount);
+      }
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(checkLoop, 60);
+    });
+
     leftBtn.addEventListener("click", () => {
-      currentIndex--;
-      slideTo(currentIndex);
-      setTimeout(checkLoop, 400);
+      slideTo(currentIndex - 1);
     });
 
     rightBtn.addEventListener("click", () => {
-      currentIndex++;
-      slideTo(currentIndex);
-      setTimeout(checkLoop, 400);
+      slideTo(currentIndex + 1);
     });
 
     dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        slideTo(i + 1); // クローンを除いた番号に+1補正
-      });
+      dot.addEventListener("click", () => slideTo(i + 1));
     });
 
     setInterval(() => {
-      currentIndex++;
-      slideTo(currentIndex);
-      setTimeout(checkLoop, 400);
+      slideTo(currentIndex + 1);
     }, 5000);
 
-    // 初期表示位置
     window.addEventListener("load", () => {
-  slideTo(currentIndex, false);
-});
+      slideTo(currentIndex, false);
+    });
   });
 </script>
+
 
 
 

@@ -10,14 +10,7 @@
   max-width: 1000px;
   margin: 0 auto 40px;
   padding: 0 1em;
-}
-
-.cal-container {
-  position: relative;   /* ボタンの absolute 位置を基準にする */
-  max-width: 1000px;    /* 必要に応じて調整 */
-  margin: 0 auto;       /* 横中央寄せ */
-  padding: 0 1em;       /* 任意：余白調整 */
-}
+  }
 
 /* ----------------------*
  * カルーセル
@@ -50,6 +43,7 @@
   height: auto;
   display: block;
   }
+
 
 .carousel-button {
   position: absolute;
@@ -90,6 +84,7 @@
 @media screen and (max-width: 768px) {
   .cal-container {
     --item-width: calc(100vw - 64px);
+    padding: 0;
   }
   .carousel {
     gap: 16px;
@@ -100,7 +95,7 @@
     height: 32px;
     font-size: 14px;
   }
-  .carousel-button.left { left: 4px; }
-  .carousel-button.right { right: 4px; }
+  .carousel-button.left { left: 8px; }
+  .carousel-button.right { right: 8px; }
   .dot { width: 8px; height: 8px; }
 }
