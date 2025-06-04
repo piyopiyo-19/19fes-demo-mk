@@ -257,34 +257,50 @@ window.addEventListener('load', () => {
 
 
 
-  
-// パーティクル
-const container = document.getElementById("floating-particles");
-const symbols = ["heart", "star", "ball", "shoes"]; // 追加したいシンボルの種類
-const total = 10;
+// パーティクル生成処理
+function createParticles() {
+  const container = document.getElementById("floating-particles");
+  const symbols = ["heart", "star", "ball", "shoes", "pto", "p-ina-g"]; // 使用するシンボル
+  const total = 25;
 
-for (let i = 0; i < total; i++) {
-  const particle = document.createElement("div");
-  const type = symbols[Math.floor(Math.random() * symbols.length)];
-  particle.classList.add("particle", type);
+  // グリッド状に基準位置を計算
+  const cols = Math.ceil(Math.sqrt(total));
+  const rows = Math.ceil(total / cols);
+  const cellW = 100 / cols;
+  const cellH = 100 / rows;
 
-  // 等間隔ベース＋ランダム補正（くっつき防止）
-  const spacing = 100 / total;
-  particle.style.left = (i * spacing + Math.random() * 5) + "vw";
+  for (let i = 0; i < total; i++) {
+    const particle = document.createElement("div");
+    const type = symbols[Math.floor(Math.random() * symbols.length)];
+    particle.classList.add("particle", type);
 
-  // 画面外の下から出現（Y座標）
-  particle.style.bottom = -(Math.random() * 20 + 10) + "vh";
+    const col = i % cols;
+    const row = Math.floor(i / cols);
 
-  // 回転＆大きさランダム
-  const scale = 0.7 + Math.random() * 0.6;
-  particle.style.transform = `scale(${scale}) rotate(${Math.random() * 360}deg)`;
+    // 画面全体にバランスよく配置
+    particle.style.left = (col * cellW + Math.random() * (cellW - 5)) + "vw";
+    particle.style.bottom = (row * cellH + Math.random() * (cellH - 5)) + "vh";
 
-  // ゆっくりめのアニメーション＋ランダムな開始タイミング
-  particle.style.animationDuration = 10 + Math.random() * 5 + "s";
-  particle.style.animationDelay = Math.random() * 5 + "s";
+    // サイズは一定
 
-  container.appendChild(particle);
+    // ランダムな初期回転角
+    const baseRotate = Math.random() * 360;
+    particle.style.setProperty('--rotate-base', `${baseRotate}deg`);
+    particle.style.transform = `translate(0, 0) rotate(${baseRotate}deg)`;
+
+    // アニメーション設定
+    const duration = 15 + Math.random() * 10;
+    const offset = Math.random() * duration;
+    particle.style.animation = `fadeInParticle 1.2s ease-out forwards, floatParticle ${duration}s linear infinite`;
+    particle.style.animationDelay = `0s, -${offset}s`;
+    
+    container.appendChild(particle);
+  }
 }
+
+// DOM構築完了後にアニメーションを開始
+document.addEventListener('DOMContentLoaded', createParticles);
+
 
 
 

@@ -128,7 +128,7 @@
 <div class="form-group">
   <label for="comment">アピールポイント（任意）</label>
   <textarea id="comment" name="entry.137029353" rows="6"
-    placeholder="例：歌詞がキャラの心情と重なっていて印象的です！&#10;※歌詞の直接引用がある場合掲載しきれない可能性があります。ご了承ください"></textarea>
+    placeholder="※歌詞の直接引用がある場合掲載しきれない可能性があります。&#10;あらかじめご了承ください"></textarea>
 </div>
 
 
@@ -313,42 +313,50 @@ window.addEventListener('load', () => {
 
 
 
-// パーティクル
-const container = document.getElementById("floating-particles");
-const symbols = ["heart", "star", "ball", "shoes", "pto", "p-ina-g"]; // 追加したいシンボルの種類
-const total = 20;
 
-for (let i = 0; i < total; i++) {
-  const particle = document.createElement("div");
-  const type = symbols[Math.floor(Math.random() * symbols.length)];
-  particle.classList.add("particle", type);
+// パーティクル生成処理
+function createParticles() {
+  const container = document.getElementById("floating-particles");
+  const symbols = ["heart", "star", "ball", "shoes", "pto", "p-ina-g"]; // 使用するシンボル
+  const total = 25;
 
-  // 等間隔ベース＋ランダム補正（くっつき防止）
-  const spacing = 100 / total;
-  particle.style.left = (i * spacing + Math.random() * 5) + "vw";
+  // グリッド状に基準位置を計算
+  const cols = Math.ceil(Math.sqrt(total));
+  const rows = Math.ceil(total / cols);
+  const cellW = 100 / cols;
+  const cellH = 100 / rows;
 
-  // 画面外の下から出現（Y座標）
-  particle.style.left = (-10 + Math.random() * 80) + "vw"; // -30〜50vw
-  particle.style.bottom = (-30 + Math.random() * 20) + "vh"; // -30〜-10vh
+  for (let i = 0; i < total; i++) {
+    const particle = document.createElement("div");
+    const type = symbols[Math.floor(Math.random() * symbols.length)];
+    particle.classList.add("particle", type);
 
-  // 回転＆大きさランダム
-  // サイズ・回転をばらけさせる
-  const scale = 0.6 + Math.random() * 0.5;
-  const rotate = Math.random() * 360;
-  particle.style.transform = `scale(${scale}) rotate(${rotate}deg)`;
+    const col = i % cols;
+    const row = Math.floor(i / cols);
 
-  // ゆっくりめのアニメーション＋ランダムな開始タイミング
-  particle.style.animationDuration = 10 + Math.random() * 12 + "s";
-  particle.style.animationDelay = Math.random() * 2 + "s";
+    // 画面全体にバランスよく配置
+    particle.style.left = (col * cellW + Math.random() * (cellW - 5)) + "vw";
+    particle.style.bottom = (row * cellH + Math.random() * (cellH - 5)) + "vh";
 
-  container.appendChild(particle);
+    // サイズは一定
+
+    // ランダムな初期回転角
+    const baseRotate = Math.random() * 360;
+    particle.style.setProperty('--rotate-base', `${baseRotate}deg`);
+    particle.style.transform = `translate(0, 0) rotate(${baseRotate}deg)`;
+
+    // アニメーション設定
+    const duration = 15 + Math.random() * 10;
+    const offset = Math.random() * duration;
+    particle.style.animation = `fadeInParticle 1.2s ease-out forwards, floatParticle ${duration}s linear infinite`;
+    particle.style.animationDelay = `0s, -${offset}s`;
+    
+    container.appendChild(particle);
+  }
 }
 
-
-
-
-
-
+// DOM構築完了後にアニメーションを開始
+document.addEventListener('DOMContentLoaded', createParticles);
 
   </script>
 </body>

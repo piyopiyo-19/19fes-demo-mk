@@ -58,14 +58,15 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  opacity: 0.9;
+  opacity: 0;
   background-size: contain;
   background-repeat: no-repeat;
-  animation: floatParticle linear infinite;
+  --rotate-base: 0deg;
+  transform: translate(0, 0) rotate(var(--rotate-base));
+  animation: fadeInParticle 1.2s ease-out forwards, floatParticle linear infinite;
   will-change: transform;
   z-index: -1;
 }
-
 
 
 
@@ -138,16 +139,17 @@
 
 @keyframes floatParticle {
   0% {
-    transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
+    transform: translate(0, 0) rotate(var(--rotate-base));
   }
   100% {
-    transform: translate(60vw, -120vh) rotate(360deg);
-    opacity: 0.8;
+    transform: translate(60vw, -120vh) rotate(calc(var(--rotate-base) + 360deg));
   }
 }
 
-
+@keyframes fadeInParticle {
+  from { opacity: 0; }
+  to { opacity: 0.9; }
+}
 
 
 /*============= 
@@ -626,6 +628,7 @@ textarea {
 textarea::placeholder {
   color: #b2b8ee;
   font-size: 1.1rem;
+  line-height: 1.4;
 }
 
 
@@ -641,7 +644,6 @@ textarea::placeholder {
   font-size: 0.8rem;
 }
 }
-
 
 
 
