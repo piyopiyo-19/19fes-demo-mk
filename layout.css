@@ -1261,7 +1261,7 @@ p.indent{
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: #005bac; /* 適宜調整、リンク色 */
+  color: #005bac;
   text-decoration: none;
   font-size: 14px;
 }
@@ -1271,9 +1271,10 @@ p.indent{
 }
 
 .external-icon {
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   vertical-align: middle;
+  flex-shrink: 0;
 }
 
 
