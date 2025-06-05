@@ -73,9 +73,20 @@
     });
   }
 
+  function loadFooter() {
+    const ph = document.getElementById('footer-placeholder');
+    if (ph) {
+      fetch('includes/footer.html')
+        .then(res => res.text())
+        .then(html => { ph.innerHTML = html; });
+    }
+  }
+
   global.fadeImage = fadeImage;
   global.showTab = showTab;
   global.setupAosAnimations = setupAosAnimations;
   global.setupPageTopButton = setupPageTopButton;
   global.initHamburgerMenu = initHamburgerMenu;
+  global.loadFooter = loadFooter;
 })(window);
+document.addEventListener('DOMContentLoaded', loadFooter);

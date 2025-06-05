@@ -1,0 +1,11 @@
+/* page specific styles for FAQ page */
+
+.section {
+  padding: 15px 20px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 10px;
+  }
+}
