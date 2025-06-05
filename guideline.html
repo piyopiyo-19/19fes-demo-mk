@@ -290,100 +290,12 @@
 </a>
 
 
-  <script>
-    function fadeImage(imageEl) {
-      if (!imageEl) return;
-      imageEl.classList.remove('show');
-      void imageEl.offsetWidth;
-      setTimeout(() => {
-        imageEl.classList.add('show');
-      }, 10);
-    }
-
-    function showTab(tab) {
-      const circle = document.getElementById('circle');
-      const general = document.getElementById('general');
-      const circleImage = document.getElementById('circle-image');
-      const generalImage = document.getElementById('general-image');
-
-      if (tab === 'circle') {
-        circle.style.display = 'block';
-        general.style.display = 'none';
-        fadeImage(circleImage);
-      } else {
-        general.style.display = 'block';
-        circle.style.display = 'none';
-        fadeImage(generalImage);
-      }
-
-      document.querySelectorAll(".tab-buttons button").forEach(btn => {
-      btn.classList.remove("active");
-      });
-      event.target.classList.add("active");
-
-      // ✅ activeクラス切り替え
-      document.querySelectorAll(".tab-buttons button").forEach(btn => {
-      btn.classList.remove("active");
-      });
-      const clicked = (tab === 'circle') ? document.querySelector('.tab-buttons button:nth-child(1)')
-      : document.querySelector('.tab-buttons button:nth-child(2)');
-      clicked.classList.add("active");
-
-    }
-
-    // スクロール演出
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('aos-animate');
-        }
-      });
-    });
-    document.querySelectorAll('[data-aos-f]').forEach(el => observer.observe(el));
-
-    // 初回表示時に .show を付ける前に、一度すべて外す
-window.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.fade-up').forEach(el => el.classList.remove('show'));
-});
-
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    fadeImage(document.getElementById('circle-image'));
-  }, 100);
-});
-
-    // ハンバーガーメニュー
-    const toggle = document.getElementById("menu-toggle");
-    const body = document.body;
-    const mask = document.getElementById("mask");
-
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("open");
-    });
-    mask.addEventListener("click", () => {
-      body.classList.remove("open");
-    });
+<!-- ✅ 共通スクリプト-->
+<script src="js/common.js"></script>
 
 
-
-
-    // ページトップボタン
-  const pageTop = document.getElementById("pageTop");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      pageTop.classList.add("show");
-    } else {
-      pageTop.classList.remove("show");
-    }
-  });
-
-  pageTop.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-
-  </script>
+<!-- ✅ ガイドラインスクリプト-->
+<script src="js/guideline.js"></script>
+ 
 </body>
 </html>
