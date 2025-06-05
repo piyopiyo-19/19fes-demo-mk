@@ -1250,33 +1250,29 @@ p.indent{
   transform: scale(1);
 }
 
-
-
-
-
-
 /* 新しいタブでリンク先を開く */
 .external-link {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  color: #005bac;
+  color: #3374ee;
   text-decoration: none;
   font-size: 14px;
+  border-bottom: 1px solid currentColor;
+  margin-right: 5px;
 }
 
 .external-link:hover {
-  text-decoration: underline;
+  opacity: 0.8;
 }
 
-.external-icon {
-  display: inline-block;   /* override base img rule */
+.external-link::after {
+  content: "";
+  display: inline-block;
   width: 11px;
   height: 11px;
-  vertical-align: middle;
-  flex-shrink: 0;
+  margin-left: 4px;
+  background: url("../images/new-page.svg") no-repeat center/contain;
 }
-
 
 
 
