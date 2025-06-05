@@ -1255,10 +1255,26 @@ p.indent{
 
 
 
+/* 新しいタブでリンク先を開く */
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #005bac;
+  text-decoration: none;
+  font-size: 14px;
+}
 
+.external-link:hover {
+  text-decoration: underline;
+}
 
-
-
+.external-icon {
+  width: 11px;
+  height: 11px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
 
 
 
