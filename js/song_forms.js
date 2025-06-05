@@ -41,4 +41,8 @@ function createParticles() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', createParticles);
+if (document.readyState !== 'loading') {
+  createParticles();
+} else {
+  document.addEventListener('DOMContentLoaded', createParticles);
+}
