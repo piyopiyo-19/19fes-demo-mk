@@ -361,7 +361,7 @@
 
    /* セクションに背景画像を設定2 */
 .with-webonlyabout {
-  background-image: url("images/webonlitoha.png");  /* パスは調整 */
+  background-image: url("../images/webonlitoha.png");  /* パスは調整 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -398,7 +398,7 @@
 
 /* セクションに背景画像を設定3 */
 .with-sa-kurusanka {
-  background-image: url("images/sa-kurusannka.png");  /* パスは調整 */
+  background-image: url("../images/sa-kurusannka.png");  /* パスは調整 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -418,7 +418,7 @@
 
 /* セクションに背景画像を設定 */
 .with-topbk {
-  background-image: url("images/topbk.png");  /* パスは調整 */
+  background-image: url("../images/topbk.png");  /* パスは調整 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
