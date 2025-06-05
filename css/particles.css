@@ -1,0 +1,89 @@
+/* Particle effect styles */
+#floating-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  --rotate-base: 0deg;
+  transform: translate(0, 0) rotate(var(--rotate-base));
+  animation: fadeInParticle 1.2s ease-out forwards, floatParticle linear infinite;
+  will-change: transform;
+  z-index: -1;
+}
+
+.particle.heart {
+  background-image: url("images/p-onp.png");
+  width: 70px;
+  height: 70px;
+}
+
+.particle.star {
+  background-image: url("images/p-bsk.png");
+  width: 85px;
+  height: 85px;
+}
+
+.particle.ball {
+  background-image: url("images/p-ball.png");
+  width: 70px;
+  height: 70px;
+}
+
+.particle.shoes {
+  background-image: url("images/p-shoes.png");
+  width: 80px;
+  height: 80px;
+}
+
+.particle.pto {
+  background-image: url("images/p-t.png");
+  width: 80px;
+  height: 80px;
+}
+
+.particle.p-ina-g {
+  background-image: url("images/p-ina-g.png");
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .particle {
+    width: 50px;
+    height: 50px;
+  }
+  .particle.heart,
+  .particle.star,
+  .particle.ball,
+  .particle.shoes {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translate(0, 0) rotate(var(--rotate-base));
+  }
+  100% {
+    transform: translate(60vw, -120vh) rotate(calc(var(--rotate-base) + 360deg));
+  }
+}
+
+@keyframes fadeInParticle {
+  from { opacity: 0; }
+  to { opacity: 0.9; }
+}
