@@ -1270,12 +1270,12 @@ p.indent{
 }
 
 .external-icon {
+  display: inline-block;   /* override base img rule */
   width: 11px;
   height: 11px;
   vertical-align: middle;
   flex-shrink: 0;
 }
-
 
 
 
