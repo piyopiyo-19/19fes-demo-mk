@@ -763,7 +763,7 @@ p.indent{
   position: relative;
   padding: .5em .5em .5em calc(15px + .5em);/*テキスト周りの余白*/
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 15px 50%);
-  background-color: #5e6eff;/*背景色*/
+  background-color: #6574fa;/*背景色*/
   color: #fff;/*文字色*/
   margin-left: -1em; /* 見出しだけ外側にずらす */
   font-size: 1.5em;
