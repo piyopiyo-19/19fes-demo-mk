@@ -189,6 +189,43 @@ main h1 {
 
 /* 概要　スケジュールのレイアウト */
 
+
+.info-section h2 {
+  font-weight: 900;
+  text-align: center;
+  border-bottom: 2px solid #2196f3;
+  padding-bottom: 0.5em;
+  margin-bottom: 0; /* ← 下をつめる */
+}
+
+.info-line {
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+  border-top: 1px solid #2196f3;
+  border-bottom: 1px solid #2196f3;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+
+.info-line .label {
+  font-weight: bold;
+  color: #1976d2;
+  margin-right: 1em;
+  white-space: nowrap;
+  width: 12em;
+}
+
+/* h2の見出しはボーダーなし（線をinfo-lineに統一） */
+.info-section h2 {
+  border-bottom: none;
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+}
+
+
+
 /* 通常のinfo-line */
 .info-line {
   border-top: 1px solid #2196f3;
