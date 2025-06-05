@@ -71,7 +71,22 @@
       body.classList.remove('open');
       mask.style.display = 'none';
     });
+    }
+
+  function loadHeader() {
+    const ph = document.getElementById('header-placeholder');
+    if (ph) {
+      fetch('includes/header.html')
+        .then(res => res.text())
+        .then(html => {
+          ph.innerHTML = html;
+          initHamburgerMenu();
+        });
+    }
   }
+
+
+
 
   function loadFooter() {
     const ph = document.getElementById('footer-placeholder');
@@ -87,6 +102,10 @@
   global.setupAosAnimations = setupAosAnimations;
   global.setupPageTopButton = setupPageTopButton;
   global.initHamburgerMenu = initHamburgerMenu;
+  global.loadHeader = loadHeader;
   global.loadFooter = loadFooter;
 })(window);
-document.addEventListener('DOMContentLoaded', loadFooter);
+document.addEventListener('DOMContentLoaded', () => {
+  loadHeader();
+  loadFooter();
+});
