@@ -205,11 +205,12 @@ button.submit-btn {
 
 #forms-attention p {
   font-size: 1.5em;
+  font-weight: 650;         /* 少し軽めの太さで柔らかく */
 }
 
     @media (max-width: 768px) {
 #forms-attention p {
-  font-size: 1.05em;
+  font-size: 1.15em;
 }
    }
 
@@ -245,7 +246,7 @@ button.submit-btn {
 /* 太字ハイライトコメント */
 #forms-attention .bold-text-forms {
   color: #7073ff;           /* 明るめの青 */
-  font-size: 1.3em;       
+  font-size: 1.5em;       
   font-weight: 800;         /* 太め*/
 }
 
@@ -269,7 +270,7 @@ button.submit-btn {
 }
 
 #forms-attention .bold-text-forms {
-  font-size: 1.2em;       
+  font-size: 1.35em;       
 }
     }
 
@@ -284,5 +285,5 @@ button.submit-btn {
     'ヒラギノ角ゴ ProN',
     'Meiryo',
     sans-serif;
-    font-weight: 600;         /* 少し軽めの太さで柔らかく */
+
 }
