@@ -43,7 +43,7 @@ textarea::placeholder {
 
     @media (max-width: 768px) {
 .forms-white-box {
-  padding: 0.5em 1.8em;
+  padding: 0.5em 1.5em;
 }
    }
 
@@ -210,7 +210,7 @@ button.submit-btn {
 
     @media (max-width: 768px) {
 #forms-attention p {
-  font-size: 1.15em;
+  font-size: 1.1em;
 }
    }
 
@@ -270,7 +270,7 @@ button.submit-btn {
 }
 
 #forms-attention .bold-text-forms {
-  font-size: 1.35em;       
+  font-size: 1.2em;       
 }
     }
 
