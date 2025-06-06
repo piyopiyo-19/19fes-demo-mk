@@ -212,13 +212,17 @@ textarea::placeholder {
 
 /* 白いボックス*/
 .forms-white-box {
-  max-width: 780px;
-  margin: 0 auto;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   box-sizing: border-box;
   position: relative;
   background-color: #ffffff;
-  border-radius: 15px;
- /*  border: 4px dashed rgba(81, 109, 235, 0.651);*/
+  border-top: 4px dashed rgba(81, 109, 235, 0.651);
+  border-bottom: 4px dashed rgba(81, 109, 235, 0.651);
+  border-left: none;
+  border-right: none;
   padding: 2.5em 1em 1.8em 1em;
   margin-bottom: 1em;
 }
@@ -237,9 +241,10 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .forms-white-box {
-  padding: 1.7em 1em 1em 1em;
-  /* border: 3px dashed rgba(81, 109, 235, 0.651);*/
-}
+    padding: 1.7em 1em 1em 1em;
+    border-top: 3px dashed rgba(81, 109, 235, 0.651);
+    border-bottom: 3px dashed rgba(81, 109, 235, 0.651);
+  }
   .forms-white-box .forms-intro-img {
     top: -4em;
     width: 100%;
@@ -468,11 +473,11 @@ button.submit-btn {
 
 
   
-/* Kosugi Maru font for attention section */
+/* M PLUS 1 font for attention section */
 #songforms #forms-attention,
 #songforms #forms-attention,
 #scr-banner * {
-  font-family: 'Kosugi Maru',
+  font-family: 'M PLUS 1',
     'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN',
     'ヒラギノ角ゴ ProN',
@@ -500,7 +505,7 @@ button.submit-btn {
   width: 100%;
   padding: 0.2em 0;
   overflow: hidden;
-  font-family: 'Kosugi Maru', 'Zen Maru Gothic',
+  font-family: 'M PLUS 1', 'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
 }
 
