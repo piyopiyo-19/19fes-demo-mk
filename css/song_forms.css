@@ -172,3 +172,32 @@ button.submit-btn {
     animation: none !important;
   }
 }
+
+/* ------------------------------
+ * Banner full-width adjustments
+ * ------------------------------*/
+#songforms main {
+  padding: 0;
+}
+
+#songforms #page-title {
+  margin: -20px 13em 30px 13em;
+  padding: 0;
+}
+
+#songforms #page-title .container-center {
+  max-width: 100%;
+  padding: 0;
+}
+
+#songforms #page-title img {
+  width: 100%;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+#songforms #page-title {
+  margin: -12px 10px 30px 10px;
+}
+    }
