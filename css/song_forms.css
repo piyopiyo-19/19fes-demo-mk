@@ -316,7 +316,7 @@ button.submit-btn {
  * ----------------------------------------*/
 #scr-banner .scrolling-banner {
   background-color: rgb(81, 109, 235);
-  margin-top: 8em;        /* 上に少し余白 */
+  margin-top: 7em;        /* 上に少し余白 */
   color: #fff;
   width: 100%;
   padding: 0.2em 0;
@@ -360,34 +360,36 @@ button.submit-btn {
 
 .footer-dangos img {
   position: absolute;
-  top: 100px;  /* peek out from behind the footer */
-  width: 195px;
+  top: 40px;  /* peek out from behind the footer */
+  width: 250px;
   max-width: 30vw;
   transform: translateY(0);
-  animation: poyonBounce 4s ease-in-out infinite;
+  animation: poyonBounce 1.5s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
   .footer-dangos img {
-    top: 65px;
-    width: 120px;
+    top: 35px;
+    width: 150px;
+    
   }
 }
 
 .footer-dangos .left-dango {
-  left: 300px;
+  left: 400px;
+  
 }
 
 .footer-dangos .right-dango {
-  right: 300px;
+  right: 400px;
 }
 
 @media (max-width: 768px) {
 .footer-dangos .left-dango {
-  left: 60px;
+  left: 80px;
 }
 .footer-dangos .right-dango {
-  right: 60px;
+  right: 80px;
 }
 }
 
