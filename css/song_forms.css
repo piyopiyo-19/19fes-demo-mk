@@ -33,25 +33,16 @@ textarea::placeholder {
 
 /* 白いボックス*/
 .forms-white-box {
-  padding: 1.5rem 3% 1.5rem 3%;
   max-width: 700px;
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
-  background-color: #ffffffd0;
-  border-radius: 16px; 
+  background-color: #ffffffad;
+  border-radius: 10px;
 }
 
 
 
-@media (max-width: 768px) {
-  .forms-white-box {
-    padding: 0.1em 1.5em 1em 1.5em;
-    border-radius: 16px;
-  }
-
-
-}
 
 
 
@@ -234,9 +225,9 @@ button.submit-btn {
 
 /* 太字ハイライトコメント */
 .bold-text-forms {
-  color: #5062ff;           /* 明るめの青 */
-  font-size: 1.2em;       
-  font-weight: 700;         /* 少し軽めの太さで柔らかく */
+  color: #7073ff;           /* 明るめの青 */
+  font-size: 1.3em;       
+  font-weight: 750;         /* 少し軽めの太さで柔らかく */
 }
 
 
@@ -255,12 +246,22 @@ button.submit-btn {
 }
 
 .bold-text-forms {
-  font-size: 1.2em;         /* 少し小さめの文字 */
+  font-size: 1.35em;         /* 少し小さめの文字 */
 }
     }
 
+.bold-text-forms {
+  font-size: 1.2em;         /* 少し小さめの文字 */
+}
+  
+
 /* Kosugi Maru font for attention section */
-#songforms #forms-attention #form-thanks {
-  font-family: 'Kosugi Maru', 'Zen Maru Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
-  font-weight: 660;         /* 少し軽めの太さで柔らかく */
+#songforms #forms-attention,
+#songforms #forms-attention * {
+  font-family: 'Kosugi Maru',
+    'Zen Maru Gothic',
+    'Hiragino Kaku Gothic ProN',
+    'ヒラギノ角ゴ ProN',
+    'Meiryo',
+    sans-serif;
 }
