@@ -82,6 +82,7 @@ textarea::placeholder {
 
 .form-group input,
 .form-group textarea {
+  color: #555c96;
   padding: 0.6em;
   font-size: 1em;
   border: 1px solid #5386e4;
