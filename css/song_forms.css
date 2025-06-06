@@ -233,4 +233,7 @@ button.submit-btn {
 }
     }
 
-
+/* Kosugi Maru font for attention section */
+#songforms #forms-attention {
+  font-family: 'Kosugi Maru', 'Zen Maru Gothic', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
+}
