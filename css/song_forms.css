@@ -239,10 +239,10 @@ button.submit-btn {
 
 /* 直下の補足コメント */
 #forms-attention .note-text-forms {
-  color: #75acff;           /* 明るめの青 */
+  color: #7d7fff;          /* 明るめの青 */
   font-size: 0.7em;         /* 少し小さめの文字 */
   margin-top: -0.25em;        /* 上に少し余白 */
-  font-weight: 550;         /* 少し軽めの太さで柔らかく */
+  font-weight: 500;         /* 少し軽めの太さで柔らかく */
   line-height: 1.5;         /* 読みやすい行間 */
 }
 
@@ -250,8 +250,8 @@ button.submit-btn {
 /* 太字ハイライトコメント */
 #forms-attention .bold-text-forms {
   color: #7073ff;           /* 明るめの青 */
-  font-size: 1.6em;       
-  font-weight: 800;         /* 太め*/
+  font-size: 1.5em;       
+  font-weight: 900;         /* 太め*/
 }
 
 
@@ -268,12 +268,12 @@ button.submit-btn {
 #forms-attention .note-text-forms {
   font-size: 0.9em;         /* 少し小さめの文字 */
   margin-top: -0.8em;        /* 上に少し余白 */
-  font-weight: 600;         /* 少し軽めの太さで柔らかく */
+  font-weight: 500;         /* 少し軽めの太さで柔らかく */
   line-height: 1.5;         /* 読みやすい行間 */
 }
 
 #forms-attention .bold-text-forms {
-  font-size: 1.3em;       
+  font-size: 1.25em;       
 }
     }
 
