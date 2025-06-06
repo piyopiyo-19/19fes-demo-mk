@@ -41,6 +41,12 @@ textarea::placeholder {
   border-radius: 10px;
 }
 
+    @media (max-width: 768px) {
+.forms-white-box {
+  padding: 0.5em 3em;
+}
+   }
+
 
 
 
@@ -197,6 +203,10 @@ button.submit-btn {
   padding: 0;
 }
 
+#forms-attention p {
+  font-size: 1em;
+}
+
 #songforms #page-title {
   margin: -20px 13em 30px 13em;
   padding: 0;
@@ -213,8 +223,11 @@ button.submit-btn {
 }
 
 
+
+
+
 /* 直下の補足コメント */
-.note-text-forms {
+#forms-attention .note-text-forms {
   color: #8491ff;           /* 明るめの青 */
   font-size: 0.7em;         /* 少し小さめの文字 */
   margin-top: -0.25em;        /* 上に少し余白 */
@@ -224,11 +237,15 @@ button.submit-btn {
 
 
 /* 太字ハイライトコメント */
-.bold-text-forms {
+#forms-attention .bold-text-forms {
   color: #7073ff;           /* 明るめの青 */
   font-size: 1.3em;       
-  font-weight: 750;         /* 少し軽めの太さで柔らかく */
+  font-weight: 800;         /* 太め*/
 }
+
+
+
+
 
 
 
@@ -237,7 +254,7 @@ button.submit-btn {
   margin: -12px 10px 30px 10px;
 }
 
-.note-text-forms {
+#forms-attention .note-text-forms {
   color: #8491ff;           /* 明るめの青 */
   font-size: 0.8em;         /* 少し小さめの文字 */
   margin-top: -0.8em;        /* 上に少し余白 */
@@ -245,16 +262,13 @@ button.submit-btn {
   line-height: 1.5;         /* 読みやすい行間 */
 }
 
-.bold-text-forms {
-  font-size: 1.35em;         /* 少し小さめの文字 */
+#forms-attention .bold-text-forms {
+  font-size: 1.2em;       
 }
     }
 
-.bold-text-forms {
-  font-size: 1.2em;         /* 少し小さめの文字 */
-}
-  
 
+  
 /* Kosugi Maru font for attention section */
 #songforms #forms-attention,
 #songforms #forms-attention * {
