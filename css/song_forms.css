@@ -196,8 +196,41 @@ button.submit-btn {
 }
 
 
+/* 直下の補足コメント */
+.note-text-forms {
+  color: #8491ff;           /* 明るめの青 */
+  font-size: 0.7em;         /* 少し小さめの文字 */
+  margin-top: -0.25em;        /* 上に少し余白 */
+  font-weight: 550;         /* 少し軽めの太さで柔らかく */
+  line-height: 1.5;         /* 読みやすい行間 */
+}
+
+
+/* 太字ハイライトコメント */
+.bold-text-forms {
+  color: #8491ff;           /* 明るめの青 */
+  font-size: 1.2em;       
+  font-weight: 700;         /* 少し軽めの太さで柔らかく */
+}
+
+
+
 @media (max-width: 768px) {
 #songforms #page-title {
   margin: -12px 10px 30px 10px;
 }
+
+.note-text-forms {
+  color: #8491ff;           /* 明るめの青 */
+  font-size: 0.8em;         /* 少し小さめの文字 */
+  margin-top: -0.8em;        /* 上に少し余白 */
+  font-weight: 600;         /* 少し軽めの太さで柔らかく */
+  line-height: 1.5;         /* 読みやすい行間 */
+}
+
+.bold-text-forms {
+  font-size: 1.2em;         /* 少し小さめの文字 */
+}
     }
+
+
