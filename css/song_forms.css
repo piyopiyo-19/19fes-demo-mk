@@ -69,27 +69,39 @@ textarea::placeholder {
 
 
    /* 入力フォーム 並び */
+.form-group {
+  margin-bottom: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+
 .form-group input,
 .form-group textarea {
   padding: 0.6em;
   font-size: 1em;
-  border: 1px solid #aaa;
+  border: 1px solid #5386e4;
   border-radius: 6px;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
   transition: border-color 0.3s ease, background-size 0.3s ease;
-  background-image: linear-gradient(#3374ee, #3374ee);
-  background-size: 0 2px;
-  background-position: 0 100%;
+  background-image: linear-gradient(#6bec80, #6bec80),
+    linear-gradient(#5386e4, #5386e4);
+  background-size: 0 1px, 100% 1px;
+  background-position: 0 100%, 0 100%;
   background-repeat: no-repeat;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #3374ee;
+  border-color: #6bec80;
   outline: none;
-  background-size: 100% 2px;
+  background-size: 100% 2px, 100% 2px;
 }
 
 
