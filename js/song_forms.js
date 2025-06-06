@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburgerMenu();
   setupAosAnimations('[data-aos-f]');
   setupPageTopButton(300);
+  attachFooterDangos();
 });
 
 var submitted = false; // used by form iframe callback
@@ -45,4 +46,24 @@ if (document.readyState !== 'loading') {
   createParticles();
 } else {
   document.addEventListener('DOMContentLoaded', createParticles);
+}
+
+function attachFooterDangos() {
+  const dangos = document.querySelector('.footer-dangos');
+  if (!dangos) return;
+
+  const insert = () => {
+    const mobile = window.matchMedia('(max-width: 768px)').matches;
+    const selector = mobile
+      ? '#footer-placeholder .footer-mobile'
+      : '#footer-placeholder .site-footer';
+    const footer = document.querySelector(selector);
+    if (footer) {
+      footer.style.position = footer.style.position || 'relative';
+      footer.appendChild(dangos);
+    } else {
+      setTimeout(insert, 100);
+    }
+  };
+  insert();
 }

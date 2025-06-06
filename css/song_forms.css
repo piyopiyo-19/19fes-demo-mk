@@ -326,21 +326,27 @@ button.submit-btn {
  * 宗拓ぽよん　アニメーション
  * ----------------------------------------*/
 .footer-dangos {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  top: 0;
   left: 0;
   right: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 .footer-dangos img {
   position: absolute;
-  bottom: -30px;  /* rest partially hidden behind footer */
+  top: -30px;  /* peek out from behind the footer */
   width: 180px;
   max-width: 30vw;
   transform: translateY(0);
   animation: poyonBounce 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .footer-dangos img {
+    top: -50px;
+  }
 }
 
 .footer-dangos .left-dango {
@@ -355,13 +361,16 @@ button.submit-btn {
   0%, 100% {
     transform: translateY(0) scale(1);
   }
-  40% {
-    transform: translateY(-10px) scale(1.1);
+  30% {
+    transform: translateY(-15px) scale(1.1);
   }
-  60% {
-    transform: translateY(5px) scale(0.95);
+  50% {
+    transform: translateY(6px) scale(0.95);
+  }
+  65% {
+    transform: translateY(-8px) scale(1.05);
   }
   80% {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(4px) scale(0.98);
   }
 }
