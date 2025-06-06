@@ -264,4 +264,5 @@ button.submit-btn {
     'ヒラギノ角ゴ ProN',
     'Meiryo',
     sans-serif;
+    font-weight: 600;         /* 少し軽めの太さで柔らかく */
 }
