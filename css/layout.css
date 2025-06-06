@@ -69,8 +69,8 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 1em;
-    max-width: 200px;
-    padding: 10px 30px;
+    max-width: 300px;
+    padding: 10px 45px;
     color: #ffffff;
     transition: 0.3s ease-in-out;
     font-weight: bold;
@@ -84,6 +84,17 @@
     color: #FFF;
 }
 
+@media (max-width: 768px) {
+.return-btn a {
+    border-radius: 50px;
+    margin-top: 1em;
+    max-width: 200px;
+    padding: 10px 35px;
+    padding-right: 2em; /* 右にスペースを確保 */
+    margin: 0.8em 2em;
+    font-size: 1.1em;
+}
+}
 
 
 
