@@ -1518,7 +1518,9 @@ body {
   color: #fff;
   font-size: 14px;
   padding: 40px 20px 20px;
-  margin-top: 16em
+  margin-top: 16em;
+  position: relative;
+  z-index: 10;
 }
 
 .footer-container {
@@ -1586,6 +1588,8 @@ body {
 
 .footer-mobile {
   display: none;
+  position: relative;
+  z-index: 10;
 }
 /* ---------------フッター（ここまで） ---------------------*/
 
@@ -1603,7 +1607,9 @@ body {
   text-align: center;
   font-size: 13px;
   padding: 30px 15px;
-  margin-top: 11em
+  margin-top: 11em;
+  position: relative;
+  z-index: 10;
 }
 
 .footer-logo {
@@ -1643,6 +1649,8 @@ body {
 
   .footer-mobile {
     display: block;
+    position: relative;
+    z-index: 10;
   }
    }
 

@@ -18,10 +18,10 @@
   }
    }
 
-
+/* 入力テキストボックス*/
 textarea {
-  min-height: 180px;  /* 高さを明示的に */
-  resize: vertical;   /* ユーザーが縦にリサイズできる（オプション） */
+  min-height: 180px;  /* テキストボックス高さ */
+  resize: vertical;   /* ユーザーが縦にリサイズできる*/
 }
 
 textarea::placeholder {
@@ -49,14 +49,6 @@ textarea::placeholder {
 
 
 
-
-
-
-
-
-
-
-
 /* 入力フォーム 青枠 */
 .formsbox {
   background-color: #ffffff;
@@ -73,7 +65,6 @@ textarea::placeholder {
     /* ▼ アニメっぽい右下シャドウ追加 */
   box-shadow: 1rem 1rem 0px rgb(81 109 235);  /* 右+下にくっきり */
 }
-
 
 
 @media (max-width: 768px) {
@@ -100,13 +91,6 @@ textarea::placeholder {
   line-height: 1.4;
 }
 }
-
-
-
-
-
-
-
 
 
    /* 入力フォーム 並び */
@@ -196,31 +180,15 @@ button.submit-btn {
   }
 }
 
+
+
 /* ------------------------------
- * Banner full-width adjustments
+ * バナー表示　制御
  * ------------------------------*/
+
 #songforms main {
   padding: 0;
 }
-
-#forms-attention p {
-  font-size: 1.5em;
-  font-weight: 650;         /* 少し軽めの太さで柔らかく */
-  line-height: 1.8;         /* 読みやすい行間 */
-  margin-bottom: 1em;
-}
-
-    @media (max-width: 768px) {
-#forms-attention p {
-  font-size: 1.2em;
-  line-height: 1.25;         /* 読みやすい行間 */
-  margin-bottom: 1.2em;
-}
-   }
-
-
-
-   
 
 #songforms #page-title {
   margin: -20px 13em 30px 13em;
@@ -238,17 +206,31 @@ button.submit-btn {
 }
 
 
-
-
-
-/* 直下の補足コメント */
-#forms-attention .note-text-forms {
-  color: #7d7fff;          /* 明るめの青 */
-  font-size: 0.7em;         /* 少し小さめの文字 */
-  margin-top: -0.25em;        /* 上に少し余白 */
-  font-weight: 500;         /* 少し軽めの太さで柔らかく */
-  line-height: 1.5;         /* 読みやすい行間 */
+@media (max-width: 768px) {
+#songforms #page-title {
+  margin: -12px 10px 30px 10px;
 }
+}
+
+/* ------------------------------
+ * About　テキスト制御
+ * ------------------------------*/
+
+
+#forms-attention p {
+  font-size: 1.5em;
+  font-weight: 650;         /* 少し軽めの太さで柔らかく */
+  line-height: 1.8;         /* 読みやすい行間 */
+  margin-bottom: 1em;
+}
+
+    @media (max-width: 768px) {
+#forms-attention p {
+  font-size: 1.2em;
+  line-height: 1.25;         /* 読みやすい行間 */
+  margin-bottom: 1.2em;
+}
+   }
 
 
 /* 太字ハイライトコメント */
@@ -260,15 +242,18 @@ button.submit-btn {
 
 
 
-
+/* 直下の補足コメント */
+#forms-attention .note-text-forms {
+  color: #7d7fff;       
+  font-size: 0.7em;       
+  margin-top: -0.25em;       
+  font-weight: 500;        
+  line-height: 1.5;      
+}
 
 
 
 @media (max-width: 768px) {
-#songforms #page-title {
-  margin: -12px 10px 30px 10px;
-}
-
 #forms-attention .note-text-forms {
   font-size: 0.9em;         /* 少し小さめの文字 */
   margin-top: -0.8em;        /* 上に少し余白 */
@@ -277,7 +262,8 @@ button.submit-btn {
 }
 
 #forms-attention .bold-text-forms {
-  font-size: 1.25em;       
+  font-size: 1.2em;
+  font-weight: 900;         /* 太め*/       
 }
     }
 
@@ -296,8 +282,17 @@ button.submit-btn {
 
 }
 
+/* Remove side padding so banner spans full width */
+#scr-banner.section {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+}
+
 /* ----------------------------------------
- * Scrolling banner under submit button
+ * スクロールバナー
  * ----------------------------------------*/
 #scr-banner .scrolling-banner {
   background-color: rgb(81, 109, 235);
@@ -326,3 +321,47 @@ button.submit-btn {
 }
 
 
+
+/* ----------------------------------------
+ * 宗拓ぽよん　アニメーション
+ * ----------------------------------------*/
+.footer-dangos {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-dangos img {
+  position: absolute;
+  bottom: -30px;  /* rest partially hidden behind footer */
+  width: 180px;
+  max-width: 30vw;
+  transform: translateY(0);
+  animation: poyonBounce 4s ease-in-out infinite;
+}
+
+.footer-dangos .left-dango {
+  left: -20px;
+}
+
+.footer-dangos .right-dango {
+  right: -20px;
+}
+
+@keyframes poyonBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-10px) scale(1.1);
+  }
+  60% {
+    transform: translateY(5px) scale(0.95);
+  }
+  80% {
+    transform: translateY(-5px) scale(1.05);
+  }
+}
