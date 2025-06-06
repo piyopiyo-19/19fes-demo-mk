@@ -43,7 +43,7 @@ textarea::placeholder {
 
     @media (max-width: 768px) {
 .forms-white-box {
-  padding: 0.5em 3em;
+  padding: 0.5em 1.8em;
 }
    }
 
@@ -204,8 +204,14 @@ button.submit-btn {
 }
 
 #forms-attention p {
-  font-size: 1em;
+  font-size: 1.5em;
 }
+
+    @media (max-width: 768px) {
+#forms-attention p {
+  font-size: 1.05em;
+}
+   }
 
 #songforms #page-title {
   margin: -20px 13em 30px 13em;
