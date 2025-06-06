@@ -43,7 +43,7 @@ textarea::placeholder {
 
     @media (max-width: 768px) {
 .forms-white-box {
-  padding: 0.5em 1.5em;
+  padding: 0.5em 1.2em;
 }
    }
 
@@ -207,12 +207,14 @@ button.submit-btn {
   font-size: 1.5em;
   font-weight: 650;         /* 少し軽めの太さで柔らかく */
   line-height: 1.8;         /* 読みやすい行間 */
+  margin-bottom: 1em;
 }
 
     @media (max-width: 768px) {
 #forms-attention p {
   font-size: 1.2em;
   line-height: 1.25;         /* 読みやすい行間 */
+  margin-bottom: 1.2em;
 }
    }
 
@@ -291,4 +293,41 @@ button.submit-btn {
     'Meiryo',
     sans-serif;
 
+}
+
+/* ----------------------------------------
+ * Scrolling banner under submit button
+ * ----------------------------------------*/
+#songforms .scrolling-banner {
+  background-color: rgb(81, 109, 235);
+  margin-top: 8em;        /* 上に少し余白 */
+  color: #fff;
+  width: 100%;
+  padding: 0.2em 0;
+  overflow: hidden;
+  font-family: 'Kosugi Maru', 'Zen Maru Gothic',
+    'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
+}
+
+#songforms .scrolling-banner .scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: banner-scroll 15s linear infinite;
+}
+
+#songforms .scrolling-banner .scrolling-text span {
+  padding: 0.8em 1rem;
+}
+
+@keyframes banner-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+/* デバッグ */
+.db-tx {
+  color: #14bb54;           /* 明るめの青 */
+  font-size: 0.8em;      
+  margin-top: 5em;        /* 上に少し余白 */
 }
