@@ -52,15 +52,13 @@ function attachFooterDangos() {
   const dangos = document.querySelector('.footer-dangos');
   if (!dangos) return;
 
+  const placeholder = document.getElementById('footer-placeholder');
+  if (!placeholder) return;
+
   const insert = () => {
-    const mobile = window.matchMedia('(max-width: 768px)').matches;
-    const selector = mobile
-      ? '#footer-placeholder .footer-mobile'
-      : '#footer-placeholder .site-footer';
-    const footer = document.querySelector(selector);
-    if (footer) {
-      footer.style.position = footer.style.position || 'relative';
-      footer.appendChild(dangos);
+    if (placeholder.firstElementChild) {
+      placeholder.style.position = 'relative';
+      placeholder.appendChild(dangos);
     } else {
       setTimeout(insert, 100);
     }

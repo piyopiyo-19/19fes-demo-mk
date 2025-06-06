@@ -218,9 +218,9 @@ button.submit-btn {
 
 
 #forms-attention p {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 650;         /* 少し軽めの太さで柔らかく */
-  line-height: 1.8;         /* 読みやすい行間 */
+  line-height: 1.4;         /* 読みやすい行間 */
   margin-bottom: 1em;
 }
 
@@ -236,7 +236,7 @@ button.submit-btn {
 /* 太字ハイライトコメント */
 #forms-attention .bold-text-forms {
   color: #7073ff;           /* 明るめの青 */
-  font-size: 1.5em;       
+  font-size: 1.25em;       
   font-weight: 900;         /* 太め*/
 }
 
@@ -325,6 +325,10 @@ button.submit-btn {
 /* ----------------------------------------
  * 宗拓ぽよん　アニメーション
  * ----------------------------------------*/
+#footer-placeholder {
+  position: relative;
+}
+
 .footer-dangos {
   position: absolute;
   top: 0;
@@ -336,8 +340,8 @@ button.submit-btn {
 
 .footer-dangos img {
   position: absolute;
-  top: -30px;  /* peek out from behind the footer */
-  width: 180px;
+  top: 100px;  /* peek out from behind the footer */
+  width: 195px;
   max-width: 30vw;
   transform: translateY(0);
   animation: poyonBounce 4s ease-in-out infinite;
@@ -345,17 +349,28 @@ button.submit-btn {
 
 @media (max-width: 768px) {
   .footer-dangos img {
-    top: -50px;
+    top: 65px;
+    width: 120px;
   }
 }
 
 .footer-dangos .left-dango {
-  left: -20px;
+  left: 300px;
 }
 
 .footer-dangos .right-dango {
-  right: -20px;
+  right: 300px;
 }
+
+@media (max-width: 768px) {
+.footer-dangos .left-dango {
+  left: 60px;
+}
+.footer-dangos .right-dango {
+  right: 60px;
+}
+}
+
 
 @keyframes poyonBounce {
   0%, 100% {
