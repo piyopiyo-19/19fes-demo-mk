@@ -61,6 +61,10 @@
   margin-top: 2em;
 }
 
+#thanks .return-btn {
+  margin-bottom: 2em;
+}
+
 .return-btn a {
     background: rgb(81 109 235);
     border-radius: 50px;

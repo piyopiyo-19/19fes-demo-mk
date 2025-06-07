@@ -30,9 +30,24 @@
   flex-shrink: 0;
 }
 
+#thanks .bg_pattern {
+  top: 0;
+  height: 100vh;
+}
+
+/* Thanksページ用の白い余白 */
+#thanks .bottom-white-gap {
+  height: 180px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
 #songforms .bottom-white-gap {
   height: 80px;
+}
+#thanks .bottom-white-gap {
+  height: 95px;
 }
    }
 
@@ -265,7 +280,7 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .forms-white-box {
-    padding: 1.7em 1em 1em 1em;
+    padding: 1.7em 0.5em 1em 0.5em;
 
   }
   .forms-white-box .forms-intro-img {
@@ -279,7 +294,7 @@ textarea::placeholder {
 /* 入力フォーム 青枠 */
 .formsbox {
   background-color: #ffffff;
-  border: 3px solid rgb(81 109 235); 
+  border: 2px solid rgb(81 109 235); 
   border-radius: 20px;
   padding: 2.5em 3em;
   max-width: 700px;
@@ -288,9 +303,6 @@ textarea::placeholder {
   box-sizing: border-box;
   position: relative;
   font-size: 1em;
-
-    /* ▼ アニメっぽい右下シャドウ追加 */
-  box-shadow: 1rem 1rem 0px rgb(81 109 235);  /* 右+下にくっきり */
 }
 
 
@@ -453,7 +465,7 @@ button.submit-btn {
 
     @media (max-width: 768px) {
 #forms-attention p {
-  font-size: 1.05em;
+  font-size: 1em;
   line-height: 1.25;         /* 読みやすい行間 */
   margin-bottom: 1.2em;
 }
@@ -534,7 +546,8 @@ button.submit-btn {
 @media (max-width: 768px) {
 #scr-banner .scrolling-banner {
   margin: 4em 0 10em 0;  
-  padding: 0.3em 0;
+  padding: 0.4em 0;
+  font-size: 1em;         /* 少し軽めの太さで柔らかく */
 }
 }
 
@@ -582,6 +595,11 @@ button.submit-btn {
   --dango-rotation: 0deg;
   transform: rotate(var(--dango-rotation)) translateY(0);
   animation: poyonBounce 1.2s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.footer-dangos.animate img {
+  animation-play-state: running;
 }
 
 @media (max-width: 768px) {
