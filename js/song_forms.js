@@ -55,6 +55,24 @@ function attachFooterDangos() {
   const placeholder = document.getElementById('footer-placeholder');
   if (!placeholder) return;
 
+  const images = dangos.querySelectorAll('img');
+  let loaded = 0;
+
+  const startAnim = () => {
+    loaded++;
+    if (loaded === images.length) {
+      dangos.classList.add('animate');
+    }
+  };
+
+  images.forEach(img => {
+    if (img.complete) {
+      startAnim();
+    } else {
+      img.addEventListener('load', startAnim);
+    }
+  });
+
   const insert = () => {
     if (placeholder.firstElementChild) {
       placeholder.style.position = 'relative';
