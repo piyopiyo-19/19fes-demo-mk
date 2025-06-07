@@ -498,19 +498,30 @@ button.submit-btn {
  * ----------------------------------------*/
 #scr-banner .scrolling-banner {
   background-color: rgb(255, 255, 255);
-  margin: 4em 0 10em 0;  
+  margin: 4em 0 12em 0;  
   color: rgb(81, 109, 235);
   width: 100%;
-  padding: 0.2em 0;
+  padding: 0.3em 0;
   overflow: hidden;
   font-family: 'DotGothic16', 'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
 }
 
+
+@media (max-width: 768px) {
+#scr-banner .scrolling-banner {
+  margin: 4em 0 10em 0;  
+  padding: 0.3em 0;
+}
+}
+
+
+
+
 #scr-banner .scrolling-banner .scrolling-text {
   display: inline-block;
   white-space: nowrap;
-  animation: banner-scroll 15s linear infinite;
+  animation: banner-scroll 20s linear infinite;
 }
 
 #scr-banner .scrolling-banner .scrolling-text span {
@@ -545,8 +556,9 @@ button.submit-btn {
   top: 0;
   width: 250px;
   max-width: 30vw;
-  transform: translateY(0);
-  animation: poyonBounce 1s ease-in-out infinite;
+  --dango-rotation: 0deg;
+  transform: rotate(var(--dango-rotation)) translateY(0);
+  animation: poyonBounce 1.2s ease-in-out infinite;
 }
 
 @media (max-width: 768px) {
@@ -562,30 +574,39 @@ button.submit-btn {
 
 .footer-dangos .left-dango {
   left: 400px;
-  
+  top: -10px;
+  animation-delay: 0s;
+  --dango-rotation: 2deg;
 }
 
 .footer-dangos .right-dango {
   right: 400px;
+  animation-delay: 0.5s;
+  --dango-rotation: -2deg;
 }
 
 @media (max-width: 768px) {
 .footer-dangos .left-dango {
   left: 80px;
+  top: -5px;
+  animation-delay: 0s;
+  --dango-rotation: 2deg;
 }
 .footer-dangos .right-dango {
   right: 80px;
+  animation-delay: 0.5s;
+  --dango-rotation: -2deg;
 }
 }
 
 
 @keyframes poyonBounce {
-     0%   { transform: scale(.9,1.05)      translateY(0); }
-     15%  { transform: scale(1.1,.9)   translateY(10%); }
-     30%  { transform: scale(1,1)   translateY(0); }
-     45%  { transform: scale(1.05,.95) translateY(5%); }
-     60%  { transform: scale(1,1)      translateY(0); }
-     75%  { transform: scale(1.02,.98) translateY(2%); }
-     90%  { transform: scale(1,1)      translateY(0); }
-     100% { transform: scale(1,1)      translateY(0); }
- }
+     0%   { transform: rotate(var(--dango-rotation)) scale(.9,1.05)      translateY(0); }
+     15%  { transform: rotate(var(--dango-rotation)) scale(1.1,.9)   translateY(10%); }
+     30%  { transform: rotate(var(--dango-rotation)) scale(1,1)   translateY(0); }
+     45%  { transform: rotate(var(--dango-rotation)) scale(1.05,.95) translateY(5%); }
+     60%  { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
+     75%  { transform: rotate(var(--dango-rotation)) scale(1.02,.98) translateY(2%); }
+     90%  { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
+     100% { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
+      }
