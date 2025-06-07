@@ -66,7 +66,7 @@
 }
 
 .return-btn a {
-    background: rgb(81 109 235);
+    background: rgb(255, 255, 255);
     border-radius: 50px;
     position: relative;
     display: flex;
@@ -75,7 +75,7 @@
     margin-top: 1em;
     max-width: 300px;
     padding: 10px 45px;
-    color: #ffffff;
+    color: rgb(37, 75, 245);
     font-weight: bold;
     text-decoration: none;
     padding-right: 2em; /* 右にスペースを確保 */
@@ -90,7 +90,7 @@
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(to right, #4b3be0, #31a2ff);
+    background: linear-gradient(to right, #6fff9a, #6cb1ff);
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: -1;
@@ -99,7 +99,7 @@
     opacity: 1;
 }
 .return-btn a:hover {
-    color: #FFF;
+    color: rgb(255, 255, 255);
     transform: translateY(-2px);
 }
 
@@ -115,7 +115,8 @@
     transition: none;
 }
   .return-btn a:hover {
-      background: rgb(81 109 235);
+      background: rgb(255, 255, 255);
+      color: rgb(37, 75, 245);
       transform: none;
   }
   .return-btn a::before {
