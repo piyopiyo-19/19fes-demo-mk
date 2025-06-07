@@ -536,7 +536,7 @@ button.submit-btn {
   left: 0;
   right: 0;
   pointer-events: none;
-  z-index: -1;
+  z-index: 5; /* above background and particles but below the footer */
 }
 
 .footer-dangos img {
