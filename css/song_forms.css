@@ -57,7 +57,7 @@ html, body {
 body {
   letter-spacing: .025em;
   line-height: 1.8;
-  color: #5e5f92;
+  color: #434472;
   font-weight: 520; /* 共通のフォント */
 }
 body {
@@ -219,8 +219,7 @@ textarea::placeholder {
   box-sizing: border-box;
   position: relative;
   background-color: #ffffff;
-  border-top: 4px dashed rgba(81, 109, 235, 0.651);
-  border-bottom: 4px dashed rgba(81, 109, 235, 0.651);
+
   border-left: none;
   border-right: none;
   padding: 2.5em 1em 1.8em 1em;
@@ -242,8 +241,7 @@ textarea::placeholder {
 @media (max-width: 768px) {
   .forms-white-box {
     padding: 1.7em 1em 1em 1em;
-    border-top: 3px dashed rgba(81, 109, 235, 0.651);
-    border-bottom: 3px dashed rgba(81, 109, 235, 0.651);
+
   }
   .forms-white-box .forms-intro-img {
     top: -4em;
@@ -473,17 +471,16 @@ button.submit-btn {
 
 
   
-/* M PLUS 1 font for attention section */
+/* Noto Sans JP font for attention section */
 #songforms #forms-attention,
 #songforms #forms-attention,
 #scr-banner * {
-  font-family: 'M PLUS 1',
+  font-family: 'Noto Sans JP',
     'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN',
     'ヒラギノ角ゴ ProN',
     'Meiryo',
     sans-serif;
-
 }
 
 /* Remove side padding so banner spans full width */
@@ -499,13 +496,13 @@ button.submit-btn {
  * スクロールバナー
  * ----------------------------------------*/
 #scr-banner .scrolling-banner {
-  background-color: rgb(81, 109, 235);
+  background-color: rgb(81, 235, 114);
   margin-top: 7em;        /* 上に少し余白 */
   color: #fff;
   width: 100%;
   padding: 0.2em 0;
   overflow: hidden;
-  font-family: 'M PLUS 1', 'Zen Maru Gothic',
+  font-family: 'DotGothic16', 'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
 }
 
