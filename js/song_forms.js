@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburgerMenu();
   setupAosAnimations('[data-aos-f]');
   setupPageTopButton(300);
-  attachFooterDangos();
 });
 
 var submitted = false; // used by form iframe callback
@@ -46,22 +45,4 @@ if (document.readyState !== 'loading') {
   createParticles();
 } else {
   document.addEventListener('DOMContentLoaded', createParticles);
-}
-
-function attachFooterDangos() {
-  const dangos = document.querySelector('.footer-dangos');
-  if (!dangos) return;
-
-  const placeholder = document.getElementById('footer-placeholder');
-  if (!placeholder) return;
-
-  const insert = () => {
-    if (placeholder.firstElementChild) {
-      placeholder.style.position = 'relative';
-      placeholder.appendChild(dangos);
-    } else {
-      setTimeout(insert, 100);
-    }
-  };
-  insert();
 }
