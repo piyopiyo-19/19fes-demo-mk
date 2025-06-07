@@ -261,8 +261,8 @@ textarea::placeholder {
   background-color: #ffffff;
   border-left: none;
   border-right: none;
-  padding: 2.5em 0.6em 1.8em 0.8em;
-  margin-bottom: 2.5em;
+  padding: 2.5em 0.6em 1em 0.8em;
+  margin-bottom: 1.5em;
 }
 
 /* 上部に配置するイントロ画像 */
@@ -279,8 +279,8 @@ textarea::placeholder {
 
 @media (max-width: 768px) {
   .forms-white-box {
-    padding: 1.8em 0.5em 2.5em 0.5em;
-    margin-bottom: 5em;
+    padding: 1.8em 0.5em 1.5em 0.5em;
+    margin-bottom: 0.2em;
   }
   .forms-white-box .forms-intro-img {
     top: -4em;
@@ -685,24 +685,32 @@ button.submit-btn {
 
 /* スクロールダウンの位置 */
 .scrolldown {
-  padding-top: 70px;
+  padding-top: 95px;
   position: relative;
   text-align: center;
+  margin-bottom: 90px;
+}
+.scrolldown span {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 /* 矢印のアニメーション部分 */
 .scrolldown::before {
   animation: scroll 2s infinite;
-  border-bottom: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
   content: "";
-  height: 30px;
+  height: 40px;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   top: 0;
-  width: 30px;
+  width: 40px;
 }
+
 /* 矢印のアニメーション */
 @keyframes scroll {
   0% {
@@ -714,7 +722,7 @@ button.submit-btn {
   }
   80% {
     opacity: 0;
-    transform: rotate(-45deg) translate(-20px, 20px);
+    transform: rotate(-45deg) translate(-30px, 30px);
   }
   100% {
     opacity: 0;
