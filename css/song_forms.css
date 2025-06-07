@@ -11,7 +11,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #4869ff;
-  z-index: -1;
+  z-index: 0; /* base layer for the page background */
 }
 .Paper_v2 {
   background-image:
@@ -496,7 +496,7 @@ button.submit-btn {
  * スクロールバナー
  * ----------------------------------------*/
 #scr-banner .scrolling-banner {
-  background-color: rgb(81, 235, 114);
+  background-color: rgb(68, 189, 88);
   margin-top: 7em;        /* 上に少し余白 */
   color: #fff;
   width: 100%;
@@ -532,16 +532,16 @@ button.submit-btn {
 
 .footer-dangos {
   position: absolute;
-  top: 0;
+  top: -200px; /* offset so dangos peek above the footer */
   left: 0;
   right: 0;
   pointer-events: none;
-  z-index: 5; /* above background and particles but below the footer */
+  z-index: 5; /* in front of particles but still behind the footer */
 }
 
 .footer-dangos img {
   position: absolute;
-  top: 40px;  /* peek out from behind the footer */
+  top: 0;
   width: 250px;
   max-width: 30vw;
   transform: translateY(0);
@@ -549,10 +549,13 @@ button.submit-btn {
 }
 
 @media (max-width: 768px) {
+  .footer-dangos {
+    top: -110px;
+  }
   .footer-dangos img {
-    top: 35px;
+    top: 0;
     width: 150px;
-    
+
   }
 }
 
