@@ -681,3 +681,42 @@ button.submit-btn {
     transform: rotate(35deg);
     margin-left: 30px;
 }
+
+
+/* スクロールダウンの位置 */
+.scrolldown {
+  padding-top: 70px;
+  position: relative;
+  text-align: center;
+}
+/* 矢印のアニメーション部分 */
+.scrolldown::before {
+  animation: scroll 2s infinite;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  content: "";
+  height: 30px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+}
+/* 矢印のアニメーション */
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    transform: rotate(-45deg) translate(-20px, 20px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
