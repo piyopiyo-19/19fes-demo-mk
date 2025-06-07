@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initHamburgerMenu();
-  setupAosAnimations('[data-aos-f]');
   setupPageTopButton(300);
   attachFooterDangos();
 });
@@ -86,9 +85,33 @@ function attachFooterDangos() {
 
 window.addEventListener('load', () => {
   const loader = document.getElementById('page-loader');
-  if (loader) {
+  const header = document.getElementById('page-title');
+  const contents = document.querySelectorAll(
+    '#forms-attention, .scrolldown, #formdayo, #scr-banner, .footer-dangos'
+  );
+
+  const hideLoader = () => {
+    if (!loader) return;
+    loader.classList.add('hide');
     setTimeout(() => {
       loader.style.display = 'none';
-    }, 300);
-  }
+    }, 400);
+  };
+
+  const showHeader = () => {
+    if (header) header.classList.add('aos-animate');
+  };
+
+  const showContents = () => {
+    contents.forEach((el, i) => {
+      setTimeout(() => el.classList.add('aos-animate'), i * 200);
+    });
+  };
+
+  hideLoader();
+  setTimeout(() => {
+    showHeader();
+    setTimeout(showContents, 600);
+    setupAosAnimations('[data-aos-f]');
+  }, 400);
 });
