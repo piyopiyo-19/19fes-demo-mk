@@ -15,6 +15,28 @@
   background-color: #4869ff;
   z-index:-2; /* base layer for the page background */
 }
+
+/* song_formsページ用: 下部に白い余白を追加するため
+   背景全体を青にしつつ、ページ末尾に白いブロックを設置 */
+#songforms .bg_pattern {
+  top: 0;
+  height: 100vh;
+}
+
+/* フッター直前の白い余白エリア */
+#songforms .bottom-white-gap {
+  height: 120px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+#songforms .bottom-white-gap {
+  height: 80px;
+}
+   }
+
+
 .Paper_v2 {
   background-image:
     repeating-linear-gradient(to bottom,
@@ -225,7 +247,7 @@ textarea::placeholder {
 
   border-left: none;
   border-right: none;
-  padding: 2.5em 1em 1.8em 1em;
+  padding: 2.5em 0.6em 1.8em 0.6em;
   margin-bottom: 1em;
 }
 
@@ -499,10 +521,11 @@ button.submit-btn {
 #scr-banner .scrolling-banner {
   background-color: rgb(255, 255, 255);
   margin: 4em 0 12em 0;  
-  color: rgb(81, 109, 235);
+  color: rgb(39, 73, 228);
   width: 100%;
   padding: 0.3em 0;
   overflow: hidden;
+  font-weight: 700;         /* 少し軽めの太さで柔らかく */
   font-family: 'DotGothic16', 'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
 }
