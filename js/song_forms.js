@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburgerMenu();
   setupPageTopButton(300);
   attachFooterDangos();
+  attachFormsDangos();
 });
 
 var submitted = false; // used by form iframe callback
@@ -83,11 +84,34 @@ function attachFooterDangos() {
   insert();
 }
 
+function attachFormsDangos() {
+  const dangos = document.querySelector('.forms-dangos');
+  if (!dangos) return;
+
+  const images = dangos.querySelectorAll('img');
+  let loaded = 0;
+
+  const startAnim = () => {
+    loaded++;
+    if (loaded === images.length) {
+      dangos.classList.add('animate');
+    }
+  };
+
+  images.forEach(img => {
+    if (img.complete) {
+      startAnim();
+    } else {
+      img.addEventListener('load', startAnim);
+    }
+  });
+}
+
 window.addEventListener('load', () => {
   const loader = document.getElementById('page-loader');
   const header = document.getElementById('page-title');
   const contents = document.querySelectorAll(
-    '#forms-attention, .scrolldown, #formdayo, #scr-banner, .footer-dangos'
+    '#forms-attention, .scrolldown, #formdayo, #scr-banner, .forms-dangos, .footer-dangos'
   );
 
   const hideLoader = () => {
