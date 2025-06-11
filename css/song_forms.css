@@ -638,6 +638,71 @@ button.submit-btn {
 }
 
 
+/* ------------------------------
+ * フォームぽよん アニメーション
+ * ------------------------------*/
+.formsbox {
+  position: relative;
+  z-index: 2;
+}
+
+.forms-dangos {
+  position: absolute;
+  top: -180px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.forms-dangos img {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  max-width: 30vw;
+  --dango-rotation: 0deg;
+  transform: rotate(var(--dango-rotation)) translateY(0);
+  animation: poyonBounce 1.2s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.forms-dangos.animate img {
+  animation-play-state: running;
+}
+
+@media (max-width: 768px) {
+  .forms-dangos {
+    top: -100px;
+  }
+  .forms-dangos img {
+    width: 120px;
+  }
+}
+
+.forms-dangos .left-dango {
+  left: -60px;
+  top: -10px;
+  animation-delay: 0s;
+  --dango-rotation: 2deg;
+}
+
+.forms-dangos .right-dango {
+  right: -60px;
+  animation-delay: 0.5s;
+  --dango-rotation: -2deg;
+}
+
+@media (max-width: 768px) {
+  .forms-dangos .left-dango {
+    left: -20px;
+    top: -5px;
+  }
+  .forms-dangos .right-dango {
+    right: -20px;
+  }
+}
+
+
 @keyframes poyonBounce {
      0%   { transform: rotate(var(--dango-rotation)) scale(.9,1.05)      translateY(0); }
      15%  { transform: rotate(var(--dango-rotation)) scale(1.1,.9)   translateY(10%); }
