@@ -30,6 +30,8 @@
   flex-shrink: 0;
 }
 
+
+
 #thanks .bg_pattern {
   top: 0;
   height: 100vh;
@@ -41,6 +43,8 @@
   background: #fff;
   flex-shrink: 0;
 }
+
+
 
 @media (max-width: 768px) {
 #songforms .bottom-white-gap {
@@ -295,14 +299,28 @@ textarea::placeholder {
   background-color: #ffffff;
   border: 2px solid rgb(81 109 235); 
   border-radius: 20px;
-  padding: 2.5em 3em;
+  padding: 5px 3em 2.5em 3em;
   max-width: 700px;
   margin: 0 auto;
-  margin-top: 0.6em;
+  margin-top: 7em;
   box-sizing: border-box;
   position: relative;
   font-size: 1em;
 }
+/* 入力フォーム タイトル画像 */
+.form-title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.form-title-img {
+  display: block;
+  width: calc(100% + 6em - 10px);
+  max-width: none;
+  margin: 0 calc(5px - 3em);
+  height: auto;
+}
+
 
 
 @media (max-width: 768px) {
@@ -310,7 +328,7 @@ textarea::placeholder {
     padding: 2em 2.5em;
     border-radius: 16px;
     font-size: 16px;
-    margin-top: 1em;
+    margin-top: 3em;
 
   }
   /* iOS Safari はフォーカスされた要素のフォントサイズが 16px 未満の場合にズームします。 */
@@ -643,12 +661,12 @@ button.submit-btn {
  * ------------------------------*/
 .formsbox {
   position: relative;
-  z-index: 2;
+  /* no z-index so decorations can sit behind the box */
 }
 
 .forms-dangos {
   position: absolute;
-  top: -180px;
+  top: -100px; /* peek out from behind the form */
   left: 0;
   right: 0;
   pointer-events: none;
@@ -657,7 +675,6 @@ button.submit-btn {
 
 .forms-dangos img {
   position: absolute;
-  top: 0;
   width: 200px;
   max-width: 30vw;
   --dango-rotation: 0deg;
@@ -672,33 +689,35 @@ button.submit-btn {
 
 @media (max-width: 768px) {
   .forms-dangos {
-    top: -100px;
-  }
-  .forms-dangos img {
-    width: 120px;
+    top: -60px; /* show smaller peek on mobile */
   }
 }
 
 .forms-dangos .left-dango {
-  left: -60px;
-  top: -10px;
+  left: 20px;
+  top: -60px;
   animation-delay: 0s;
   --dango-rotation: 2deg;
+  width: 220px;
 }
 
 .forms-dangos .right-dango {
-  right: -60px;
+  top: -40px;
+  right: 20px;
   animation-delay: 0.5s;
   --dango-rotation: -2deg;
 }
 
 @media (max-width: 768px) {
   .forms-dangos .left-dango {
-    left: -20px;
-    top: -5px;
+    left: 30px;
+    top: -40px;
+    width: 135px;
   }
   .forms-dangos .right-dango {
-    right: -20px;
+    right: 30px;
+    top: -29px;
+    width: 125px;
   }
 }
 
