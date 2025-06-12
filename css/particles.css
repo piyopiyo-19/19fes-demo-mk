@@ -47,6 +47,12 @@
   height: 80px;
 }
 
+.particle.hand {
+  background-image: url("../images/p-hnd.png");
+  width: 100px;
+  height: 100px;
+}
+
 .particle.pto {
   background-image: url("../images/p-t.png");
   width: 80px;
@@ -55,6 +61,12 @@
 
 .particle.p-ina-g {
   background-image: url("../images/p-ina-g.png");
+  width: 100px;
+  height: 100px;
+}
+
+.particle.p-piano {
+  background-image: url("../images/p-piano.png");
   width: 100px;
   height: 100px;
 }
@@ -70,6 +82,11 @@
   .particle.shoes {
     width: 50px;
     height: 50px;
+  }
+  .particle.hand,
+  .particle.piano{
+    width: 70px;
+    height: 70px;
   }
 }
 

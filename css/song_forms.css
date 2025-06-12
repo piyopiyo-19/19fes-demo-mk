@@ -223,18 +223,20 @@ h6 {
 
 /* page specific styles for song forms */
 
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .section {
-      padding: 15px 20px 15px 20px;
-    }
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* フォームのフェード演出　速度 */
+#formdayo[data-aos-f] {
+  transform: translateY(100px);
+  transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+}
+
+.section {
+  padding: 15px 20px 15px 20px;
+}
     @media (max-width: 768px) {
   .section {
    padding: 5px 20px 5px 20px;
@@ -811,7 +813,7 @@ button.submit-btn {
 @media (max-width: 768px) {
 .scrolldown {
   padding-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 280px;
   margin-top: 1px;
 }
 .scrolldown span {
