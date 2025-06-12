@@ -1,19 +1,31 @@
 <style>
+/* ===== footer-pre specific styles ===== */
 @media (max-width: 768px) {
   .footer-pre-mobile .footer-note p {
     font-size: 0.8rem;
   }
+
+  /* icons side‑by‑side and centered */
   .footer-pre-mobile .footer-sns {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
   }
   .footer-pre-mobile .footer-sns a img {
-    display: block;
-    margin: 0 auto;
+    margin: 2em 0 0.2em 0;
   }
+}
+
+/* widen copy spacing for both pc and mobile */
+.footer-pre .footer-bottom {
+  margin-top: 40px;
+}
+.footer-pre-mobile .footer-copy {
+  margin-top: 40px;
 }
 </style>
 
-<footer class="site-footer">
+<footer class="site-footer footer-pre">
   <div class="footer-container">
     <div class="footer-left">
       <img src="images/footer-logo.png" alt="サイトロゴ" class="footer-logo">
