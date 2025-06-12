@@ -1579,7 +1579,6 @@ body {
   vertical-align: middle;
 }
 .footer-social {
-  flex-basis: 100%;
   text-align: center;
   margin-top: 10px;
 }
@@ -1631,6 +1630,7 @@ body {
   text-align: center;
   margin-top: 10px;
 }
+
 
 .footer-sns a img {
   width: 40px;
