@@ -65,10 +65,16 @@
   height: 100px;
 }
 
-.particle.p-piano {
+.particle.piano {
   background-image: url("../images/p-piano.png");
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
+}
+
+.particle.p8-p {
+  background-image: url("../images/p-8-p.png");
+  width: 90px;
+  height: 90px;
 }
 
 @media (max-width: 768px) {
@@ -79,12 +85,13 @@
   .particle.heart,
   .particle.star,
   .particle.ball,
-  .particle.shoes {
+  .particle.shoes,
+  .particle.p8-p,
+  .particle.piano{
     width: 50px;
     height: 50px;
   }
-  .particle.hand,
-  .particle.piano{
+  .particle.hand{
     width: 70px;
     height: 70px;
   }
