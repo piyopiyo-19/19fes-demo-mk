@@ -12,7 +12,7 @@ var submitted = false; // used by form iframe callback
 function createParticles() {
   const container = document.getElementById('floating-particles');
   if (!container) return;
-  const symbols = ['heart', 'star', 'ball', 'shoes', 'pto', 'hand','p-ina-g'];
+  const symbols = ['heart', 'star', 'ball', 'shoes', 'pto', 'hand', 'piano', 'p8-p', 'p-ina-g','p-ina-g'];
   const total = 25;
   const cols = Math.ceil(Math.sqrt(total));
   const rows = Math.ceil(total / cols);
