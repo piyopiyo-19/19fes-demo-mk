@@ -91,7 +91,8 @@
   function loadFooter() {
     const ph = document.getElementById('footer-placeholder');
     if (ph) {
-      fetch('includes/footer.html')
+      const src = ph.dataset.src || 'includes/footer.html';
+      fetch(src)
         .then(res => res.text())
         .then(html => { ph.innerHTML = html; });
     }
