@@ -271,30 +271,31 @@ textarea::placeholder {
   background-color: #ffffff;
   border-left: none;
   border-right: none;
-  padding: 3.5em 0.6em 1em 0.8em;
+  padding: 6em 0.6em 1em 0.8em;
   margin-bottom: 1.5em;
 }
 
 /* 上部に配置するイントロ画像 */
 .forms-white-box .forms-intro-img {
   position: absolute;
-  top: -5.5em;
+  top: -1em;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1000px;
+  max-width: 650px;
   height: auto;
   pointer-events: none;
 }
 
 @media (max-width: 768px) {
   .forms-white-box {
-    padding: 2.8em 0.5em 2em 0.5em;
+    padding: 6em 0.5em 2em 0.5em;
     margin-bottom: 1.5em;
   }
   .forms-white-box .forms-intro-img {
-    top: -4em;
+    top: -0.8em;
     width: 100%;
+    max-width: 400px;
   }
 }
 
@@ -556,7 +557,6 @@ button.submit-btn {
 
 
   
-/* Noto Sans JP font for attention section */
 #songforms #forms-attention {
   font-family: 'Noto Sans JP',
     'Zen Maru Gothic',
@@ -564,6 +564,16 @@ button.submit-btn {
     'ヒラギノ角ゴ ProN',
     'Meiryo',
     sans-serif;
+}
+
+/* Ensure white box spans full width on mobile */
+@media (max-width: 768px) {
+  #forms-attention .container-center {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    width: 100%;
+  }
 }
 
 /* Remove side padding so banner spans full width */
