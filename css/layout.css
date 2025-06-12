@@ -1578,6 +1578,11 @@ body {
   margin-left: 8px;
   vertical-align: middle;
 }
+.footer-social {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
 
 .footer-bottom {
   text-align: center;
@@ -1620,6 +1625,11 @@ body {
 .footer-logo {
   width: 100px;
   margin: 0 auto 10px;
+}
+
+.footer-sns {
+  text-align: center;
+  margin-top: 10px;
 }
 
 .footer-sns a img {
