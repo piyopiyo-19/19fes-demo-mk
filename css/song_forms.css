@@ -230,19 +230,11 @@ h6 {
 
 /* フォームのフェード演出　速度 */
 #formdayo[data-aos-f] {
-  opacity: 1;
-  transform: none;
-  transition: none;
-}
-
-#formdayo[data-aos-f] .formsbox {
-  opacity: 0;
   transform: translateY(100px);
   transition: opacity 0.8s ease-out, transform 0.6s ease-out;
 }
 
-#formdayo[data-aos-f].aos-animate .formsbox {
-  opacity: 1;
+#formdayo[data-aos-f].aos-animate {
   transform: translateY(0);
 }
 
@@ -603,7 +595,7 @@ button.submit-btn {
 #scr-banner .scrolling-banner {
   margin: 5em 0 5.5em 0;  
   padding: 0.4em 0;
-  font-size: 0.8em;         /* 少し軽めの太さで柔らかく */
+  font-size: 0.77em;         /* 少し軽めの太さで柔らかく */
 }
 }
 
@@ -700,7 +692,6 @@ button.submit-btn {
  * ------------------------------*/
 .formsbox {
   position: relative;
-  /* no z-index so decorations can sit behind the box */
 }
 
 .forms-dangos {

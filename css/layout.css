@@ -1566,13 +1566,12 @@ body {
   gap: 15px;
 }
 
-.footer-nav li a {
+.footer-right .footer-nav li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
 }
-
 .footer-social a img {
   width: 40px;
   margin-left: 8px;
@@ -1581,6 +1580,13 @@ body {
 .footer-social {
   text-align: center;
   margin-top: 10px;
+}
+.footer-note .footer-social {
+  text-align: center;
+}
+.footer-note .footer-social a img {
+  margin-left: 0;
+  display: inline-block;
 }
 
 .footer-bottom {
