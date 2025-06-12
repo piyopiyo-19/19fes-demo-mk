@@ -794,7 +794,7 @@ button.submit-btn {
 
 /* スクロールダウンの位置 */
 .scrolldown {
-  padding-top: 100px;
+  padding-top: 130px;
   position: relative;
   text-align: center;
   margin-bottom: 300px;
@@ -802,7 +802,7 @@ button.submit-btn {
 }
 .scrolldown span {
   display: block;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
 }
@@ -827,13 +827,20 @@ button.submit-btn {
   border-bottom: 3px solid #ffffff;
   border-left: 3px solid #ffffff;
   content: "";
-  height: 40px;
+  height: 60px;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   top: 0;
-  width: 40px;
+  width: 60px;
+}
+
+@media (max-width: 768px) {
+  .scrolldown::before {
+    height: 40px;
+    width: 40px;
+  }
 }
 
 /* 矢印のアニメーション */
