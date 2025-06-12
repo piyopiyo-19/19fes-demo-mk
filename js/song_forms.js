@@ -12,7 +12,7 @@ var submitted = false; // used by form iframe callback
 function createParticles() {
   const container = document.getElementById('floating-particles');
   if (!container) return;
-  const symbols = ['heart', 'star', 'ball', 'shoes', 'pto', 'p-ina-g'];
+  const symbols = ['heart', 'star', 'ball', 'shoes', 'pto', 'hand','p-ina-g'];
   const total = 25;
   const cols = Math.ceil(Math.sqrt(total));
   const rows = Math.ceil(total / cols);
@@ -133,9 +133,12 @@ window.addEventListener('load', () => {
   };
 
   hideLoader();
-  setTimeout(() => {
-    showHeader();
-    setTimeout(showContents, 600);
-    setupAosAnimations('[data-aos-f]');
-  }, 400);
+    setTimeout(() => {
+      showHeader();
+      setTimeout(showContents, 600);
+      // Apply default observer to all elements except the form section
+      setupAosAnimations('[data-aos-f]:not(#formdayo)');
+      // Delay animation trigger for the form section
+      setupAosAnimations('#formdayo', { threshold: 1 });
+    }, 400);
 });
