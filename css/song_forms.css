@@ -12,8 +12,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #496bff;
-  z-index:-2; /* base layer for the page background */
+  background-color: #4e6eff;
+  z-index:-2; 
 }
 
 /* song_formsページ用: 下部に白い余白を追加するため
@@ -29,7 +29,6 @@
   background: #fff;
   flex-shrink: 0;
 }
-
 
 
 #thanks .bg_pattern {
@@ -275,7 +274,20 @@ textarea::placeholder {
   margin-bottom: 1.5em;
 }
 
-/* 上部に配置するイントロ画像 */
+/* zoom-in animation for the white box container */
+#forms-attention {
+  opacity: 0;
+  transform: scale(0.95);
+  /* speed up the zoom effect for a snappier appearance */
+  transition: transform 0.3s ease-out, opacity 0.35s ease-out;
+}
+
+#forms-attention.zoom-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 上部に配置するinfo画像 */
 .forms-white-box .forms-intro-img {
   position: absolute;
   top: -1em;
@@ -286,7 +298,7 @@ textarea::placeholder {
   height: auto;
   pointer-events: none;
   opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transition: popZoom 0.3s ease-out, opacity 0.3s ease-out forwards;
 }
 
 .forms-white-box .forms-intro-img.pop {
@@ -307,7 +319,7 @@ textarea::placeholder {
 
 
 
-/* 入力フォーム 青枠 */
+/* 入力フォーム box*/
 .formsbox {
   background-color: #ffffff;
  /*  border: 2px solid rgb(81 109 235); */
@@ -353,9 +365,7 @@ textarea::placeholder {
 
 
 
-  /* iOS Safari はフォーカスされた要素のフォントサイズが 16px 未満の場合にズームします。 */
-  /* フォントサイズを明示的に設定すると、無効にすることなくこの動作を防止できます */
-  /* ページ全体をピンチしてズームします。 */
+  /* iOS Safari ズームします。 */
   .form-group input,
   .form-group textarea {
     font-size: 16px;
@@ -782,7 +792,7 @@ button.submit-btn {
 
 
 
- /*ページタイトル（ページメインタイトル）*/
+ /*Thanksページ　ページタイトル（ページメインタイトル）*/
 .thanks-page-title {
     display: flex;
     font-weight: 700;
@@ -813,7 +823,7 @@ button.submit-btn {
 }
 
 
-/* スクロールダウンの位置 */
+/* スクロールダウン演出 */
 .scrolldown {
   padding-top: 130px;
   position: relative;
@@ -883,7 +893,7 @@ button.submit-btn {
 }
 
 
-/* ----- Page loader spinner ----- */
+/* ----- ページローダー　アイコン ----- */
 #page-loader {
   position: fixed;
   inset: 0;
@@ -981,7 +991,7 @@ button.submit-btn {
   }
 }
 
-/* ----- Page loader text ----- */
+/* ----- ページローダー　テキスト ----- */
 .loader-text {
   margin-top: 1.2em;
   color: #fff;
