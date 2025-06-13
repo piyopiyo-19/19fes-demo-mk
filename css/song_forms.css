@@ -309,8 +309,8 @@ textarea::placeholder {
 /* container for the intro text */
 .forms-intro-text {
   opacity: 0;
-  transform: scale(0.9);
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: scale(0.8);
+  transition: transform 0.3s ease-out, opacity 0.1s ease-out;
 }
 
 .forms-intro-text.zoom-in {
@@ -760,6 +760,12 @@ button.submit-btn {
   right: 0;
   pointer-events: none;
   z-index: -1;
+  opacity: 0;
+  transform: translateY(80px);
+}
+
+.forms-dangos.slide-in {
+  animation: dangosSlideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .forms-dangos img {
@@ -819,8 +825,23 @@ button.submit-btn {
      60%  { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
      75%  { transform: rotate(var(--dango-rotation)) scale(1.02,.98) translateY(2%); }
      90%  { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
-     100% { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
+      100% { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
       }
+
+@keyframes dangosSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 
 
