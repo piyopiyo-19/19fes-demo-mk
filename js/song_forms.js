@@ -113,6 +113,7 @@ window.addEventListener('load', () => {
   const contents = document.querySelectorAll(
     '#forms-attention, .scrolldown, #formdayo, #scr-banner, .forms-dangos, .footer-dangos'
   );
+  const introImg = document.querySelector('.forms-white-box .forms-intro-img');
 
   const hideLoader = () => {
     if (!loader) return;
@@ -130,6 +131,9 @@ window.addEventListener('load', () => {
     contents.forEach((el, i) => {
       setTimeout(() => el.classList.add('aos-animate'), i * 200);
     });
+    setTimeout(() => {
+      if (introImg) introImg.classList.add('pop');
+    }, 500);
   };
 
   hideLoader();
