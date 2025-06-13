@@ -110,8 +110,9 @@ function attachFormsDangos() {
 window.addEventListener('load', () => {
   const loader = document.getElementById('page-loader');
   const header = document.getElementById('page-title');
+  const formsAttention = document.getElementById('forms-attention');
   const contents = document.querySelectorAll(
-    '#forms-attention, .scrolldown, #formdayo, #scr-banner, .forms-dangos, .footer-dangos'
+    '.scrolldown, #formdayo, #scr-banner, .forms-dangos, .footer-dangos'
   );
   const introImg = document.querySelector('.forms-white-box .forms-intro-img');
 
@@ -127,22 +128,37 @@ window.addEventListener('load', () => {
     if (header) header.classList.add('aos-animate');
   };
 
+  const showFormsAttention = () => {
+    if (formsAttention) formsAttention.classList.add('zoom-in');
+  };
+
   const showContents = () => {
     contents.forEach((el, i) => {
       setTimeout(() => el.classList.add('aos-animate'), i * 200);
     });
-    setTimeout(() => {
-      if (introImg) introImg.classList.add('pop');
-    }, 500);
+  };
+
+  const showIntroImg = () => {
+    if (introImg) introImg.classList.add('pop');
   };
 
   hideLoader();
+  setTimeout(() => {
+    showHeader();
+    // after header appears, show forms attention with delay
     setTimeout(() => {
-      showHeader();
-      setTimeout(showContents, 600);
-      // Apply default observer to all elements except the form section
-      setupAosAnimations('[data-aos-f]:not(#formdayo)');
-      // Delay animation trigger for the form section
-      setupAosAnimations('#formdayo', { threshold: 1 });
-    }, 400);
+      showFormsAttention();
+      // show intro image after the white box zooms in
+      // slightly delay the pop animation for a smoother sequence
+      setTimeout(() => {
+        showIntroImg();
+        // show remaining contents
+        setTimeout(showContents, 400);
+      }, 600);
+    }, 500);
+    // Apply default observer to all elements except form section and forms attention
+    setupAosAnimations('[data-aos-f]:not(#formdayo):not(#forms-attention)');
+    // Delay animation trigger for the form section
+    setupAosAnimations('#formdayo', { threshold: 1 });
+  }, 400);
 });
