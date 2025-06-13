@@ -168,7 +168,8 @@ window.addEventListener('load', () => {
       const titleObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            setTimeout(() => formTitle.classList.add('zoom-in'), 500);
+            // reduce delay before zoom to match faster animation
+            setTimeout(() => formTitle.classList.add('zoom-in'), 80);
             titleObserver.unobserve(entry.target);
           }
         });
