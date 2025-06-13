@@ -343,6 +343,15 @@ textarea::placeholder {
   animation: formTitleZoom 0.4s ease-out forwards;
 }
 
+/* extend title image nearly full width inside the form box */
+.form-title-img {
+  display: block;
+  width: calc(100% + 6em - 10px);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @keyframes formTitleZoom {
   from {
     opacity: 0;
@@ -365,8 +374,11 @@ textarea::placeholder {
   }
   /* adjust title image width to match reduced padding */
   .form-title-img {
+    display: block;
     width: calc(100% + 5em - 10px);
-    margin: 0 calc(5px - 2.5em);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
 
