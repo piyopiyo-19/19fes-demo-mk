@@ -340,7 +340,8 @@ textarea::placeholder {
 }
 
 .form-title.zoom-in {
-  animation: formTitleZoom 0.4s ease-out forwards;
+  /* shorten the animation for a snappy "pop" effect */
+  animation: formTitleZoom 0.2s ease-out forwards;
 }
 
 /* extend title image nearly full width inside the form box */
@@ -384,12 +385,12 @@ textarea::placeholder {
 
 
 
-  /* iOS Safari ズームします。 */
+  /* iOS Safari ズーム */
   .form-group input,
   .form-group textarea {
     font-size: 16px;
   }
-   /* プレースホルダーテキストも、わずかなジャンプを避けるために一致する必要があります */
+
   .form-group input::placeholder {
     font-size: 16px;
   }
