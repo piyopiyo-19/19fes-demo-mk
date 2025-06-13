@@ -17,6 +17,7 @@
 }
 .footer-pre .footer-social a img {
   margin-left: 0;
+  margin-top: 0.1em;
   width: 50px;
 }
 
@@ -28,6 +29,20 @@
     text-align: center;
   }
 
+  .footer-pre .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* tighten spacing between logo and social links */
+  .footer-pre .footer-left {
+    gap: 10px;
+  }
+
+  .footer-pre .footer-social {
+    margin-top: 0;
+  }
+
   .sp-only {
     display: inline;
   }
@@ -37,7 +52,7 @@
   }
 
   .footer-pre .footer-social a img {
-    margin: 2em 0 0.2em 0;
+    margin: 0.1em 0 2em 0;
     gap: 16px;
     width: 50px;
   }
