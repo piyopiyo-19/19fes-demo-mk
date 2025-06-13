@@ -148,13 +148,12 @@ window.addEventListener('load', () => {
     // after header appears, show forms attention with delay
     setTimeout(() => {
       showFormsAttention();
-      // show intro image after the white box zooms in
-      // slightly delay the pop animation for a smoother sequence
+      // show intro image shortly after the white box zooms in
       setTimeout(() => {
         showIntroImg();
         // show remaining contents
         setTimeout(showContents, 400);
-      }, 600);
+      }, 200);
     }, 500);
     // Apply default observer to all elements except form section and forms attention
     setupAosAnimations('[data-aos-f]:not(#formdayo):not(#forms-attention)');
@@ -168,12 +167,12 @@ window.addEventListener('load', () => {
       const titleObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // reduce delay before zoom to match faster animation
-            setTimeout(() => formTitle.classList.add('zoom-in'), 80);
+            // trigger form title slightly after the form box zooms in
+            setTimeout(() => formTitle.classList.add('zoom-in'), 200);
             titleObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.5 });
+      }, { threshold: 0.3 });
       titleObserver.observe(formsbox);
     }
   }, 400);
