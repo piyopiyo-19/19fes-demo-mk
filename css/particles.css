@@ -26,74 +26,64 @@
 .particle.heart {
   background-image: url("../images/p-onp.png");
   width: 70px;
-  height: 70px;
 }
 
 .particle.star {
   background-image: url("../images/p-bsk.png");
   width: 85px;
-  height: 85px;
 }
 
 .particle.ball {
   background-image: url("../images/p-ball.png");
   width: 70px;
-  height: 70px;
 }
 
 .particle.shoes {
   background-image: url("../images/p-shoes.png");
   width: 80px;
-  height: 80px;
 }
 
 .particle.hand {
   background-image: url("../images/p-hnd.png");
-  width: 100px;
-  height: 100px;
+  width: 90px;
 }
 
 .particle.pto {
   background-image: url("../images/p-t.png");
   width: 80px;
-  height: 80px;
 }
 
 .particle.p-ina-g {
   background-image: url("../images/p-ina-g.png");
-  width: 100px;
-  height: 100px;
+  width: 80px;
 }
 
 .particle.piano {
   background-image: url("../images/p-piano.png");
-  width: 90px;
-  height: 90px;
+  width: 85px;
 }
 
 .particle.p8-p {
   background-image: url("../images/p-8-p.png");
-  width: 90px;
-  height: 90px;
+  width: 80px;
 }
 
 @media (max-width: 768px) {
   .particle {
     width: 50px;
-    height: 50px;
   }
   .particle.heart,
   .particle.star,
   .particle.ball,
   .particle.shoes,
+  .particle.p-ina-g,
   .particle.p8-p,
   .particle.piano{
     width: 50px;
-    height: 50px;
   }
-  .particle.hand{
-    width: 70px;
-    height: 70px;
+  .particle.hand,
+  .particle.shoes{
+    width: 60px;
   }
 }
 

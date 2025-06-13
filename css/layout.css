@@ -1548,6 +1548,11 @@ body {
   height: auto;
 }
 
+.footer-pre .footer-logo {
+  width: 120px;
+  height: auto;
+}
+
 .footer-info p {
   margin: 0;
   line-height: 1.6;
@@ -1589,6 +1594,11 @@ body {
   display: inline-block;
 }
 
+/* tighten desktop footer note spacing */
+.footer-pre .footer-note p {
+  line-height: 0.8;
+}
+
 .footer-bottom {
   text-align: center;
   margin-top: 20px;
@@ -1606,6 +1616,7 @@ body {
   position: relative;
   z-index: 10;
 }
+
 /* ---------------フッター（ここまで） ---------------------*/
 
 
