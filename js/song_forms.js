@@ -112,7 +112,7 @@ window.addEventListener('load', () => {
   const header = document.getElementById('page-title');
   const formsAttention = document.getElementById('forms-attention');
   const contents = document.querySelectorAll(
-    '.scrolldown, #formdayo, #scr-banner, .forms-dangos, .footer-dangos'
+    '.scrolldown, #formdayo, #scr-banner, .footer-dangos'
   );
   const introImg = document.querySelector('.forms-white-box .forms-intro-img');
   const introText = document.querySelector('.forms-intro-text');
@@ -164,8 +164,9 @@ window.addEventListener('load', () => {
         }, 200);
       }, 200);
     }, 500);
-    // Apply default observer to all elements except form section and forms attention
-    setupAosAnimations('[data-aos-f]:not(#formdayo):not(#forms-attention)');
+    // Apply default observer to all elements except form section, forms attention
+    // and the dangos around the form which will be triggered manually
+    setupAosAnimations('[data-aos-f]:not(#formdayo):not(#forms-attention):not(.forms-dangos)');
     // Delay animation trigger for the form section
       setupAosAnimations('#formdayo', {
       threshold: 1.0,
@@ -173,14 +174,22 @@ window.addEventListener('load', () => {
     });
 
     // Zoom in the form title shortly after the form box appears
+    // and then slide in the dangos surrounding the form
     const formsbox = document.querySelector('.formsbox');
     const formTitle = document.querySelector('.form-title');
+    const formsDangos = document.querySelector('.forms-dangos');
     if (formsbox && formTitle) {
       const titleObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             // trigger form title slightly after the form box zooms in
-            setTimeout(() => formTitle.classList.add('zoom-in'), 200);
+            setTimeout(() => {
+              formTitle.classList.add('zoom-in');
+              // then slide in the dangos a bit later
+              if (formsDangos) {
+                setTimeout(() => formsDangos.classList.add('slide-in'), 200);
+              }
+            }, 200);
             titleObserver.unobserve(entry.target);
           }
         });
