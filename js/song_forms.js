@@ -153,13 +153,13 @@ window.addEventListener('load', () => {
     // after header appears, show forms attention with delay
     setTimeout(() => {
       showFormsAttention();
-      // show intro image shortly after the white box zooms in
+      // slide in the intro text shortly after the white box zooms in
       setTimeout(() => {
-        showIntroImg();
-        // then zoom in the text inside the white box
+        showIntroText();
+        // then pop the intro image a bit later
         setTimeout(() => {
-          showIntroText();
-          // show remaining contents
+          showIntroImg();
+          // show remaining contents␊
           setTimeout(showContents, 400);
         }, 200);
       }, 200);
