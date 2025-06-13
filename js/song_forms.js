@@ -115,6 +115,7 @@ window.addEventListener('load', () => {
     '.scrolldown, #formdayo, #scr-banner, .forms-dangos, .footer-dangos'
   );
   const introImg = document.querySelector('.forms-white-box .forms-intro-img');
+  const introText = document.querySelector('.forms-intro-text');
 
   const hideLoader = () => {
     if (!loader) return;
@@ -142,6 +143,10 @@ window.addEventListener('load', () => {
     if (introImg) introImg.classList.add('pop');
   };
 
+  const showIntroText = () => {
+    if (introText) introText.classList.add('zoom-in');
+  };
+
   hideLoader();
   setTimeout(() => {
     showHeader();
@@ -151,8 +156,12 @@ window.addEventListener('load', () => {
       // show intro image shortly after the white box zooms in
       setTimeout(() => {
         showIntroImg();
-        // show remaining contents
-        setTimeout(showContents, 400);
+        // then zoom in the text inside the white box
+        setTimeout(() => {
+          showIntroText();
+          // show remaining contents
+          setTimeout(showContents, 400);
+        }, 200);
       }, 200);
     }, 500);
     // Apply default observer to all elements except form section and forms attention
