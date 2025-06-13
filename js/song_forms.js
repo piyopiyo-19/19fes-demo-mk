@@ -160,5 +160,20 @@ window.addEventListener('load', () => {
     setupAosAnimations('[data-aos-f]:not(#formdayo):not(#forms-attention)');
     // Delay animation trigger for the form section
     setupAosAnimations('#formdayo', { threshold: 1 });
+
+    // Zoom in the form title shortly after the form box appears
+    const formsbox = document.querySelector('.formsbox');
+    const formTitle = document.querySelector('.form-title');
+    if (formsbox && formTitle) {
+      const titleObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => formTitle.classList.add('zoom-in'), 500);
+            titleObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      titleObserver.observe(formsbox);
+    }
   }, 400);
 });
