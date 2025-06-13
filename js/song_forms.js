@@ -158,7 +158,10 @@ window.addEventListener('load', () => {
     // Apply default observer to all elements except form section and forms attention
     setupAosAnimations('[data-aos-f]:not(#formdayo):not(#forms-attention)');
     // Delay animation trigger for the form section
-    setupAosAnimations('#formdayo', { threshold: 1 });
+      setupAosAnimations('#formdayo', {
+      threshold: 0.6,
+      rootMargin: '0px 0px -40% 0px'
+    });
 
     // Zoom in the form title shortly after the form box appears
     const formsbox = document.querySelector('.formsbox');
