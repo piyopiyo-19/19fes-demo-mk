@@ -271,7 +271,7 @@ textarea::placeholder {
   background-color: #ffffff;
   border-left: none;
   border-right: none;
-  padding: 6em 0.6em 1em 0.8em;
+  padding: 7em 0.8em 1em 0.8em;
   margin-bottom: 1.5em;
 }
 
@@ -291,7 +291,7 @@ textarea::placeholder {
 /* 上部に配置するinfo画像 */
 .forms-white-box .forms-intro-img {
   position: absolute;
-  top: -1em;
+  top: -0.8em;
   left: 50%;
   transform: translateX(-50%) scale(0.8);
   width: 100%;
@@ -529,7 +529,7 @@ button.submit-btn {
 }
 
 #songforms #page-title {
-  margin: -20px 13em 6.5em 13em;
+  margin: -20px 13em 2em 13em;
   padding: 0;
 }
 
@@ -543,10 +543,18 @@ button.submit-btn {
   display: block;
 }
 
+@media (min-width: 769px) {
+  #songforms #page-title img {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 @media (max-width: 768px) {
 #songforms #page-title {
-  margin: -12px 10px 5em 10px;
+  margin: -12px 10px 1.5em 10px;
 }
 }
 
@@ -558,7 +566,7 @@ button.submit-btn {
 #forms-attention p {
   font-size: 1.2em;
   font-weight: 650;         /* 少し軽めの太さで柔らかく */
-  line-height: 1.4;         /* 読みやすい行間 */
+  line-height: 1.45;         /* 読みやすい行間 */
   margin-bottom: 1em;
 }
 
@@ -574,7 +582,7 @@ button.submit-btn {
 /* 太字ハイライトコメント */
 #forms-attention .bold-text-forms {
   color: #7073ff;           /* 明るめの青 */
-  font-size: 1.25em;       
+  font-size: 1.35em;       
   font-weight: 900;         /* 太め*/
 }
 
@@ -641,7 +649,7 @@ button.submit-btn {
 #scr-banner .scrolling-banner {
   background-color: rgb(255, 255, 255);
   margin: 6em 0 6em 0;  
-  color: rgb(30, 60, 197);
+  color: rgb(46, 79, 228);
   width: 100%;
   padding: 0.3em 0;
   overflow: hidden;
@@ -771,7 +779,7 @@ button.submit-btn {
 
 .forms-dangos img {
   position: absolute;
-  width: 200px;
+  width: 180px;
   max-width: 30vw;
   --dango-rotation: 0deg;
   transform: rotate(var(--dango-rotation)) translateY(0);
@@ -790,16 +798,16 @@ button.submit-btn {
 }
 
 .forms-dangos .left-dango {
-  left: 20px;
+  left: 55px;
   top: -60px;
   animation-delay: 0s;
   --dango-rotation: 2deg;
-  width: 220px;
+  width: 210px;
 }
 
 .forms-dangos .right-dango {
-  top: -40px;
-  right: 20px;
+  top: -28px;
+  right: 60px;
   animation-delay: 0.5s;
   --dango-rotation: -2deg;
 }
