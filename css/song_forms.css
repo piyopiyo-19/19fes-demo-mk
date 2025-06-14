@@ -338,6 +338,8 @@ textarea::placeholder {
   max-width: 30vw;
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 .forms-white-box .intro-chara.left {
@@ -350,6 +352,11 @@ textarea::placeholder {
   right: 430px;
   bottom: -6em;
 }
+
+.forms-white-box .intro-chara.poyon {
+  animation: charaPoyon 0.4s ease-out forwards;
+}
+
 
 @media (max-width: 768px) {
   .forms-white-box .intro-chara {
@@ -1137,6 +1144,21 @@ button.submit-btn {
   }
   100% {
     transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes charaPoyon {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
     opacity: 1;
   }
 }
