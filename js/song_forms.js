@@ -172,14 +172,14 @@ window.addEventListener('load', () => {
         setTimeout(() => {
           showIntroImg();
 
-          // show characters sequentially after intro image pops
+          // show characters sequentially after intro image pops␊
           setTimeout(() => {
             showCharaIbuki();
             setTimeout(() => {
               showCharaSindo();
               setTimeout(showContents, 400);
             }, 200);
-          }, 200);
+          }, 1000);
         }, 200);
       }, 200);
     }, 500);
