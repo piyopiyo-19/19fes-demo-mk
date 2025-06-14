@@ -331,6 +331,39 @@ textarea::placeholder {
   }
 }
 
+/* キャラ画像を白いボックスの左右に配置 */
+.forms-white-box .intro-chara {
+  position: absolute;
+  width: 250px;
+  max-width: 30vw;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.forms-white-box .intro-chara.left {
+  left: 450px;
+  width: 260px;
+  bottom: -6em;
+}
+
+.forms-white-box .intro-chara.right {
+  right: 430px;
+  bottom: -6em;
+}
+
+@media (max-width: 768px) {
+  .forms-white-box .intro-chara {
+    width: 130px;
+  }
+  .forms-white-box .intro-chara.left {
+    left: 20px;
+    bottom: -5em;
+  }
+  .forms-white-box .intro-chara.right {
+    right: 20px;
+    bottom: -5em;
+  }
+}
 
 
 /* 入力フォーム box*/
