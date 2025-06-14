@@ -354,7 +354,13 @@ textarea::placeholder {
 }
 
 .forms-white-box .intro-chara.poyon {
-  animation: charaPoyon 0.4s ease-out forwards;
+  animation: charaPoyon 0.4s ease-out forwards,
+             float1 3s ease-in-out 0.4s infinite;
+}
+
+.forms-white-box .intro-chara.right.poyon {
+  animation: charaPoyon 0.4s ease-out forwards,
+             float2 3s ease-in-out 0.4s infinite;
 }
 
 
@@ -363,12 +369,14 @@ textarea::placeholder {
     width: 130px;
   }
   .forms-white-box .intro-chara.left {
-    left: 20px;
-    bottom: -5em;
+    left: 15px;
+    bottom: -9em;
+    width: 150px;
   }
   .forms-white-box .intro-chara.right {
-    right: 20px;
-    bottom: -5em;
+    right: 15px;
+    bottom: -9em;
+    width: 145px;
   }
 }
 
@@ -1160,5 +1168,23 @@ button.submit-btn {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes float1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(14px);
   }
 }
