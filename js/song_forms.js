@@ -116,6 +116,8 @@ window.addEventListener('load', () => {
   );
   const introImg = document.querySelector('.forms-white-box .forms-intro-img');
   const introText = document.querySelector('.forms-intro-text');
+  const charaIbuki = document.querySelector('.forms-white-box .intro-chara.left');
+  const charaSindo = document.querySelector('.forms-white-box .intro-chara.right');
 
   const hideLoader = () => {
     if (!loader) return;
@@ -142,6 +144,16 @@ window.addEventListener('load', () => {
   const showIntroImg = () => {
     if (introImg) introImg.classList.add('pop');
   };
+    const showCharaIbuki = () => {
+    if (charaIbuki) charaIbuki.classList.add('poyon');
+  };
+
+  const showCharaSindo = () => {
+    if (charaSindo) charaSindo.classList.add('poyon');
+  };
+
+
+  
 
   const showIntroText = () => {
     if (introText) introText.classList.add('zoom-in');
@@ -159,8 +171,15 @@ window.addEventListener('load', () => {
         // then pop the intro image a bit later
         setTimeout(() => {
           showIntroImg();
-          // show remaining contents␊
-          setTimeout(showContents, 400);
+
+          // show characters sequentially after intro image pops
+          setTimeout(() => {
+            showCharaIbuki();
+            setTimeout(() => {
+              showCharaSindo();
+              setTimeout(showContents, 400);
+            }, 200);
+          }, 200);
         }, 200);
       }, 200);
     }, 500);
