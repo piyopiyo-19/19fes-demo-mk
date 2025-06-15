@@ -189,7 +189,7 @@ window.addEventListener('load', () => {
     // Delay animation trigger for the form section
       setupAosAnimations('#formdayo', {
       threshold: 1.0,
-      rootMargin: '0px 0px 50px 0px'
+      rootMargin: '0px 0px -20% 0px'
     });
 
     // Zoom in the form title shortly after the form box appears
