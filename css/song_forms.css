@@ -763,7 +763,7 @@ button.submit-btn {
 
 .footer-dangos {
   position: absolute;
-  top: -200px; /* offset so dangos peek above the footer */
+  top: -120px; /* offset so dangos peek above the footer */
   left: 0;
   right: 0;
   pointer-events: none;
@@ -773,7 +773,7 @@ button.submit-btn {
 .footer-dangos img {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 180px;
   max-width: 30vw;
   --dango-rotation: 0deg;
   transform: rotate(var(--dango-rotation)) translateY(0);
@@ -787,37 +787,37 @@ button.submit-btn {
 
 @media (max-width: 768px) {
   .footer-dangos {
-    top: -110px;
+    top: -70px;
   }
   .footer-dangos img {
     top: 0;
-    width: 150px;
+    width: 100px;
 
   }
 }
 
 .footer-dangos .left-dango {
-  left: 400px;
+  left: 730px;
   top: -10px;
   animation-delay: 0s;
   --dango-rotation: 2deg;
 }
 
 .footer-dangos .right-dango {
-  right: 400px;
+  right: 730px;
   animation-delay: 0.5s;
   --dango-rotation: -2deg;
 }
 
 @media (max-width: 768px) {
 .footer-dangos .left-dango {
-  left: 80px;
+  left: 130px;
   top: -5px;
   animation-delay: 0s;
   --dango-rotation: 2deg;
 }
 .footer-dangos .right-dango {
-  right: 80px;
+  right: 130px;
   animation-delay: 0.5s;
   --dango-rotation: -2deg;
 }
