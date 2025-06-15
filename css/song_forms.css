@@ -621,7 +621,7 @@ button.submit-btn {
     @media (max-width: 768px) {
 #forms-attention p {
   font-size: 0.95em;
-  line-height: 1.4;         /* 読みやすい行間 */
+  line-height: 1.45;         /* 読みやすい行間 */
   margin-bottom: 1.2em;
 }
    }
