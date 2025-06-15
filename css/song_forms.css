@@ -38,7 +38,7 @@
 
 /* Thanksページ用の白い余白 */
 #thanks .bottom-white-gap {
-  height: 180px;
+  height: 50px;
   background: #fff;
   flex-shrink: 0;
 }
@@ -50,7 +50,7 @@
   height: 40px;
 }
 #thanks .bottom-white-gap {
-  height: 95px;
+  height: 40px;
 }
    }
 
