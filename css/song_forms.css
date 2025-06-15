@@ -343,14 +343,14 @@ textarea::placeholder {
 }
 
 .forms-white-box .intro-chara.left {
-  left: 450px;
-  width: 260px;
+  left: 430px;
+  width: 262px;
   bottom: -6em;
 }
 
 .forms-white-box .intro-chara.right {
-  right: 430px;
-  bottom: -7em;
+  right: 440px;
+  bottom: -7.5em;
 }
 
 .forms-white-box .intro-chara.poyon {
