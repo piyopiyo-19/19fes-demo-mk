@@ -179,7 +179,7 @@ window.addEventListener('load', () => {
               showCharaSindo();
               setTimeout(showContents, 400);
             }, 200);
-          }, 1000);
+          }, 800);    // 出現タイミング
         }, 200);
       }, 200);
     }, 500);
