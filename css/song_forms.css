@@ -334,7 +334,7 @@ textarea::placeholder {
 /* キャラ画像を白いボックスの左右に配置 */
 .forms-white-box .intro-chara {
   position: absolute;
-  width: 250px;
+  width: 265px;
   max-width: 30vw;
   pointer-events: none;
   z-index: 1;
@@ -350,7 +350,7 @@ textarea::placeholder {
 
 .forms-white-box .intro-chara.right {
   right: 430px;
-  bottom: -6em;
+  bottom: -7em;
 }
 
 .forms-white-box .intro-chara.poyon {
@@ -1111,6 +1111,18 @@ button.submit-btn {
   font-family: 'DotGothic16', 'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
 }
+
+.loader-run {
+  margin-top: 2em;
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+.loader-run {
+  margin-top: 2em;
+  max-width: 190px;
+}
+    }
 
 .loader-text span {
   display: inline-block;
