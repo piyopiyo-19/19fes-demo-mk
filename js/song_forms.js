@@ -204,11 +204,11 @@ window.addEventListener('load', () => {
             // trigger form title slightly after the form box zooms in
             setTimeout(() => {
               formTitle.classList.add('zoom-in');
-              // then slide in the dangos a bit later
+              // 宗拓→タイトル出現タイミング
               if (formsDangos) {
-                setTimeout(() => formsDangos.classList.add('slide-in'), 200);
+                setTimeout(() => formsDangos.classList.add('slide-in'), 100);
               }
-            }, 200);
+            }, 100);
             titleObserver.unobserve(entry.target);
           }
         });
