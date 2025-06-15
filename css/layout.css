@@ -103,6 +103,10 @@
     transform: translateY(-2px);
 }
 
+#thanks .return-btn {
+  margin-bottom: 8em;
+}
+
 @media (max-width: 768px) {
 .return-btn a {
     border-radius: 50px;
