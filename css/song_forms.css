@@ -618,9 +618,9 @@ button.submit-btn {
   margin-bottom: 1em;
 }
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
 #forms-attention p {
-  font-size: 0.95em;
+  font-size: 0.9em;
   line-height: 1.45;         /* 読みやすい行間 */
   margin-bottom: 1.2em;
 }
