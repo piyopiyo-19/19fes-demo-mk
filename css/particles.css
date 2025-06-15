@@ -68,6 +68,11 @@
   width: 80px;
 }
 
+.particle.p-ina-b {
+  background-image: url("../images/p-ina-b.png");
+  width: 80px;
+}
+
 @media (max-width: 768px) {
   .particle {
     width: 50px;
@@ -77,6 +82,7 @@
   .particle.ball,
   .particle.shoes,
   .particle.p-ina-g,
+  .particle.p-ina-b,
   .particle.p8-p,
   .particle.piano{
     width: 50px;
