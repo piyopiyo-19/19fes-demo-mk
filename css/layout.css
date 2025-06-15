@@ -107,6 +107,14 @@
   margin-bottom: 5em;
 }
 
+
+@media (max-width: 768px) {
+#thanks .return-btn {
+  margin-bottom: 8em;
+}
+}
+
+
 @media (max-width: 768px) {
 .return-btn a {
     border-radius: 50px;
