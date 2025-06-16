@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHamburgerMenu();
   setupPageTopButton(300);
   attachFooterDangos();
-  attachFormsDangos();
+  attachformsPoyo();
 });
 
 var submitted = false; // used by form iframe callback
@@ -84,8 +84,8 @@ function attachFooterDangos() {
   insert();
 }
 
-function attachFormsDangos() {
-  const dangos = document.querySelector('.forms-dangos');
+function attachformsPoyo() {
+  const dangos = document.querySelector('.forms-poyo');
   if (!dangos) return;
 
   const images = dangos.querySelectorAll('img');
@@ -110,14 +110,14 @@ function attachFormsDangos() {
 window.addEventListener('load', () => {
   const loader = document.getElementById('page-loader');
   const header = document.getElementById('page-title');
-  const formsAttention = document.getElementById('forms-attention');
+  const formsAttention = document.getElementById('forms-information');
   const contents = document.querySelectorAll(
-    '.scrolldown, #formdayo, #scr-banner, .footer-dangos'
+    '.scrolldown, #formbox-Container, #scr-banner, .footer-dangos'
   );
-  const introImg = document.querySelector('.forms-white-box .forms-intro-img');
-  const introText = document.querySelector('.forms-intro-text');
-  const charaIbuki = document.querySelector('.forms-white-box .intro-chara.left');
-  const charaSindo = document.querySelector('.forms-white-box .intro-chara.right');
+  const infoImg = document.querySelector('.f-info-white-box .forms-info-img');
+  const infoText = document.querySelector('.forms-info-text');
+  const charaIbuki = document.querySelector('.f-info-white-box .info-chara.left');
+  const charaSindo = document.querySelector('.f-info-white-box .info-chara.right');
 
   const hideLoader = () => {
     if (!loader) return;
@@ -141,8 +141,8 @@ window.addEventListener('load', () => {
     });
   };
 
-  const showIntroImg = () => {
-    if (introImg) introImg.classList.add('pop');
+  const showinfoImg = () => {
+    if (infoImg) infoImg.classList.add('pop');
   };
     const showCharaIbuki = () => {
     if (charaIbuki) charaIbuki.classList.add('poyon');
@@ -155,8 +155,8 @@ window.addEventListener('load', () => {
 
   
 
-  const showIntroText = () => {
-    if (introText) introText.classList.add('zoom-in');
+  const showinfoText = () => {
+    if (infoText) infoText.classList.add('zoom-in');
   };
 
   hideLoader();
@@ -165,14 +165,14 @@ window.addEventListener('load', () => {
     // after header appears, show forms attention with delay
     setTimeout(() => {
       showFormsAttention();
-      // slide in the intro text shortly after the white box zooms in
+      // slide in the info text shortly after the white box zooms in
       setTimeout(() => {
-        showIntroText();
-        // then pop the intro image a bit later
+        showinfoText();
+        // then pop the info image a bit later
         setTimeout(() => {
-          showIntroImg();
+          showinfoImg();
 
-          // show characters sequentially after intro image pops␊
+          // show characters sequentially after info image pops␊
           setTimeout(() => {
             showCharaIbuki();
             setTimeout(() => {
@@ -185,9 +185,9 @@ window.addEventListener('load', () => {
     }, 500);
     // Apply default observer to all elements except form section, forms attention
     // and the dangos around the form which will be triggered manually
-    setupAosAnimations('[data-aos-f]:not(#formdayo):not(#forms-attention):not(.forms-dangos)');
+    setupAosAnimations('[data-aos-f]:not(#formbox-Container):not(#forms-information):not(.forms-poyo)');
     // Delay animation trigger for the form section
-      setupAosAnimations('#formdayo', {
+      setupAosAnimations('#formbox-Container', {
       threshold: 1.0,
       rootMargin: '0px 0px -20% 0px'
     });
@@ -196,7 +196,7 @@ window.addEventListener('load', () => {
     // and then slide in the dangos surrounding the form
     const formsbox = document.querySelector('.formsbox');
     const formTitle = document.querySelector('.form-title');
-    const formsDangos = document.querySelector('.forms-dangos');
+    const formsPoyo = document.querySelector('.forms-poyo');
     if (formsbox && formTitle) {
       const titleObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -205,8 +205,8 @@ window.addEventListener('load', () => {
             setTimeout(() => {
               formTitle.classList.add('zoom-in');
               // 宗拓→タイトル出現タイミング
-              if (formsDangos) {
-                setTimeout(() => formsDangos.classList.add('slide-in'), 100);
+              if (formsPoyo) {
+                setTimeout(() => formsPoyo.classList.add('slide-in'), 100);
               }
             }, 100);
             titleObserver.unobserve(entry.target);
