@@ -14,7 +14,7 @@
 
 
 
- <!-- 必須設定 -->
+ <!-- OGP画像 必須設定 -->
  <meta property="og:title" content="宗拓フェス! イメソンアンケート" />
  <meta property="og:description" content="宗拓イメージソングを大募集！" />
  <meta property="og:type" content="website" />
@@ -22,17 +22,17 @@
  <meta property="og:image" content="https://19fes-demo-mk.netlify.app/images/bana-ank-l.png?v=6" />　<!-- 画像の直リンク貼る！！！！ -->
  <meta property="og:site_name" content="MNTKFES!" />
 
- <!-- Twitterカード対応-->
+ <!-- OGP Twitterカード対応-->
  <meta name="twitter:card" content="summary_large_image" />
  <meta name="twitter:title" content="宗拓フェス! イメソンアンケート" />
  <meta name="twitter:description" content="宗拓イメージソングを大募集！" />
  <meta name="twitter:image" content="https://19fes-demo-mk.netlify.app/images/bana-ank-l.png?v=6" /> <!-- 画像の直リンク貼る！！！！ -->
 
-
-
 </head>
 
 <body id="songforms">
+
+  <!-- ローディング演出 -->
   <div id="page-loader">
     <div class="loader-form">
       <div></div><div></div><div></div><div></div><div></div><div></div>
@@ -45,15 +45,8 @@
     <img src="images/loading_mntk_run.gif" alt="Loading animation" class="loader-run">
   </div>
 
-  <div class="bg_pattern Paper_v2"></div>
-
-
-
-
-
-   <!-- ✅ ヘッダー -
-   <div id="header-placeholder"></div>
-    ✅ ヘッダー --->
+  <!-- 背景パターン -->
+  <div class="bg_pattern Paper_v2"></div> 
 
 
 
@@ -61,48 +54,46 @@
 <main> 
     <section class="section" id="page-title" data-aos-f>
       <div class="container-center center-line">
-          <img src="images/bana-ank.png" alt="フォームバナー">
+          <img src="images/bana-ank.png" alt="宗拓フェス！特別企画 イメソンアンケート">
         </div>
     </section>
 
 
 
-    
-    <section class="section" id="forms-attention" data-aos-f>
+    <!-- info　概要コメント -->
+    <section class="section" id="forms-information" data-aos-f>
       <div class="container-center center-line">
-        <div class="forms-white-box">
-          <img src="images/info-folm-2.png" alt="フォームイントロ" class="forms-intro-img">
-          <div class="forms-intro-text">
+        <div class="f-info-white-box">
+          <img src="images/folms-info.png" alt="この企画について" class="forms-info-img">
+          <div class="forms-info-text">
             <p>WEBオンリー特別企画として<br><span class="bold-text-forms">宗拓イメージソングを大募集！</span></p>
             <p>お寄せいただいた楽曲は<br><span class="bold-text-forms">『イベント限定プレイリスト』</span>にまとめ<br><span class="bold-text-forms">Spotifyにて公開予定♪</span></p>
             <p>２人の世界観にぴったりな１曲、<br>ぜひご紹介ください！</p>
-            <!-- <p class="note-text-forms">♪完全匿名＆お一人様何回でも回答いただけます♪</p> -->
           </div>
-          <img src="images/cool_ibuki.png" alt="クールいぶき" class="intro-chara left">
-          <img src="images/cool_sindo.png" alt="クールしんどう" class="intro-chara right">
+          <img src="images/cool_ibuki.png" alt="COOLいぶき" class="info-chara left">
+          <img src="images/cool_shindo.png" alt="HEATしんどう" class="info-chara right">
         </div>
       </div>
     </section>
-       
+
+    <!-- スクロールダウン演出 --> 
     <div class="scrolldown"><span>Scroll</span> </div>
 
 
 
-
-    <section class="section" id="formdayo" data-aos-f>
+    <!-- アンケートフォーム本体 --> 
+    <section class="section" id="formbox-Container" data-aos-f>
       <div class="container-center">
-
-
       <div class="formsbox">
-        <div class="forms-dangos" data-aos-f>
-          <img src="images/ibib.png" alt="いぶドット" class="left-dango">
-          <img src="images/tktk.png" alt="しんドット" class="right-dango">
+        <div class="forms-poyo" data-aos-f>
+          <img src="images/ibuki-dt.png" alt="いぶきドット" class="left-poyoyo">
+          <img src="images/shindo-dt.png" alt="しんドット" class="right-poyoyo">
         </div>
         <form action="https://docs.google.com/forms/d/e/1FAIpQLScz4uerKTzyo_z02RvlFQpAYOtwVh2HDzSnj0JfWYrxBBt7EA/formResponse"
       method="POST"
       target="hidden_iframe"
       onsubmit="submitted = true;">
-           <div class="form-title"><img src="images/form-title.png" alt="フォームタイトル" class="form-title-img"></div>
+           <div class="form-title"><img src="images/form-title.png" alt="アンケートフォーム" class="form-title-img"></div>
           <div class="form-group">
             <p style="color:#7d7fff; text-align:center; font-size:0.85em; margin-bottom:2em;">＼完全匿名＆お一人様何回でも回答いただけます！／</p>
             <label for="song">曲名<span class="required-badge">必須</span></label>
@@ -129,6 +120,7 @@
       </div>
     </section>
 
+    <!-- スクロールテキスト -->
     <section class="section" id="scr-banner" data-aos-f>
       <div class="scrolling-banner">
         <div class="scrolling-text">
@@ -147,17 +139,10 @@
 
   <div class="bottom-white-gap"></div>
 
- <!-- デモフッター-->
+ <!-- プレオープンフッター-->
  <div id="footer-placeholder" data-src="includes/footer-pre.html"></div>
 
 
- <!-- ✅ ページトップボタン
-
- <a href="#" id="pageTop" class="pagetop">
- <img src="images/Pagetop.png" alt="ページトップに戻る">
- </a>
-
- プボタン-->
 
 <!-- パーティクル -->
 <div id="floating-particles"></div>
@@ -168,7 +153,7 @@
 <!-- ✅ 共通スクリプト-->
 <script src="js/common.js"></script>
 
-<!-- ✅ formsスクリプト-->
+<!-- ✅ フォーム・thanks共通スクリプト-->
 <script src="js/song_forms.js"></script>
 
 
