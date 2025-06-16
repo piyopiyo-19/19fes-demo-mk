@@ -1,4 +1,4 @@
-// Scripts for the contact page
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initHamburgerMenu();
@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   attachformsPoyo();
 });
 
-var submitted = false; // used by form iframe callback
+var submitted = false; // フォームのiframe転送で使用
 
 function createParticles() {
   const container = document.getElementById('floating-particles');
   if (!container) return;
-  const symbols = ['eig-note1', 'bsk-ball', 'soccer-ball', 'shoes', 'g-clef', 'hand', 'piano', 'eig-note2', 'p-ina-g','p-ina-b'];
+  const symbols = ['eig-note1', 'bsk-ball', 'soccer-ball', 'shoes', 'g-clef', 'hand', 'piano', 'eig-note2', 'p-ina-g', 'p-ina-b'];
   const total = 25;
   const cols = Math.ceil(Math.sqrt(total));
   const rows = Math.ceil(total / cols);
@@ -144,7 +144,7 @@ window.addEventListener('load', () => {
   const showinfoImg = () => {
     if (infoImg) infoImg.classList.add('pop');
   };
-    const showCharaIbuki = () => {
+  const showCharaIbuki = () => {
     if (charaIbuki) charaIbuki.classList.add('poyon');
   };
 
@@ -153,7 +153,7 @@ window.addEventListener('load', () => {
   };
 
 
-  
+
 
   const showinfoText = () => {
     if (infoText) infoText.classList.add('zoom-in');
@@ -162,17 +162,17 @@ window.addEventListener('load', () => {
   hideLoader();
   setTimeout(() => {
     showHeader();
-    // after header appears, show forms attention with delay
+    // ヘッダーが表示された後フォームタイトルを表示する
     setTimeout(() => {
       showFormsAttention();
-      // slide in the info text shortly after the white box zooms in
+      // infoボックスズームイン → テキストのみスライド出現
       setTimeout(() => {
         showinfoText();
-        // then pop the info image a bit later
+        // →その後クルヒをポップアップ表示する
         setTimeout(() => {
           showinfoImg();
 
-          // show characters sequentially after info image pops␊
+          // ポップアップ表示後、文字を順次表示
           setTimeout(() => {
             showCharaIbuki();
             setTimeout(() => {
@@ -183,17 +183,16 @@ window.addEventListener('load', () => {
         }, 200);
       }, 200);
     }, 500);
-    // Apply default observer to all elements except form section, forms attention
-    // and the dangos around the form which will be triggered manually
+    // フォーム、infoを除くすべての要素にデフォルトのオブザーバーを適用
+    // ドットぽよんのみ手動制御
     setupAosAnimations('[data-aos-f]:not(#formbox-Container):not(#forms-information):not(.forms-poyo)');
-    // Delay animation trigger for the form section
-      setupAosAnimations('#formbox-Container', {
+    //　フォーム部分の出現遅延制御
+    setupAosAnimations('#formbox-Container', {
       threshold: 1.0,
       rootMargin: '0px 0px -20% 0px'
     });
 
-    // Zoom in the form title shortly after the form box appears
-    // and then slide in the dangos surrounding the form
+    // フォームボックス表示→フォームタイトルズームイン→ドット宗拓ぽよん表示
     const formsbox = document.querySelector('.formsbox');
     const formTitle = document.querySelector('.form-title');
     const formsPoyo = document.querySelector('.forms-poyo');
@@ -201,10 +200,10 @@ window.addEventListener('load', () => {
       const titleObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // trigger form title slightly after the form box zooms in
+            // フォームボックスズームイン→フォームタイトル表示
             setTimeout(() => {
               formTitle.classList.add('zoom-in');
-              // 宗拓→タイトル出現タイミング
+              // 宗拓・タイトル出現タイミング
               if (formsPoyo) {
                 setTimeout(() => formsPoyo.classList.add('slide-in'), 100);
               }
