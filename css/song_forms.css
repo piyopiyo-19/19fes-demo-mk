@@ -228,13 +228,13 @@ h6 {
 }
 
 /* フォームのズーム演出 */
-#formdayo[data-aos-f] {
+#formbox-Container[data-aos-f] {
   transform: scale(0.9);
   /* speed up the zoom for a snappier appearance */
   transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 
-#formdayo[data-aos-f].aos-animate {
+#formbox-Container[data-aos-f].aos-animate {
   transform: scale(1);
 }
 
@@ -261,7 +261,7 @@ textarea::placeholder {
 
 
 /* 白いボックス*/
-.forms-white-box {
+.f-info-white-box {
   width: 100vw;
   max-width: none;
   margin-left: calc(50% - 50vw);
@@ -276,20 +276,20 @@ textarea::placeholder {
 }
 
 /* zoom-in animation for the white box container */
-#forms-attention {
+#forms-information {
   opacity: 0;
   transform: scale(0.95);
   /* speed up the zoom effect for a snappier appearance */
   transition: transform 0.3s ease-out, opacity 0.35s ease-out;
 }
 
-#forms-attention.zoom-in {
+#forms-information.zoom-in {
   opacity: 1;
   transform: scale(1);
 }
 
 /* 上部に配置するinfo画像 */
-.forms-white-box .forms-intro-img {
+.f-info-white-box .forms-info-img {
   position: absolute;
   top: -0.8em;
   left: 50%;
@@ -302,29 +302,29 @@ textarea::placeholder {
   transition: popZoom 0.3s ease-out, opacity 0.3s ease-out forwards;
 }
 
-.forms-white-box .forms-intro-img.pop {
+.f-info-white-box .forms-info-img.pop {
   animation: popZoom 0.3s ease-out forwards;
 }
 
-/* container for the intro text */
-.forms-intro-text {
+/* container for the info text */
+.forms-info-text {
   opacity: 0;
   transform: translateY(40px);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.25s ease-out;
 }
 
-.forms-intro-text.zoom-in {
+.forms-info-text.zoom-in {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (max-width: 768px) {
-  .forms-white-box {
+  .f-info-white-box {
     padding: 6em 0.5em 3em 0.5em;
     margin-bottom: 1.5em;
   }
-  .forms-white-box .forms-intro-img {
+  .f-info-white-box .forms-info-img {
     top: -0.8em;
     width: 100%;
     max-width: 400px;
@@ -332,7 +332,7 @@ textarea::placeholder {
 }
 
 /* キャラ画像を白いボックスの左右に配置 */
-.forms-white-box .intro-chara {
+.f-info-white-box .info-chara {
   position: absolute;
   width: 265px;
   max-width: 35vw;
@@ -342,38 +342,38 @@ textarea::placeholder {
   transform: scale(0.8);
 }
 
-.forms-white-box .intro-chara.left {
+.f-info-white-box .info-chara.left {
   left: 430px;
   width: 262px;
   bottom: -6em;
 }
 
-.forms-white-box .intro-chara.right {
+.f-info-white-box .info-chara.right {
   right: 440px;
   bottom: -7.5em;
 }
 
-.forms-white-box .intro-chara.poyon {
+.f-info-white-box .info-chara.poyon {
   animation: charaPoyon 0.4s ease-out forwards,
              float1 3s ease-in-out 0.4s infinite;
 }
 
-.forms-white-box .intro-chara.right.poyon {
+.f-info-white-box .info-chara.right.poyon {
   animation: charaPoyon 0.4s ease-out forwards,
              float2 3s ease-in-out 0.4s infinite;
 }
 
 
 @media (max-width: 768px) {
-  .forms-white-box .intro-chara {
+  .f-info-white-box .info-chara {
     width: 130px;
   }
-  .forms-white-box .intro-chara.left {
+  .f-info-white-box .info-chara.left {
     left: 15px;
     bottom: -7em;
     width: 150px;
   }
-  .forms-white-box .intro-chara.right {
+  .f-info-white-box .info-chara.right {
     right: 15px;
     bottom: -7.9em;
     width: 154px;
@@ -611,7 +611,7 @@ button.submit-btn {
  * ------------------------------*/
 
 
-#forms-attention p {
+#forms-information p {
   font-size: 1.2em;
   font-weight: 650;         /* 少し軽めの太さで柔らかく */
   line-height: 1.45;         /* 読みやすい行間 */
@@ -619,7 +619,7 @@ button.submit-btn {
 }
 
 @media (max-width: 768px) {
-#forms-attention p {
+#forms-information p {
   font-size: 0.9em;
   line-height: 1.45;         /* 読みやすい行間 */
   margin-bottom: 1.2em;
@@ -628,7 +628,7 @@ button.submit-btn {
 
 
 /* 太字ハイライトコメント */
-#forms-attention .bold-text-forms {
+#forms-information .bold-text-forms {
   position: relative;
   color: #7073ff;           /* 明るめの青 */
   font-size: 1.35em;
@@ -636,7 +636,7 @@ button.submit-btn {
   padding: 0.1em 0.05em;    /* ハイライトと文字の余白 */
 }
 
-#forms-attention .bold-text-forms::before {
+#forms-information .bold-text-forms::before {
   content: "";
   position: absolute;
   left: 0.3em;
@@ -650,33 +650,19 @@ button.submit-btn {
 
 
 
-/* 直下の補足コメント */
-#forms-attention .note-text-forms {
-  color: #7d7fff;       
-  font-size: 0.7em;       
-  margin-top: -0.25em;       
-  font-weight: 500;        
-  line-height: 1.5;      
-}
 
 
 
 @media (max-width: 768px) {
-#forms-attention .note-text-forms {
-  font-size: 0.9em;         /* 少し小さめの文字 */
-  margin-top: -1em;        /* 上に少し余白 */
-  font-weight: 600;         /* 少し軽めの太さで柔らかく */
-  line-height: 1.4;         /* 読みやすい行間 */
-}
 
 /* 太字ハイライトコメント */
-#forms-attention .bold-text-forms {
+#forms-information .bold-text-forms {
   font-size: 1.3em;
   font-weight: 900;         /* 太め*/
   padding: 0.1em 0.05em;    /* ハイライトと文字の余白 */
 }
 
-#forms-attention .bold-text-forms::before {
+#forms-information .bold-text-forms::before {
   bottom: -0.1em;
   height: 0.6em;
 }
@@ -684,7 +670,7 @@ button.submit-btn {
 
 
   
-#songforms #forms-attention {
+#songforms #forms-information {
   font-family: 'Noto Sans JP',
     'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN',
@@ -695,7 +681,7 @@ button.submit-btn {
 
 /* Ensure white box spans full width on mobile */
 @media (max-width: 768px) {
-  #forms-attention .container-center {
+  #forms-information .container-center {
     padding-left: 0;
     padding-right: 0;
     max-width: none;
@@ -796,27 +782,27 @@ button.submit-btn {
   }
 }
 
-.footer-dangos .left-dango {
+.footer-dangos .left-poyoyo {
   left: 730px;
   top: -10px;
   animation-delay: 0s;
   --dango-rotation: 2deg;
 }
 
-.footer-dangos .right-dango {
+.footer-dangos .right-poyoyo {
   right: 730px;
   animation-delay: 0.5s;
   --dango-rotation: -2deg;
 }
 
 @media (max-width: 768px) {
-.footer-dangos .left-dango {
+.footer-dangos .left-poyoyo {
   left: 130px;
   top: -5px;
   animation-delay: 0s;
   --dango-rotation: 2deg;
 }
-.footer-dangos .right-dango {
+.footer-dangos .right-poyoyo {
   right: 130px;
   animation-delay: 0.5s;
   --dango-rotation: -2deg;
@@ -831,7 +817,7 @@ button.submit-btn {
   position: relative;
 }
 
-.forms-dangos {
+.forms-poyo {
   position: absolute;
   top: -100px; /* peek out from behind the form */
   left: 0;
@@ -842,11 +828,11 @@ button.submit-btn {
   transform: translateY(80px);
 }
 
-.forms-dangos.slide-in {
+.forms-poyo.slide-in {
   animation: dangosSlideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.forms-dangos img {
+.forms-poyo img {
   position: absolute;
   width: 180px;
   max-width: 30vw;
@@ -856,17 +842,17 @@ button.submit-btn {
   animation-play-state: paused;
 }
 
-.forms-dangos.animate img {
+.forms-poyo.animate img {
   animation-play-state: running;
 }
 
 @media (max-width: 768px) {
-  .forms-dangos {
+  .forms-poyo {
     top: -60px; /* show smaller peek on mobile */
   }
 }
 
-.forms-dangos .left-dango {
+.forms-poyo .left-poyoyo {
   left: 55px;
   top: -60px;
   animation-delay: 0s;
@@ -874,7 +860,7 @@ button.submit-btn {
   width: 210px;
 }
 
-.forms-dangos .right-dango {
+.forms-poyo .right-poyoyo {
   top: -28px;
   right: 60px;
   animation-delay: 0.5s;
@@ -882,12 +868,12 @@ button.submit-btn {
 }
 
 @media (max-width: 768px) {
-  .forms-dangos .left-dango {
+  .forms-poyo .left-poyoyo {
     left: 30px;
     top: -40px;
     width: 135px;
   }
-  .forms-dangos .right-dango {
+  .forms-poyo .right-poyoyo {
     right: 30px;
     top: -29px;
     width: 125px;
