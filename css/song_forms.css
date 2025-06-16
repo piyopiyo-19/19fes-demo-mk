@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=DotGothic16&display=swap');
 
+/* -----------------------------------------------------------------------------
+ * ★共通のcss★
+ * -----------------------------------------------------------------------------*/
 
-/* 共通のcss */
-
-/* =============
-背景パターン 設定
-============= */
+/* 背景パターン */
 .bg_pattern {
   position: fixed;
   top: 0;
@@ -13,7 +12,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #4e6eff;
-  z-index:-2; 
+  z-index: -2;
 }
 
 /* song_formsページ用: 下部に白い余白を追加するため
@@ -46,40 +45,41 @@
 
 
 @media (max-width: 768px) {
-#songforms .bottom-white-gap {
-  height: 40px;
+  #songforms .bottom-white-gap {
+    height: 40px;
+  }
+
+  #thanks .bottom-white-gap {
+    height: 40px;
+  }
 }
-#thanks .bottom-white-gap {
-  height: 40px;
-}
-   }
 
 
 .Paper_v2 {
   background-image:
     repeating-linear-gradient(to bottom,
       transparent 25px,
-      rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
-      transparent 27px,  transparent 51px,
-      rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
-      transparent 53px,  transparent 77px,
-      rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
-      transparent 79px,  transparent 103px,
-      rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
-      transparent 105px,  transparent 129px,
-      rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px),
+      rgba(0, 0, 0, 0.04) 26px, rgba(0, 0, 0, 0.04) 26px,
+      transparent 27px, transparent 51px,
+      rgba(0, 0, 0, 0.04) 52px, rgba(0, 0, 0, 0.04) 52px,
+      transparent 53px, transparent 77px,
+      rgba(0, 0, 0, 0.04) 78px, rgba(0, 0, 0, 0.04) 78px,
+      transparent 79px, transparent 103px,
+      rgba(0, 0, 0, 0.04) 104px, rgba(0, 0, 0, 0.04) 104px,
+      transparent 105px, transparent 129px,
+      rgba(0, 0, 0, 0.04) 130px, rgba(0, 0, 0, 0.04) 130px),
 
     repeating-linear-gradient(to right,
       transparent 25px,
-      rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
-      transparent 27px,  transparent 51px,
-      rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
-      transparent 53px,  transparent 77px,
-      rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
-      transparent 79px,  transparent 103px,
-      rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
-      transparent 105px,  transparent 129px,
-      rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
+      rgba(0, 0, 0, 0.04) 26px, rgba(0, 0, 0, 0.04) 26px,
+      transparent 27px, transparent 51px,
+      rgba(0, 0, 0, 0.04) 52px, rgba(0, 0, 0, 0.04) 52px,
+      transparent 53px, transparent 77px,
+      rgba(0, 0, 0, 0.04) 78px, rgba(0, 0, 0, 0.04) 78px,
+      transparent 79px, transparent 103px,
+      rgba(0, 0, 0, 0.04) 104px, rgba(0, 0, 0, 0.04) 104px,
+      transparent 105px, transparent 129px,
+      rgba(0, 0, 0, 0.04) 130px, rgba(0, 0, 0, 0.04) 130px);
 }
 
 
@@ -92,20 +92,23 @@ img {
 }
 
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
+
 body {
   letter-spacing: .025em;
   line-height: 1.8;
   color: #434472;
-  font-weight: 520; /* 共通のフォント */
+  font-weight: 520;
 }
+
 body {
   font-family:
     "Noto Sans JP",
-    "Zen Maru Gothic",            /* Google Fonts かわいい丸ゴ */
+    "Zen Maru Gothic",
     "Hiragino Kaku Gothic ProN",
     "ヒラギノ角ゴ ProN",
     "Meiryo",
@@ -119,15 +122,17 @@ body {
 * {
   box-sizing: border-box;
 }
+
 .section {
-  padding: 50px 20px 
+  padding: 50px 20px
 }
 
 #top.section {
   padding-top: 10px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -141,18 +146,19 @@ main {
 
 .site-footer,
 .footer-mobile {
-  margin-top: auto; /* ← 念のためつけておくと安全 */
+  margin-top: auto;
 }
 
 
 @media (min-width: 769px) {
   body {
-    font-size: 20px;     /* 通常より少し大きめ */
-    font-weight: 600;    /* 少し太め（デフォルトより強調） */
+    font-size: 20px;
+    font-weight: 600;
   }
 
-  p, li {
-    font-size: 1.2rem;  /* 通常段落やリストも少し大きく */
+  p,
+  li {
+    font-size: 1.2rem;
     font-weight: 600;
   }
 }
@@ -168,18 +174,23 @@ main {
 h1 {
   font-size: 2rem;
 }
+
 h2 {
   font-size: 1.75rem;
 }
+
 h3 {
   font-size: 1rem;
 }
+
 h4 {
   font-size: 0.8rem;
 }
+
 h5 {
   font-size: 0.75rem;
 }
+
 h6 {
   font-size: 0.875rem;
 }
@@ -189,28 +200,34 @@ h6 {
     font-size: 15px;
     line-height: 1.6;
   }
+
   .section {
     padding: 60px 15px;
   }
 
 
   h1 {
-  font-size: 1.6rem;
+    font-size: 1.6rem;
   }
+
   h2 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
+
   h3 {
-  font-size: 0.95rem;
+    font-size: 0.95rem;
   }
+
   h4 {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
   }
+
   h5 {
-  font-size: 0.75rem;
+    font-size: 0.75rem;
   }
+
   h6 {
-  font-size: 0.65rem;
+    font-size: 0.65rem;
   }
 
 }
@@ -220,7 +237,9 @@ h6 {
 
 
 
-/* page specific styles for song forms */
+/* -----------------------------------------------------------------------------
+ * ★以下、songform固有のcss★
+ * -----------------------------------------------------------------------------*/
 
 .fade-up.show {
   opacity: 1;
@@ -241,16 +260,17 @@ h6 {
 .section {
   padding: 15px 20px 15px 20px;
 }
-    @media (max-width: 768px) {
+
+@media (max-width: 768px) {
   .section {
-   padding: 5px 20px 5px 20px;
+    padding: 5px 20px 5px 20px;
   }
-   }
+}
 
 /* 入力テキストボックス*/
 textarea {
   min-height: 180px;  /* テキストボックス高さ */
-  resize: vertical;   /* ユーザーが縦にリサイズできる*/
+  resize: vertical; /* ユーザーが縦にリサイズできる*/
 }
 
 textarea::placeholder {
@@ -260,7 +280,7 @@ textarea::placeholder {
 }
 
 
-/* 白いボックス*/
+/* info 白いボックス*/
 .f-info-white-box {
   width: 100vw;
   max-width: none;
@@ -275,11 +295,10 @@ textarea::placeholder {
   margin-bottom: 1.5em;
 }
 
-/* zoom-in animation for the white box container */
+/* infoボックス　ズームインアニメーション制御 */
 #forms-information {
   opacity: 0;
   transform: scale(0.95);
-  /* speed up the zoom effect for a snappier appearance */
   transition: transform 0.3s ease-out, opacity 0.35s ease-out;
 }
 
@@ -288,7 +307,7 @@ textarea::placeholder {
   transform: scale(1);
 }
 
-/* 上部に配置するinfo画像 */
+/* 上部に配置するinfo　タイトル画像 */
 .f-info-white-box .forms-info-img {
   position: absolute;
   top: -0.8em;
@@ -306,7 +325,7 @@ textarea::placeholder {
   animation: popZoom 0.3s ease-out forwards;
 }
 
-/* container for the info text */
+/* info　本文のアニメーション */
 .forms-info-text {
   opacity: 0;
   transform: translateY(40px);
@@ -324,6 +343,7 @@ textarea::placeholder {
     padding: 6em 0.5em 3em 0.5em;
     margin-bottom: 1.5em;
   }
+
   .f-info-white-box .forms-info-img {
     top: -0.8em;
     width: 100%;
@@ -331,7 +351,7 @@ textarea::placeholder {
   }
 }
 
-/* キャラ画像を白いボックスの左右に配置 */
+/* クルヒ画像　左右に配置 */
 .f-info-white-box .info-chara {
   position: absolute;
   width: 265px;
@@ -355,12 +375,12 @@ textarea::placeholder {
 
 .f-info-white-box .info-chara.poyon {
   animation: charaPoyon 0.4s ease-out forwards,
-             float1 3s ease-in-out 0.4s infinite;
+    float1 3s ease-in-out 0.4s infinite;
 }
 
 .f-info-white-box .info-chara.right.poyon {
   animation: charaPoyon 0.4s ease-out forwards,
-             float2 3s ease-in-out 0.4s infinite;
+    float2 3s ease-in-out 0.4s infinite;
 }
 
 
@@ -368,11 +388,13 @@ textarea::placeholder {
   .f-info-white-box .info-chara {
     width: 130px;
   }
+
   .f-info-white-box .info-chara.left {
     left: 15px;
     bottom: -7em;
     width: 150px;
   }
+
   .f-info-white-box .info-chara.right {
     right: 15px;
     bottom: -7.9em;
@@ -384,7 +406,6 @@ textarea::placeholder {
 /* 入力フォーム box*/
 .formsbox {
   background-color: #ffffff;
- /*  border: 2px solid rgb(81 109 235); */
   border-radius: 20px;
   padding: 25px 3em 2.5em 3em;
   max-width: 700px;
@@ -394,6 +415,7 @@ textarea::placeholder {
   position: relative;
   font-size: 1em;
 }
+
 /* 入力フォーム タイトル画像 */
 .form-title {
   text-align: center;
@@ -402,11 +424,10 @@ textarea::placeholder {
 }
 
 .form-title.zoom-in {
-  /* shorten the animation for a snappy "pop" effect */
   animation: formTitleZoom 0.2s ease-out forwards;
 }
 
-/* extend title image nearly full width inside the form box */
+/* フォームタイトルテキスト画像（アンケートフォーム） */
 .form-title-img {
   display: block;
   width: calc(100% + 6em - 10px);
@@ -420,12 +441,12 @@ textarea::placeholder {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
-
 
 @media (max-width: 768px) {
   .formsbox {
@@ -435,7 +456,7 @@ textarea::placeholder {
     margin-top: 1em;
 
   }
-  /* adjust title image width to match reduced padding */
+
   .form-title-img {
     display: block;
     width: calc(100% + 5em - 10px);
@@ -444,10 +465,7 @@ textarea::placeholder {
     transform: translateX(-50%);
   }
 
-
-
-
-  /* iOS Safari ズーム */
+  /* iOS Safari ズーム制御 */
   .form-group input,
   .form-group textarea {
     font-size: 16px;
@@ -456,14 +474,17 @@ textarea::placeholder {
   .form-group input::placeholder {
     font-size: 16px;
   }
+
   textarea::placeholder {
-  font-size: 16px;
-  line-height: 1.4;
-}
+    font-size: 16px;
+    line-height: 1.4;
+  }
 }
 
 
-   /* 入力フォーム 並び */
+/* ------------------------------
+ * アンケートフォーム　入力部　制御
+ * ------------------------------*/
 .form-group {
   margin-bottom: 1.5em;
   display: flex;
@@ -515,11 +536,11 @@ textarea::placeholder {
 
 /* 入力フォーム送信ボタン */
 button.submit-btn {
-  background-color: rgb(81 109 235);    /* 鮮やかな青 */
-  color: white;                  /* 白文字 */
+  background-color: rgb(81 109 235);
+  color: white;
   border: none;
   padding: 0.8em 2em;
-  border-radius: 2rem;           /* 丸み */
+  border-radius: 2rem;
   font-size: 1.1em;
   font-weight: bold;
   font-family: 'Noto Sans JP',
@@ -539,11 +560,27 @@ button.submit-btn {
 }
 
 @keyframes wiggle-medium {
-  0%, 100% { transform: rotate(0deg); }
-  20% { transform: rotate(4deg); }
-  40% { transform: rotate(-4deg); }
-  60% { transform: rotate(3deg); }
-  80% { transform: rotate(-3deg); }
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(4deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  60% {
+    transform: rotate(3deg);
+  }
+
+  80% {
+    transform: rotate(-3deg);
+  }
 }
 
 button.submit-btn {
@@ -561,7 +598,8 @@ button.submit-btn {
 /* スマホではアニメーション無効化 */
 @media (max-width: 768px) {
   button.submit-btn:hover {
-    background-color: rgb(81, 109, 235) !important;  /* ホバー時も青のまま */
+    background-color: rgb(81, 109, 235) !important;
+    /* ホバー時も青のまま */
     animation: none !important;
   }
 }
@@ -569,9 +607,8 @@ button.submit-btn {
 
 
 /* ------------------------------
- * バナー表示　制御
+ * メインタイトル画像（ヘッダー）　表示制御
  * ------------------------------*/
-
 #songforms main {
   padding: 0;
 }
@@ -591,7 +628,9 @@ button.submit-btn {
   display: block;
 }
 
-@media (min-width: 769px) {
+
+/* ----PC表示------*/
+@media (min-width: 769px) {　
   #songforms #page-title img {
     max-width: 1100px;
     margin-left: auto;
@@ -599,41 +638,38 @@ button.submit-btn {
   }
 }
 
-
+/* ----スマホ表示------*/
 @media (max-width: 768px) {
-#songforms #page-title {
-  margin: -12px 10px 1.5em 10px;
-}
+  #songforms #page-title {
+    margin: -12px 10px 1.5em 10px;
+  }
 }
 
 /* ------------------------------
- * About　テキスト制御
+ * info　テキスト制御
  * ------------------------------*/
-
-
 #forms-information p {
   font-size: 1.2em;
-  font-weight: 650;         /* 少し軽めの太さで柔らかく */
-  line-height: 1.45;         /* 読みやすい行間 */
+  font-weight: 650;
+  line-height: 1.45;
   margin-bottom: 1em;
 }
 
 @media (max-width: 768px) {
-#forms-information p {
-  font-size: 0.9em;
-  line-height: 1.45;         /* 読みやすい行間 */
-  margin-bottom: 1.2em;
+  #forms-information p {
+    font-size: 0.9em;
+    line-height: 1.45;
+    margin-bottom: 1.2em;
+  }
 }
-   }
-
 
 /* 太字ハイライトコメント */
 #forms-information .bold-text-forms {
   position: relative;
-  color: #7073ff;           /* 明るめの青 */
+  color: #7073ff;
   font-size: 1.35em;
-  font-weight: 900;         /* 太め*/
-  padding: 0.1em 0.05em;    /* ハイライトと文字の余白 */
+  font-weight: 900;
+  padding: 0.1em 0.05em;
 }
 
 #forms-information .bold-text-forms::before {
@@ -649,27 +685,19 @@ button.submit-btn {
 }
 
 
-
-
-
-
 @media (max-width: 768px) {
+  #forms-information .bold-text-forms {
+    font-size: 1.3em;
+    font-weight: 900;
+    padding: 0.1em 0.05em;
+  }
 
-/* 太字ハイライトコメント */
-#forms-information .bold-text-forms {
-  font-size: 1.3em;
-  font-weight: 900;         /* 太め*/
-  padding: 0.1em 0.05em;    /* ハイライトと文字の余白 */
+  #forms-information .bold-text-forms::before {
+    bottom: -0.1em;
+    height: 0.6em;
+  }
 }
 
-#forms-information .bold-text-forms::before {
-  bottom: -0.1em;
-  height: 0.6em;
-}
-    }
-
-
-  
 #songforms #forms-information {
   font-family: 'Noto Sans JP',
     'Zen Maru Gothic',
@@ -679,7 +707,7 @@ button.submit-btn {
     sans-serif;
 }
 
-/* Ensure white box spans full width on mobile */
+/* スマホでボックスが幅いっぱいに広がるようにする */
 @media (max-width: 768px) {
   #forms-information .container-center {
     padding-left: 0;
@@ -689,7 +717,13 @@ button.submit-btn {
   }
 }
 
-/* Remove side padding so banner spans full width */
+
+
+/* ----------------------------------------
+ * スクロールバナー
+ * ----------------------------------------*/
+
+/* 両端の余白を取り除き横幅いっぱいに広がるようにする */
 #scr-banner.section {
   padding-left: 0;
   padding-right: 0;
@@ -698,30 +732,26 @@ button.submit-btn {
   width: 100vw;
 }
 
-/* ----------------------------------------
- * スクロールバナー
- * ----------------------------------------*/
+/* バナー本体 */
 #scr-banner .scrolling-banner {
   background-color: rgb(255, 255, 255);
-  margin: 6em 0 6em 0;  
+  margin: 6em 0 6em 0;
   color: rgb(46, 79, 228);
   width: 100%;
   padding: 0.3em 0;
   overflow: hidden;
-  font-weight: 700;         /* 少し軽めの太さで柔らかく */
+  font-weight: 700;
   font-family: 'DotGothic16', 'Zen Maru Gothic',
     'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN', 'Meiryo', sans-serif;
 }
 
-
 @media (max-width: 768px) {
-#scr-banner .scrolling-banner {
-  margin: 5em 0 5.5em 0;  
-  padding: 0.4em 0;
-  font-size: 0.77em;         /* 少し軽めの太さで柔らかく */
+  #scr-banner .scrolling-banner {
+    margin: 5em 0 5.5em 0;
+    padding: 0.4em 0;
+    font-size: 0.77em;
+  }
 }
-}
-
 
 #scr-banner .scrolling-banner .scrolling-text {
   display: inline-block;
@@ -734,8 +764,13 @@ button.submit-btn {
 }
 
 @keyframes banner-scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 
@@ -749,11 +784,13 @@ button.submit-btn {
 
 .footer-dangos {
   position: absolute;
-  top: -120px; /* offset so dangos peek above the footer */
+  top: -120px;
+  /* offset so dangos peek above the footer */
   left: 0;
   right: 0;
   pointer-events: none;
-  z-index: 5; /* in front of particles but still behind the footer */
+  z-index: 5;
+  /* in front of particles but still behind the footer */
 }
 
 .footer-dangos img {
@@ -775,6 +812,7 @@ button.submit-btn {
   .footer-dangos {
     top: -70px;
   }
+
   .footer-dangos img {
     top: 0;
     width: 100px;
@@ -796,22 +834,23 @@ button.submit-btn {
 }
 
 @media (max-width: 768px) {
-.footer-dangos .left-poyoyo {
-  left: 130px;
-  top: -5px;
-  animation-delay: 0s;
-  --dango-rotation: 2deg;
-}
-.footer-dangos .right-poyoyo {
-  right: 130px;
-  animation-delay: 0.5s;
-  --dango-rotation: -2deg;
-}
+  .footer-dangos .left-poyoyo {
+    left: 130px;
+    top: -5px;
+    animation-delay: 0s;
+    --dango-rotation: 2deg;
+  }
+
+  .footer-dangos .right-poyoyo {
+    right: 130px;
+    animation-delay: 0.5s;
+    --dango-rotation: -2deg;
+  }
 }
 
 
 /* ------------------------------
- * フォームぽよん アニメーション
+ * フォーム宗拓ぽよん アニメーション
  * ------------------------------*/
 .formsbox {
   position: relative;
@@ -819,7 +858,7 @@ button.submit-btn {
 
 .forms-poyo {
   position: absolute;
-  top: -100px; /* peek out from behind the form */
+  top: -100px;
   left: 0;
   right: 0;
   pointer-events: none;
@@ -848,7 +887,7 @@ button.submit-btn {
 
 @media (max-width: 768px) {
   .forms-poyo {
-    top: -60px; /* show smaller peek on mobile */
+    top: -60px;
   }
 }
 
@@ -873,6 +912,7 @@ button.submit-btn {
     top: -40px;
     width: 135px;
   }
+
   .forms-poyo .right-poyoyo {
     right: 30px;
     top: -29px;
@@ -882,25 +922,50 @@ button.submit-btn {
 
 
 @keyframes poyonBounce {
-     0%   { transform: rotate(var(--dango-rotation)) scale(.9,1.05)      translateY(0); }
-     15%  { transform: rotate(var(--dango-rotation)) scale(1.1,.9)   translateY(10%); }
-     30%  { transform: rotate(var(--dango-rotation)) scale(1,1)   translateY(0); }
-     45%  { transform: rotate(var(--dango-rotation)) scale(1.05,.95) translateY(5%); }
-     60%  { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
-     75%  { transform: rotate(var(--dango-rotation)) scale(1.02,.98) translateY(2%); }
-     90%  { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
-      100% { transform: rotate(var(--dango-rotation)) scale(1,1)      translateY(0); }
-      }
+  0% {
+    transform: rotate(var(--dango-rotation)) scale(.9, 1.05) translateY(0);
+  }
+
+  15% {
+    transform: rotate(var(--dango-rotation)) scale(1.1, .9) translateY(10%);
+  }
+
+  30% {
+    transform: rotate(var(--dango-rotation)) scale(1, 1) translateY(0);
+  }
+
+  45% {
+    transform: rotate(var(--dango-rotation)) scale(1.05, .95) translateY(5%);
+  }
+
+  60% {
+    transform: rotate(var(--dango-rotation)) scale(1, 1) translateY(0);
+  }
+
+  75% {
+    transform: rotate(var(--dango-rotation)) scale(1.02, .98) translateY(2%);
+  }
+
+  90% {
+    transform: rotate(var(--dango-rotation)) scale(1, 1) translateY(0);
+  }
+
+  100% {
+    transform: rotate(var(--dango-rotation)) scale(1, 1) translateY(0);
+  }
+}
 
 @keyframes dangosSlideUp {
   0% {
     opacity: 0;
     transform: translateY(80px);
   }
+
   80% {
     opacity: 1;
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -910,38 +975,40 @@ button.submit-btn {
 
 
 
- /*Thanksページ　ページタイトル（ページメインタイトル）*/
+/*Thanksページ　ページタイトル（ページメインタイトル）*/
 .thanks-page-title {
-    display: flex;
-    font-weight: 700;
-    line-height: 1.5;
-    letter-spacing: .02em;
-    content: attr(data-label);
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
+  display: flex;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: .02em;
+  content: attr(data-label);
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
 }
 
 .thanks-page-title::before,
 .thanks-page-title::after {
-    width: 3px;
-    height: 40px;
-    background-color: #ffffff;
-    content: '';
+  width: 3px;
+  height: 40px;
+  background-color: #ffffff;
+  content: '';
 }
 
 .thanks-page-title::before {
-    transform: rotate(-35deg);
-    margin-right: 30px;
+  transform: rotate(-35deg);
+  margin-right: 30px;
 }
 
 .thanks-page-title::after {
-    transform: rotate(35deg);
-    margin-left: 30px;
+  transform: rotate(35deg);
+  margin-left: 30px;
 }
 
 
-/* スクロールダウン演出 */
+/* ----------------------------------------
+ * スクロールダウン演出
+ * ----------------------------------------*/
 .scrolldown {
   padding-top: 130px;
   position: relative;
@@ -949,6 +1016,7 @@ button.submit-btn {
   margin-bottom: 300px;
   margin-top: 1px;
 }
+
 .scrolldown span {
   display: block;
   font-size: 1.2rem;
@@ -958,16 +1026,17 @@ button.submit-btn {
 
 
 @media (max-width: 768px) {
-.scrolldown {
-  padding-top: 100px;
-  margin-bottom: 390px;
-  margin-top: 1px;
-}
-.scrolldown span {
-  display: block;
-  font-size: 1.1rem;
-  font-weight: 700;
-}
+  .scrolldown {
+    padding-top: 100px;
+    margin-bottom: 390px;
+    margin-top: 1px;
+  }
+
+  .scrolldown span {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
 }
 
 /* 矢印のアニメーション部分 */
@@ -998,18 +1067,25 @@ button.submit-btn {
     opacity: 0;
     transform: rotate(-45deg) translate(0, 0);
   }
+
   40% {
     opacity: 1;
   }
+
   80% {
     opacity: 0;
     transform: rotate(-45deg) translate(-30px, 30px);
   }
+
   100% {
     opacity: 0;
   }
 }
 
+
+/* ----------------------------------------
+ * ページローディング演出
+ * ----------------------------------------*/
 
 /* ----- ページローダー　アイコン ----- */
 #page-loader {
@@ -1048,62 +1124,76 @@ button.submit-btn {
   border-radius: 50%;
   animation: loaderDot 1.8s linear infinite;
 }
+
 .loader-form div:nth-child(1) {
   transform: rotate(0deg) translate(32px);
   animation-delay: 0s;
 }
+
 .loader-form div:nth-child(2) {
   transform: rotate(30deg) translate(32px);
   animation-delay: -0.1s;
 }
+
 .loader-form div:nth-child(3) {
   transform: rotate(60deg) translate(32px);
   animation-delay: -0.2s;
 }
+
 .loader-form div:nth-child(4) {
   transform: rotate(90deg) translate(32px);
   animation-delay: -0.3s;
 }
+
 .loader-form div:nth-child(5) {
   transform: rotate(120deg) translate(32px);
   animation-delay: -0.4s;
 }
+
 .loader-form div:nth-child(6) {
   transform: rotate(150deg) translate(32px);
   animation-delay: -0.5s;
 }
+
 .loader-form div:nth-child(7) {
   transform: rotate(180deg) translate(32px);
   animation-delay: -0.6s;
 }
+
 .loader-form div:nth-child(8) {
   transform: rotate(210deg) translate(32px);
   animation-delay: -0.7s;
 }
+
 .loader-form div:nth-child(9) {
   transform: rotate(240deg) translate(32px);
   animation-delay: -0.8s;
 }
+
 .loader-form div:nth-child(10) {
   transform: rotate(270deg) translate(32px);
   animation-delay: -0.9s;
 }
+
 .loader-form div:nth-child(11) {
   transform: rotate(300deg) translate(32px);
   animation-delay: -1s;
 }
+
 .loader-form div:nth-child(12) {
   transform: rotate(330deg) translate(32px);
   animation-delay: -1.1s;
 }
 
 @keyframes loaderDot {
+
   0%,
   20%,
   80%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.2;
   }
@@ -1125,36 +1215,80 @@ button.submit-btn {
 }
 
 @media (max-width: 768px) {
-.loader-run {
-  margin-top: 2em;
-  max-width: 190px;
+  .loader-run {
+    margin-top: 2em;
+    max-width: 190px;
+  }
 }
-    }
 
 .loader-text span {
   display: inline-block;
   animation: loaderWave 1.6s ease-in-out infinite;
 }
 
-.loader-text span:nth-child(1)  { animation-delay: 0s;   }
-.loader-text span:nth-child(2)  { animation-delay: 0.1s; }
-.loader-text span:nth-child(3)  { animation-delay: 0.2s; }
-.loader-text span:nth-child(4)  { animation-delay: 0.3s; }
-.loader-text span:nth-child(5)  { animation-delay: 0.4s; }
-.loader-text span:nth-child(6)  { animation-delay: 0.5s; }
-.loader-text span:nth-child(7)  { animation-delay: 0.6s; }
-.loader-text span:nth-child(8)  { animation-delay: 0.7s; }
-.loader-text span:nth-child(9)  { animation-delay: 0.8s; }
-.loader-text span:nth-child(10) { animation-delay: 0.9s; }
-.loader-text span:nth-child(11) { animation-delay: 1s; }
-.loader-text span:nth-child(12) { animation-delay: 1.1s; }
-.loader-text span:nth-child(13) { animation-delay: 1.2s; }
-.loader-text span:nth-child(14) { animation-delay: 1.3s; }
+.loader-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader-text span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loader-text span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.loader-text span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.loader-text span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.loader-text span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.loader-text span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.loader-text span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.loader-text span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.loader-text span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+.loader-text span:nth-child(11) {
+  animation-delay: 1s;
+}
+
+.loader-text span:nth-child(12) {
+  animation-delay: 1.1s;
+}
+
+.loader-text span:nth-child(13) {
+  animation-delay: 1.2s;
+}
+
+.loader-text span:nth-child(14) {
+  animation-delay: 1.3s;
+}
 
 @keyframes loaderWave {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-8px);
   }
@@ -1165,10 +1299,12 @@ button.submit-btn {
     transform: translateX(-50%) scale(0.8);
     opacity: 0;
   }
+
   60% {
     transform: translateX(-50%) scale(1.1);
     opacity: 1;
   }
+
   100% {
     transform: translateX(-50%) scale(1);
     opacity: 1;
@@ -1180,10 +1316,12 @@ button.submit-btn {
     transform: scale(0.8);
     opacity: 0;
   }
+
   60% {
     transform: scale(1.1);
     opacity: 1;
   }
+
   100% {
     transform: scale(1);
     opacity: 1;
@@ -1191,18 +1329,24 @@ button.submit-btn {
 }
 
 @keyframes float1 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes float2 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(14px);
   }
